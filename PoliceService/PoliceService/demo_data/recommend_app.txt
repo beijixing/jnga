@@ -1,0 +1,54 @@
+{
+    "banners":
+    [
+        {
+            "id": 0,
+            "title": "",
+            "img_url": "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1487759796214&di=89ec0f3049ebb33aca3fe3fed58720ef&imgtype=0&src=http%3A%2F%2Ftpic.home.news.cn%2FxhCloudNewsPic%2Fxhpic001%2FM08%2F67%2F4E%2FwKhTg1WjpusEAAAAAAAAAAAAAAA708.jpg"
+        },
+        {
+            "id": 1,
+            "title": "",
+            "img_url": "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1487759828565&di=ab82818a9a333d70b8dca81b35bd836c&imgtype=0&src=http%3A%2F%2Fpic.qiantucdn.com%2F58pic%2F18%2F55%2F25%2F33A58PIC2kT_1024.jpg"
+        },
+        {
+            "id": 2,
+            "title": "",
+            "img_url": "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1487759957830&di=43de65bdd79772a1a82ec664027d4b7e&imgtype=0&src=http%3A%2F%2Fscimg.jb51.net%2Fallimg%2F160826%2F102-160R6161035395.jpg"
+        }
+    ],
+    "app_items": 
+    [
+        {
+            "id":0,
+            "app_name": "交管12123",
+            "img_url": "jg",
+            "link_url": ""
+        },
+        {
+            "id":1,
+            "app_name": "出入境",
+            "img_url": "crj",
+            "link_url": ""
+        },
+        {
+            "id":2,
+            "app_name": "法制办",
+            "img_url": "fz",
+            "link_url": ""
+        },
+        {
+            "id":1,
+            "app_name": "济宁交通",
+            "img_url": "jiningjiaotong",
+            "link_url": ""
+        },
+        {
+            "id":2,
+            "app_name": "10010掌上服务",
+            "img_url": "10010fw",
+            "link_url": ""
+        }
+
+    ]
+}
