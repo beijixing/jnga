@@ -16,6 +16,7 @@
 @property (strong, nonatomic) IBOutlet UIView *searchResultContainer;
 @property (strong, nonatomic) IBOutlet NSLayoutConstraint *resultContainerHeight;
 @property (strong, nonatomic) IBOutlet NSLayoutConstraint *resultContainerTopSpace;
+@property (weak, nonatomic) IBOutlet UILabel *searchResultLabel;
 
 @end
 
@@ -56,7 +57,14 @@
         [WJHUD hideFromView:wself.view];
         if (success) {
             NSDictionary *dataDict = (NSDictionary *)object;
-            if ([[dataDict objectForKey:@"code"] integerValue] == 1) {
+            if ([[dataDict objectForKey:@"error_code"] integerValue] == 0) {
+                
+                
+                self.searchResultLabel.text = [NSString stringWithFormat:@"您好，本次查询内容仅限济宁市。查询重名操作成功，存在重名，重名个数%@",[dataDict objectForKey:@"data"]];
+                
+                self.resultContainerHeight.constant = 70;
+                self.resultContainerTopSpace.constant = 15;
+                
 //                NSDictionary *data = [dataDict objectForKey:@"data"];
 //                if (!wself.dataModel) {
 //                    NSError *error;
@@ -88,16 +96,7 @@
         return;
     }
     [self searchNameNum];
-    static BOOL hideResultContainer = NO;
-    if (hideResultContainer) {
-        self.resultContainerHeight.constant = 0;
-        self.resultContainerTopSpace.constant = 0;
-    }else {
-        self.resultContainerHeight.constant = 70;
-        self.resultContainerTopSpace.constant = 15;
-    }
-    
-    hideResultContainer = !hideResultContainer;
+
 }
 
 @end

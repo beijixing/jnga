@@ -14,6 +14,7 @@
                 <outlet property="resultContainerHeight" destination="xDo-Ld-IBD" id="YOh-Xz-peg"/>
                 <outlet property="resultContainerTopSpace" destination="yRu-fE-FNa" id="tOA-Gt-YHM"/>
                 <outlet property="searchResultContainer" destination="InY-My-gbn" id="HLO-cY-xPE"/>
+                <outlet property="searchResultLabel" destination="LQE-4Q-Mgv" id="qUl-w8-qdJ"/>
                 <outlet property="searchTF" destination="G3D-af-cEX" id="I80-o8-SKM"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>

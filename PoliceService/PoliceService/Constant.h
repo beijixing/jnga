@@ -14,7 +14,7 @@
 static NSString * const Host_IP = @"http://124.133.15.90:8780/";
 
 static NSString * const AppURL = @"http://124.133.15.90:8780/jnga/appService/";
-
+static NSString * const AppJNGAURL = @"http://60.211.249.228/api/";
 //static NSString * const AppURL = @"http://192.168.106.128:8080/appService/";//老钱
 
 

@@ -37,9 +37,10 @@
     NSMutableString *stringToSha1 = [@"" mutableCopy];
     for (NSString *key in keys) {
         [stringToSha1 appendFormat:@"&%@=%@",key,pagramSort[key]];
+        
     }
     [stringToSha1 appendString:@"&signKey=egso1234566f46698e20b876020eaf2017ftd1"];
-    [stringToSha1 replaceCharactersInRange:NSMakeRange(0, 1) withString:@"?"];
+    [stringToSha1 replaceCharactersInRange:NSMakeRange(0, 1) withString:@""];
     return [stringToSha1 sha1];
 }
 - (NSComparisonResult)sortParam:(NSString *)key{
@@ -52,9 +53,9 @@
 
 - (NSString*) sha1
 {
-    const char *cstr = [self cStringUsingEncoding:NSUTF8StringEncoding];
-    
-    NSData *data = [NSData dataWithBytes:cstr length:self.length];
+//    const char *cstr = [self cStringUsingEncoding:NSUTF8StringEncoding];
+//    NSData *data = [NSData dataWithBytes:cstr length:self.length];
+    NSData *data = [self dataUsingEncoding:NSUTF8StringEncoding];
     //使用对应的CC_SHA1,CC_SHA256,CC_SHA384,CC_SHA512的长度分别是20,32,48,64
     uint8_t digest[CC_SHA1_DIGEST_LENGTH];
     //使用对应的CC_SHA256,CC_SHA384,CC_SHA512
