@@ -9,6 +9,8 @@
 #import "SimilarNameQueryVC.h"
 #import "FSMacro.h"
 #import "UIFactory.h"
+#import "WJHUD.h"
+#import "RequestService.h"
 @interface SimilarNameQueryVC ()
 @property (strong, nonatomic) IBOutlet UITextField *searchTF;
 @property (strong, nonatomic) IBOutlet UIView *searchResultContainer;
@@ -47,8 +49,45 @@
 }
 
 
+- (void)searchNameNum {
+    [WJHUD showOnView:self.view];
+    typeof(self) __weak wself = self;
+    [RequestService getNameNumWithParamDict:@{@"id":self.searchTF.text} resultBlock:^(BOOL success, id object) {
+        [WJHUD hideFromView:wself.view];
+        if (success) {
+            NSDictionary *dataDict = (NSDictionary *)object;
+            if ([[dataDict objectForKey:@"code"] integerValue] == 1) {
+//                NSDictionary *data = [dataDict objectForKey:@"data"];
+//                if (!wself.dataModel) {
+//                    NSError *error;
+//                    wself.dataModel = [[StrayManServerDataModel alloc] initWithDictionary:data error:&error];
+//                    NSLog(@"error=%@", error);
+//                }else {
+//                    StrayManServerDataModel *tmpDataModel = [[StrayManServerDataModel alloc] initWithDictionary:data error:nil];
+//                    [wself.dataModel.list addObjectsFromArray:tmpDataModel.list];
+//                }
+//                
+                }else {
+                [WJHUD showText:[dataDict objectForKey:@"message"] onView:wself.view];
+            }
+        }
+        else {
+            
+            NSLog(@"object=%@", object);
+        }
+    }];
+    
+
+}
+
+
 - (IBAction)queryAction:(UIButton *)sender {
     
+    if (self.searchTF.text.length < 1) {
+        [WJHUD showText:@"请输入待查姓名" onView:self.view];
+        return;
+    }
+    [self searchNameNum];
     static BOOL hideResultContainer = NO;
     if (hideResultContainer) {
         self.resultContainerHeight.constant = 0;

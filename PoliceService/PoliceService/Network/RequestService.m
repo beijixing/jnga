@@ -9,6 +9,7 @@
 #import "RequestService.h"
 #import "Constant.h"
 #import "UDIDManager.h"
+#import "APISign.h"
 #import "GlobalVariableManager.h"
 @implementation RequestService
 
@@ -66,7 +67,14 @@
         resultBlock(success, object);
     }];
 }
-
++(void)getNameNumWithParamDict:(NSDictionary *)paramDict resultBlock:(void(^)(BOOL success,id object))resultBlock
+{
+    NSString *urlStr = [NSString stringWithFormat:@"%@%@", AppURL, Interface_NameNum];
+    
+    [[FSNetWorkManager manager] postDataWithHostUrl:urlStr parameters:[APISign paramSignedWithPagram:[self addAddtionalParamWith:paramDict] functionName:Interface_NameNum] result:^(BOOL success, id  _Nonnull object) {
+        resultBlock(success, object);
+    }];
+}
 +(void)getStrayManListWithParamDict:(NSDictionary *)paramDict resultBlock:(void(^)(BOOL success,id object))resultBlock {
     NSString *urlStr = [NSString stringWithFormat:@"%@%@", AppURL, Interface_StrayManList];
     

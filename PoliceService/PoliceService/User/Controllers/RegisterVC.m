@@ -164,6 +164,14 @@
         [WJHUD showText:@"输入的验证码不正确" onView:self.view];
         return;
     }
+    if (self.userNameTF.text.length<6) {
+        [WJHUD showText:@"请输入姓名" onView:self.view];
+        return;
+    }
+    if (self.idCardNumberTF.text.length<6) {
+        [WJHUD showText:@"请输入身份证号码" onView:self.view];
+        return;
+    }
 
     NSString *udid = [UDIDManager getUDID];
     
@@ -171,11 +179,12 @@
                                 @"verify_code":self.verificationCodeTF.text,
                                 @"password":self.passwordTF.text,
                                 @"device_id":udid,
-                                @"ternimal_type":@"ios"
+                                @"ternimal_type":@"ios",
+                                @"name":self.userNameTF.text,
+                                @"usercard":self.idCardNumberTF.text
                                 };
     typeof(self) __weak wself = self;
     [RequestService registerWithParamDict:paramDict resultBlock:^(BOOL success, id object) {
-        
         if (success) {
             NSDictionary *dataDict = (NSDictionary *)object;
             if ([[dataDict objectForKey:@"code"] integerValue] ==1 ) {

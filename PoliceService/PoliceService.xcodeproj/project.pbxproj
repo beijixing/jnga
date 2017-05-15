@@ -289,6 +289,7 @@
 		CBC8BCF81E7135E8004C8D5A /* jiningjiaotong@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CBC8BCF71E7135E8004C8D5A /* jiningjiaotong@3x.png */; };
 		CBC8BCFB1E72564A004C8D5A /* GlobalFunctionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CBC8BCFA1E72564A004C8D5A /* GlobalFunctionManager.m */; };
 		CBC8BCFE1E72A146004C8D5A /* WJHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = CBC8BCFD1E72A146004C8D5A /* WJHUD.m */; };
+		CBCCD0AD1EC8555200CBE18A /* APISign.m in Sources */ = {isa = PBXBuildFile; fileRef = CBCCD0AC1EC8555200CBE18A /* APISign.m */; };
 		CBD98DAC1E4AB2C400C09DD2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CBD98DAB1E4AB2C300C09DD2 /* main.m */; };
 		CBD98DB51E4AB2C400C09DD2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBD98DB31E4AB2C400C09DD2 /* Main.storyboard */; };
 		CBD98DB71E4AB2C400C09DD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBD98DB61E4AB2C400C09DD2 /* Assets.xcassets */; };
@@ -1220,6 +1221,8 @@
 		CBC8BCFA1E72564A004C8D5A /* GlobalFunctionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlobalFunctionManager.m; sourceTree = "<group>"; };
 		CBC8BCFC1E72A146004C8D5A /* WJHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJHUD.h; sourceTree = "<group>"; };
 		CBC8BCFD1E72A146004C8D5A /* WJHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJHUD.m; sourceTree = "<group>"; };
+		CBCCD0AB1EC8555200CBE18A /* APISign.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APISign.h; sourceTree = "<group>"; };
+		CBCCD0AC1EC8555200CBE18A /* APISign.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APISign.m; sourceTree = "<group>"; };
 		CBD98DA71E4AB2C300C09DD2 /* PoliceService.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PoliceService.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBD98DAB1E4AB2C300C09DD2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CBD98DAD1E4AB2C400C09DD2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -3190,6 +3193,8 @@
 				CBE0CFBB1E6959F20027DAD2 /* Constant.h */,
 				CBE0CFB91E6959270027DAD2 /* RequestService.m */,
 				CBE312F41E7A303B000E1025 /* Foundation+Log.m */,
+				CBCCD0AB1EC8555200CBE18A /* APISign.h */,
+				CBCCD0AC1EC8555200CBE18A /* APISign.m */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -3684,6 +3689,7 @@
 				CBC8BCFE1E72A146004C8D5A /* WJHUD.m in Sources */,
 				CBD990CF1E4ACB3E00C09DD2 /* MBProgressHUD.m in Sources */,
 				CBD991741E4AEDF900C09DD2 /* HomeVC.m in Sources */,
+				CBCCD0AD1EC8555200CBE18A /* APISign.m in Sources */,
 				CBAF39331E977437005BB9C7 /* NewsListVC.m in Sources */,
 				CBB02AC21E6D50C0001EFCBA /* MyAnimatedAnnotationView.m in Sources */,
 				CB42BA3D1E56D0830092CE91 /* CheckPeccancyVC.m in Sources */,
