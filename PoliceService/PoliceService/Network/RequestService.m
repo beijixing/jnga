@@ -75,6 +75,14 @@
     }];
 
 }
++(void)getStrangeWordWithParamDict:(NSDictionary *)paramDict resultBlock:(void(^)(BOOL success,id object))resultBlock
+{
+    NSString *urlStr = [NSString stringWithFormat:@"%@%@", AppJNGAURL, Interface_StrangeWord];
+    [[FSNetWorkManager manager] getDataWithHostUrl:urlStr parameters:[APISign paramSignedWithPagram:paramDict functionName:Interface_StrangeWord]  result:^(BOOL success, id  _Nonnull object) {
+        resultBlock(success, object);
+    }];
+    
+}
 +(void)getStrayManListWithParamDict:(NSDictionary *)paramDict resultBlock:(void(^)(BOOL success,id object))resultBlock {
     NSString *urlStr = [NSString stringWithFormat:@"%@%@", AppURL, Interface_StrayManList];
     

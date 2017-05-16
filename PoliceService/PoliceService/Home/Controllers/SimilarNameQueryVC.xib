@@ -20,15 +20,15 @@
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NTr-lH-LFD">
-                    <rect key="frame" x="0.0" y="15" width="375" height="50"/>
+                    <rect key="frame" x="0.0" y="15" width="600" height="50"/>
                     <subviews>
                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入待查姓名" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G3D-af-cEX">
-                            <rect key="frame" x="8" y="5" width="359" height="40"/>
+                            <rect key="frame" x="8" y="5" width="584" height="40"/>
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
@@ -44,7 +44,7 @@
                     </constraints>
                 </view>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="本平台可提供全市870万常住人口姓名统计信息查询，为新生儿取名、姓名变更等提供参考指引。" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="YJL-Jh-SB2">
-                    <rect key="frame" x="16" y="269" width="343" height="115"/>
+                    <rect key="frame" x="16" y="269" width="568" height="115"/>
                     <color key="backgroundColor" red="0.93987518550000004" green="0.95748394729999997" blue="0.97612041230000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="115" id="Fhe-Tk-p5h"/>
@@ -54,7 +54,7 @@
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9xm-XK-pqV">
-                    <rect key="frame" x="16" y="165" width="343" height="50"/>
+                    <rect key="frame" x="16" y="165" width="568" height="50"/>
                     <color key="backgroundColor" red="0.1644818187" green="0.64110499620000005" blue="0.8952704668" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="lHf-Sa-6sW"/>
@@ -90,10 +90,10 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="InY-My-gbn">
-                    <rect key="frame" x="16" y="80" width="343" height="70"/>
+                    <rect key="frame" x="16" y="80" width="568" height="70"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="您好，本次查询内容仅限济宁市。查询重名操作成功，存在重名，重名个数89" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LQE-4Q-Mgv">
-                            <rect key="frame" x="8" y="4" width="327" height="62"/>
+                            <rect key="frame" x="8" y="4" width="552" height="62"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>

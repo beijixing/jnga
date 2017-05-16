@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A0DDEED1ECA928F0053AAEE /* spz@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A0DDEEC1ECA928E0053AAEE /* spz@2x.png */; };
+		5A0DDEEF1ECA92A70053AAEE /* spz@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A0DDEEE1ECA92A70053AAEE /* spz@3x.png */; };
+		5A0DDEF11ECA92CD0053AAEE /* crj@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A0DDEF01ECA92CD0053AAEE /* crj@3x.png */; };
+		5A0DDEF31ECA92E10053AAEE /* crj@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A0DDEF21ECA92E10053AAEE /* crj@2x.png */; };
+		5A0DDEF71ECA96C00053AAEE /* StrangeWordQueryVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0DDEF51ECA96C00053AAEE /* StrangeWordQueryVC.m */; };
+		5A0DDEF81ECA96C00053AAEE /* StrangeWordQueryVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A0DDEF61ECA96C00053AAEE /* StrangeWordQueryVC.xib */; };
+		5A0DDF001ECAA27A0053AAEE /* NSAttributedString+WJAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0DDEFC1ECAA27A0053AAEE /* NSAttributedString+WJAttribute.m */; };
+		5A0DDF011ECAA27A0053AAEE /* NSString+WJAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0DDEFE1ECAA27A0053AAEE /* NSString+WJAttribute.m */; };
+		5A0DDF051ECAA6370053AAEE /* CertificateProgressQueryVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0DDF031ECAA6370053AAEE /* CertificateProgressQueryVC.m */; };
+		5A0DDF061ECAA6370053AAEE /* CertificateProgressQueryVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A0DDF041ECAA6370053AAEE /* CertificateProgressQueryVC.xib */; };
 		5A86276F1EC980BF008FA467 /* xx@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A86276E1EC980BF008FA467 /* xx@2x.png */; };
 		5A8627711EC980DC008FA467 /* xx@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A8627701EC980DC008FA467 /* xx@3x.png */; };
 		5A8627751EC98305008FA467 /* DirectorMailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A8627731EC98305008FA467 /* DirectorMailVC.m */; };
@@ -864,6 +874,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5A0DDEEC1ECA928E0053AAEE /* spz@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "spz@2x.png"; sourceTree = "<group>"; };
+		5A0DDEEE1ECA92A70053AAEE /* spz@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "spz@3x.png"; sourceTree = "<group>"; };
+		5A0DDEF01ECA92CD0053AAEE /* crj@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "crj@3x.png"; sourceTree = "<group>"; };
+		5A0DDEF21ECA92E10053AAEE /* crj@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "crj@2x.png"; sourceTree = "<group>"; };
+		5A0DDEF41ECA96C00053AAEE /* StrangeWordQueryVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StrangeWordQueryVC.h; sourceTree = "<group>"; };
+		5A0DDEF51ECA96C00053AAEE /* StrangeWordQueryVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StrangeWordQueryVC.m; sourceTree = "<group>"; };
+		5A0DDEF61ECA96C00053AAEE /* StrangeWordQueryVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StrangeWordQueryVC.xib; sourceTree = "<group>"; };
+		5A0DDEFB1ECAA27A0053AAEE /* NSAttributedString+WJAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+WJAttribute.h"; sourceTree = "<group>"; };
+		5A0DDEFC1ECAA27A0053AAEE /* NSAttributedString+WJAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+WJAttribute.m"; sourceTree = "<group>"; };
+		5A0DDEFD1ECAA27A0053AAEE /* NSString+WJAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+WJAttribute.h"; sourceTree = "<group>"; };
+		5A0DDEFE1ECAA27A0053AAEE /* NSString+WJAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+WJAttribute.m"; sourceTree = "<group>"; };
+		5A0DDEFF1ECAA27A0053AAEE /* WJAttributeString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJAttributeString.h; sourceTree = "<group>"; };
+		5A0DDF021ECAA6370053AAEE /* CertificateProgressQueryVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CertificateProgressQueryVC.h; sourceTree = "<group>"; };
+		5A0DDF031ECAA6370053AAEE /* CertificateProgressQueryVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CertificateProgressQueryVC.m; sourceTree = "<group>"; };
+		5A0DDF041ECAA6370053AAEE /* CertificateProgressQueryVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CertificateProgressQueryVC.xib; sourceTree = "<group>"; };
 		5A86276E1EC980BF008FA467 /* xx@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "xx@2x.png"; sourceTree = "<group>"; };
 		5A8627701EC980DC008FA467 /* xx@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "xx@3x.png"; sourceTree = "<group>"; };
 		5A8627721EC98305008FA467 /* DirectorMailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirectorMailVC.h; sourceTree = "<group>"; };
@@ -1694,6 +1719,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5A0DDEFA1ECAA27A0053AAEE /* WJAttributeString */ = {
+			isa = PBXGroup;
+			children = (
+				5A0DDEFB1ECAA27A0053AAEE /* NSAttributedString+WJAttribute.h */,
+				5A0DDEFC1ECAA27A0053AAEE /* NSAttributedString+WJAttribute.m */,
+				5A0DDEFD1ECAA27A0053AAEE /* NSString+WJAttribute.h */,
+				5A0DDEFE1ECAA27A0053AAEE /* NSString+WJAttribute.m */,
+				5A0DDEFF1ECAA27A0053AAEE /* WJAttributeString.h */,
+			);
+			path = WJAttributeString;
+			sourceTree = "<group>";
+		};
 		CB2DB1201E66B37A00D4FA40 /* 业务办理 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1752,6 +1789,12 @@
 				CBE0CF931E67BBF40027DAD2 /* QueryLostThingsVC.xib */,
 				CBE0CF961E67BFF50027DAD2 /* QueryLostThingsResultVC.h */,
 				CBE0CF971E67BFF50027DAD2 /* QueryLostThingsResultVC.m */,
+				5A0DDEF41ECA96C00053AAEE /* StrangeWordQueryVC.h */,
+				5A0DDEF51ECA96C00053AAEE /* StrangeWordQueryVC.m */,
+				5A0DDEF61ECA96C00053AAEE /* StrangeWordQueryVC.xib */,
+				5A0DDF021ECAA6370053AAEE /* CertificateProgressQueryVC.h */,
+				5A0DDF031ECAA6370053AAEE /* CertificateProgressQueryVC.m */,
+				5A0DDF041ECAA6370053AAEE /* CertificateProgressQueryVC.xib */,
 			);
 			name = "综合查询";
 			sourceTree = "<group>";
@@ -2054,6 +2097,8 @@
 		CBB02AE11E6FFFF0001EFCBA /* 2x */ = {
 			isa = PBXGroup;
 			children = (
+				5A0DDEF21ECA92E10053AAEE /* crj@2x.png */,
+				5A0DDEEC1ECA928E0053AAEE /* spz@2x.png */,
 				CBB02AE21E6FFFF0001EFCBA /* cm@2x.png */,
 				CBB02AE31E6FFFF0001EFCBA /* cx@2x.png */,
 				CBB02AE41E6FFFF0001EFCBA /* jdc@2x.png */,
@@ -2068,6 +2113,8 @@
 		CBB02AE91E6FFFF0001EFCBA /* 3x */ = {
 			isa = PBXGroup;
 			children = (
+				5A0DDEF01ECA92CD0053AAEE /* crj@3x.png */,
+				5A0DDEEE1ECA92A70053AAEE /* spz@3x.png */,
 				CBB02AEA1E6FFFF0001EFCBA /* cm@3x.png */,
 				CBB02AEB1E6FFFF0001EFCBA /* cx@3x.png */,
 				CBB02AEC1E6FFFF0001EFCBA /* jdc@3x.png */,
@@ -2615,6 +2662,7 @@
 		CBD98FF51E4ABC6A00C09DD2 /* FosungUI */ = {
 			isa = PBXGroup;
 			children = (
+				5A0DDEFA1ECAA27A0053AAEE /* WJAttributeString */,
 				CBC8BCFC1E72A146004C8D5A /* WJHUD.h */,
 				CBC8BCFD1E72A146004C8D5A /* WJHUD.m */,
 				CB3F5C251E5C19540013FCEF /* WJTextView.h */,
@@ -3346,6 +3394,7 @@
 				CB6163CA1E5E8A3C002FD980 /* sfzyy.png in Resources */,
 				CBD991E01E4BFC4400C09DD2 /* mapapi.bundle in Resources */,
 				CB6163DE1E5E8A3C002FD980 /* yy_jzyw.png in Resources */,
+				5A0DDF061ECAA6370053AAEE /* CertificateProgressQueryVC.xib in Resources */,
 				CBAF39501E9B6525005BB9C7 /* MyConsultingDetailVC.xib in Resources */,
 				CBB02B1B1E6FFFF9001EFCBA /* ts@3x.png in Resources */,
 				CB6163E11E5E8A3C002FD980 /* yy_sfzbl.png in Resources */,
@@ -3389,6 +3438,7 @@
 				CB6164151E5EC8A9002FD980 /* wypj.png in Resources */,
 				CB6163E61E5E8A3C002FD980 /* yy_wyjy.png in Resources */,
 				CB6163D81E5E8A3C002FD980 /* yy_jdc.png in Resources */,
+				5A0DDEF31ECA92E10053AAEE /* crj@2x.png in Resources */,
 				CB6164101E5EC8A9002FD980 /* jwrx.png in Resources */,
 				CB6163B81E5E8A3C002FD980 /* 07.png in Resources */,
 				CBB02B181E6FFFF9001EFCBA /* jw@3x.png in Resources */,
@@ -3465,6 +3515,7 @@
 				CBD9919E1E4AEEE100C09DD2 /* MediaController.xib in Resources */,
 				CB42B9E91E5157B00092CE91 /* RegisterVC.xib in Resources */,
 				CBB02AB91E6CF8E5001EFCBA /* xinfangmhq@3x.png in Resources */,
+				5A0DDEED1ECA928F0053AAEE /* spz@2x.png in Resources */,
 				CBB02B271E6FFFFF001EFCBA /* crj@2x.png in Resources */,
 				5A8627711EC980DC008FA467 /* xx@3x.png in Resources */,
 				CB6163B61E5E8A3C002FD980 /* 05.png in Resources */,
@@ -3482,6 +3533,7 @@
 				CB42BA521E56E7450092CE91 /* ReservationOnlineTableCell.xib in Resources */,
 				CBB02B151E6FFFF9001EFCBA /* xf@2x.png in Resources */,
 				CBD991981E4AEEE100C09DD2 /* InteractionVC.xib in Resources */,
+				5A0DDEEF1ECA92A70053AAEE /* spz@3x.png in Resources */,
 				CB61636F1E5E89FC002FD980 /* app_square.txt in Resources */,
 				CB42BA1A1E5447B20092CE91 /* HomeCollectionViewCell.xib in Resources */,
 				CB6163E41E5E8A3C002FD980 /* yy_wjyw.png in Resources */,
@@ -3532,12 +3584,14 @@
 				CBB02AB81E6CF8E5001EFCBA /* wangjing@3x.png in Resources */,
 				CB6163CB1E5E8A3C002FD980 /* shiwqr.png in Resources */,
 				CB6164191E5EC8A9002FD980 /* zfba.png in Resources */,
+				5A0DDEF81ECA96C00053AAEE /* StrangeWordQueryVC.xib in Resources */,
 				CBD9920D1E4D6D8800C09DD2 /* LoginVC.xib in Resources */,
 				CBB02B521E7001F0001EFCBA /* mhq@3x.png in Resources */,
 				CB6163E91E5E8A3C002FD980 /* yy_wyxf.png in Resources */,
 				CBB02AF21E6FFFF0001EFCBA /* cx@2x.png in Resources */,
 				CBE0CF811E66C74A0027DAD2 /* QueryDriverPeccancyVC.xib in Resources */,
 				CBAF39381E98C73B005BB9C7 /* CommonWebViewController.xib in Resources */,
+				5A0DDEF11ECA92CD0053AAEE /* crj@3x.png in Resources */,
 				CBB02B291E6FFFFF001EFCBA /* jg@2x.png in Resources */,
 				CB6163B21E5E8A3C002FD980 /* 01.png in Resources */,
 				CB6163BE1E5E8A3C002FD980 /* banshi.png in Resources */,
@@ -3675,6 +3729,7 @@
 				CBD98EEA1E4AB37A00C09DD2 /* AFURLSessionManager.m in Sources */,
 				CBD990631E4AC64800C09DD2 /* MASViewAttribute.m in Sources */,
 				CBD98E871E4AB37A00C09DD2 /* FSJSONModelError.m in Sources */,
+				5A0DDF051ECAA6370053AAEE /* CertificateProgressQueryVC.m in Sources */,
 				CBE312ED1E77EC0F000E1025 /* LostItemDataModel.m in Sources */,
 				CB6163661E5E8863002FD980 /* AffairsGuideSubDataModel.m in Sources */,
 				CB42BA4D1E56E4AB0092CE91 /* ReservationOnlineVC.m in Sources */,
@@ -3759,6 +3814,7 @@
 				CBD991131E4ACC0300C09DD2 /* MJRefreshFooter.m in Sources */,
 				CBD9902C1E4ABCC100C09DD2 /* TapGestureLabel.m in Sources */,
 				CBD990291E4ABCC100C09DD2 /* ScrollMessageView.m in Sources */,
+				5A0DDEF71ECA96C00053AAEE /* StrangeWordQueryVC.m in Sources */,
 				CB2DB12B1E66BBA300D4FA40 /* QueryLostMenDetailVC.m in Sources */,
 				CB3F5C871E5D8E2D0013FCEF /* RecommendVC.m in Sources */,
 				CBE0CF981E67BFF50027DAD2 /* QueryLostThingsResultVC.m in Sources */,
@@ -3834,6 +3890,7 @@
 				CB42B9FA1E52A0510092CE91 /* MyBusinessTableCell.m in Sources */,
 				CBD98FFA1E4ABCAC00C09DD2 /* AlignVerticalLabel.m in Sources */,
 				CBD98E781E4AB37A00C09DD2 /* FSCoreDataManager+Private.m in Sources */,
+				5A0DDF011ECAA27A0053AAEE /* NSString+WJAttribute.m in Sources */,
 				CBD9905A1E4AC64800C09DD2 /* MASConstraint.m in Sources */,
 				CB3F5BF71E5AEBDC0013FCEF /* MultipleQueryVC.m in Sources */,
 				CB3F5C921E5D90A30013FCEF /* ServiceMapDataModel.m in Sources */,
@@ -3871,6 +3928,7 @@
 				CBD990BE1E4AC7FF00C09DD2 /* IQToolbar.m in Sources */,
 				CBD98FA01E4AB80B00C09DD2 /* NSURLRequest+Header.m in Sources */,
 				CBD98EE71E4AB37A00C09DD2 /* AFURLResponseSerialization.m in Sources */,
+				5A0DDF001ECAA27A0053AAEE /* NSAttributedString+WJAttribute.m in Sources */,
 				CBD98EDB1E4AB37A00C09DD2 /* AFHTTPSessionManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

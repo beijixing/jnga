@@ -78,7 +78,16 @@
             [self pushViewControllerWithName:@"PoliceServiceMapVC" from:vc];
         }
             break;
-            
+        case 7:
+        {
+            [self pushViewControllerWithName:@"StrangeWordQueryVC" from:vc];
+        }
+            break;
+        case 8:
+        {
+            [self pushViewControllerWithName:@"CertificateProgressQueryVC" from:vc];
+        }
+            break;
         default:
             break;
     }

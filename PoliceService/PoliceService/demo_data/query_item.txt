@@ -35,6 +35,16 @@
             "id":6,
             "operate_name": "警务地图",
             "img_url": "rx"
+        },
+        {
+            "id":7,
+            "operate_name": "生僻字查询",
+            "img_url": "spz"
+        },
+        {
+            "id":8,
+            "operate_name": "出入境证件办理进度查询",
+            "img_url": "crj"
         }
     ]
 }
