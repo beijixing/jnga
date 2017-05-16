@@ -35,6 +35,11 @@
             "id":6,
             "operate_name": "我要评警",
             "img_url": "pj"
-        }
+        },
+        {
+            "id":6,
+            "operate_name": "局长信箱",
+            "img_url": "xx"
+}
     ]
 }

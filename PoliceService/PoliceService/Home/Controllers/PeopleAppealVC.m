@@ -15,6 +15,7 @@
 #import "PeopleAppealDataModel.h"
 #import "GlobalFunctionManager.h"
 #import "UIApplication+CallSystemApp.h"
+#import "DirectorMailVC.h"
 @interface PeopleAppealVC ()<UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 @property(nonatomic, strong)UICollectionView *mainCollectionView;
 @property(nonatomic, strong) NSArray *headerTitleArr;
@@ -39,7 +40,7 @@
 
 #pragma mark --UITableViewDelegate/UITableViewDataSource
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 7;
+    return 8;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -72,6 +73,9 @@
     }else if(indexPath.row == 6) {
         CommentPoliceVC *commentVc = [[CommentPoliceVC alloc] init];
         [self.navigationController pushViewController:commentVc animated:YES];
+    }else if(indexPath.row == 7) {
+        DirectorMailVC *commentVc = [[DirectorMailVC alloc] init];
+        [self.navigationController pushViewController:commentVc animated:YES];
     }
 }
 
@@ -100,7 +104,7 @@
     if (_headerTitleArr) {
         return _headerTitleArr;
     }
-    _headerTitleArr = @[@"警务热线", @"我要举报", @"我要建议", @"我要投诉", @"我要咨询", @"我要上访", @"我要评警"];
+    _headerTitleArr = @[@"警务热线", @"我要举报", @"我要建议", @"我要投诉", @"我要咨询", @"我要上访", @"我要评警", @"局长信箱"];
     
     return _headerTitleArr;
 }
