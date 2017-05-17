@@ -45,6 +45,21 @@
             "id":8,
             "operate_name": "出入境证件办理进度查询",
             "img_url": "crj"
+        },
+        {
+            "id":9,
+            "operate_name": "高速路况",
+            "img_url": "rx"
+        },
+        {
+            "id":10,
+            "operate_name": "违法犯罪线索有奖举报奖励查询",
+            "img_url": "spz"
+        },
+        {
+            "id":11,
+            "operate_name": "违法犯罪线索有奖举报兑奖",
+            "img_url": "crj"
         }
     ]
 }

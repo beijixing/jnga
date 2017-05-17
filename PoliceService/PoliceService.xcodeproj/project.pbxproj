@@ -17,6 +17,12 @@
 		5A0DDF011ECAA27A0053AAEE /* NSString+WJAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0DDEFE1ECAA27A0053AAEE /* NSString+WJAttribute.m */; };
 		5A0DDF051ECAA6370053AAEE /* CertificateProgressQueryVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0DDF031ECAA6370053AAEE /* CertificateProgressQueryVC.m */; };
 		5A0DDF061ECAA6370053AAEE /* CertificateProgressQueryVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A0DDF041ECAA6370053AAEE /* CertificateProgressQueryVC.xib */; };
+		5A53F0D31ECC262A00162B2F /* HightWayStatusVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A53F0D11ECC262A00162B2F /* HightWayStatusVC.m */; };
+		5A53F0D41ECC262A00162B2F /* HightWayStatusVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A53F0D21ECC262A00162B2F /* HightWayStatusVC.xib */; };
+		5A53F0DC1ECC283F00162B2F /* Colligation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A53F0DB1ECC283F00162B2F /* Colligation.storyboard */; };
+		5A53F0DF1ECC2C8500162B2F /* RewardQueryTabelVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A53F0DE1ECC2C8500162B2F /* RewardQueryTabelVC.m */; };
+		5A53F0E21ECC2CC300162B2F /* CashPrizeTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A53F0E11ECC2CC300162B2F /* CashPrizeTableVC.m */; };
+		5A53F0E51ECC336600162B2F /* BaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A53F0E41ECC336600162B2F /* BaseTableViewController.m */; };
 		5A86276F1EC980BF008FA467 /* xx@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A86276E1EC980BF008FA467 /* xx@2x.png */; };
 		5A8627711EC980DC008FA467 /* xx@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A8627701EC980DC008FA467 /* xx@3x.png */; };
 		5A8627751EC98305008FA467 /* DirectorMailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A8627731EC98305008FA467 /* DirectorMailVC.m */; };
@@ -889,6 +895,16 @@
 		5A0DDF021ECAA6370053AAEE /* CertificateProgressQueryVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CertificateProgressQueryVC.h; sourceTree = "<group>"; };
 		5A0DDF031ECAA6370053AAEE /* CertificateProgressQueryVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CertificateProgressQueryVC.m; sourceTree = "<group>"; };
 		5A0DDF041ECAA6370053AAEE /* CertificateProgressQueryVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CertificateProgressQueryVC.xib; sourceTree = "<group>"; };
+		5A53F0D01ECC262A00162B2F /* HightWayStatusVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HightWayStatusVC.h; sourceTree = "<group>"; };
+		5A53F0D11ECC262A00162B2F /* HightWayStatusVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HightWayStatusVC.m; sourceTree = "<group>"; };
+		5A53F0D21ECC262A00162B2F /* HightWayStatusVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HightWayStatusVC.xib; sourceTree = "<group>"; };
+		5A53F0DB1ECC283F00162B2F /* Colligation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Colligation.storyboard; sourceTree = "<group>"; };
+		5A53F0DD1ECC2C8500162B2F /* RewardQueryTabelVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RewardQueryTabelVC.h; sourceTree = "<group>"; };
+		5A53F0DE1ECC2C8500162B2F /* RewardQueryTabelVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RewardQueryTabelVC.m; sourceTree = "<group>"; };
+		5A53F0E01ECC2CC300162B2F /* CashPrizeTableVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CashPrizeTableVC.h; sourceTree = "<group>"; };
+		5A53F0E11ECC2CC300162B2F /* CashPrizeTableVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CashPrizeTableVC.m; sourceTree = "<group>"; };
+		5A53F0E31ECC336600162B2F /* BaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableViewController.h; sourceTree = "<group>"; };
+		5A53F0E41ECC336600162B2F /* BaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewController.m; sourceTree = "<group>"; };
 		5A86276E1EC980BF008FA467 /* xx@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "xx@2x.png"; sourceTree = "<group>"; };
 		5A8627701EC980DC008FA467 /* xx@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "xx@3x.png"; sourceTree = "<group>"; };
 		5A8627721EC98305008FA467 /* DirectorMailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirectorMailVC.h; sourceTree = "<group>"; };
@@ -1795,6 +1811,14 @@
 				5A0DDF021ECAA6370053AAEE /* CertificateProgressQueryVC.h */,
 				5A0DDF031ECAA6370053AAEE /* CertificateProgressQueryVC.m */,
 				5A0DDF041ECAA6370053AAEE /* CertificateProgressQueryVC.xib */,
+				5A53F0D01ECC262A00162B2F /* HightWayStatusVC.h */,
+				5A53F0D11ECC262A00162B2F /* HightWayStatusVC.m */,
+				5A53F0D21ECC262A00162B2F /* HightWayStatusVC.xib */,
+				5A53F0DD1ECC2C8500162B2F /* RewardQueryTabelVC.h */,
+				5A53F0DE1ECC2C8500162B2F /* RewardQueryTabelVC.m */,
+				5A53F0E01ECC2CC300162B2F /* CashPrizeTableVC.h */,
+				5A53F0E11ECC2CC300162B2F /* CashPrizeTableVC.m */,
+				5A53F0DB1ECC283F00162B2F /* Colligation.storyboard */,
 			);
 			name = "综合查询";
 			sourceTree = "<group>";
@@ -2982,6 +3006,8 @@
 				CBD991541E4AEDDE00C09DD2 /* BaseViewController.m */,
 				CBD991551E4AEDDE00C09DD2 /* BlueNavigationController.h */,
 				CBD991561E4AEDDE00C09DD2 /* BlueNavigationController.m */,
+				5A53F0E31ECC336600162B2F /* BaseTableViewController.h */,
+				5A53F0E41ECC336600162B2F /* BaseTableViewController.m */,
 			);
 			path = BaseViewController;
 			sourceTree = "<group>";
@@ -3420,6 +3446,7 @@
 				CBB02B491E7001F0001EFCBA /* mhq@2x.png in Resources */,
 				CB3F5C0E1E5BEFFC0013FCEF /* SuggestionVC.xib in Resources */,
 				CB3F5CA01E5E70060013FCEF /* RecommendCollectionViewCell.xib in Resources */,
+				5A53F0DC1ECC283F00162B2F /* Colligation.storyboard in Resources */,
 				CBB02AFA1E6FFFF0001EFCBA /* jdc@3x.png in Resources */,
 				CB6163C41E5E8A3C002FD980 /* hukzx.png in Resources */,
 				CB6163D51E5E8A3C002FD980 /* yy_hkdj.png in Resources */,
@@ -3566,6 +3593,7 @@
 				CB6163FB1E5EC4AF002FD980 /* complaint_item.txt in Resources */,
 				CB3F5C211E5BF19C0013FCEF /* AffairsGuideDetailVC.xib in Resources */,
 				CB6163E71E5E8A3C002FD980 /* yy_wypj.png in Resources */,
+				5A53F0D41ECC262A00162B2F /* HightWayStatusVC.xib in Resources */,
 				5A8627761EC98305008FA467 /* DirectorMailVC.xib in Resources */,
 				CBAF39431E9B3599005BB9C7 /* jingwuzixun@3x.png in Resources */,
 				CBB02B141E6FFFF8001EFCBA /* ts@2x.png in Resources */,
@@ -3671,6 +3699,7 @@
 				CBD98E931E4AB37A00C09DD2 /* UIButton+FSWebCache.m in Sources */,
 				CBD991191E4ACC0300C09DD2 /* MJRefreshAutoGifFooter.m in Sources */,
 				CBD98FAC1E4AB82500C09DD2 /* UIView+Additions.m in Sources */,
+				5A53F0DF1ECC2C8500162B2F /* RewardQueryTabelVC.m in Sources */,
 				CB42BA0A1E52D76D0092CE91 /* MyConsultingTableCell.m in Sources */,
 				CBD990691E4AC64800C09DD2 /* NSArray+MASAdditions.m in Sources */,
 				CB3F5C9F1E5E70060013FCEF /* RecommendCollectionViewCell.m in Sources */,
@@ -3703,6 +3732,7 @@
 				CBD990A31E4AC7FF00C09DD2 /* IQUIView+Hierarchy.m in Sources */,
 				CBD990661E4AC64800C09DD2 /* MASViewConstraint.m in Sources */,
 				CB2DB1271E66B4A200D4FA40 /* QueryLostMenVC.m in Sources */,
+				5A53F0E21ECC2CC300162B2F /* CashPrizeTableVC.m in Sources */,
 				CBD990201E4ABCC100C09DD2 /* GesturePasswordButton.m in Sources */,
 				CBD991431E4ACC0300C09DD2 /* UIView+MJExtension.m in Sources */,
 				CBD991311E4ACC0300C09DD2 /* MJRefreshStateHeader.m in Sources */,
@@ -3735,6 +3765,7 @@
 				CB42BA4D1E56E4AB0092CE91 /* ReservationOnlineVC.m in Sources */,
 				CBD9915A1E4AEDDE00C09DD2 /* BaseViewController.m in Sources */,
 				CBD990601E4AC64800C09DD2 /* MASLayoutConstraint.m in Sources */,
+				5A53F0D31ECC262A00162B2F /* HightWayStatusVC.m in Sources */,
 				CBE0CFBA1E6959270027DAD2 /* RequestService.m in Sources */,
 				CBD990571E4AC64800C09DD2 /* MASCompositeConstraint.m in Sources */,
 				CBD991841E4AEDFF00C09DD2 /* PoliceWeiboVC.m in Sources */,
@@ -3745,6 +3776,7 @@
 				CBB02AD21E6E95E2001EFCBA /* GlobalVariableManager.m in Sources */,
 				CB42B9E81E5157B00092CE91 /* RegisterVC.m in Sources */,
 				CBD9911F1E4ACC0300C09DD2 /* MJRefreshAutoStateFooter.m in Sources */,
+				5A53F0E51ECC336600162B2F /* BaseTableViewController.m in Sources */,
 				CB3F5C271E5C19540013FCEF /* WJTextView.m in Sources */,
 				CBD98EFF1E4AB37A00C09DD2 /* JSONValueTransformer.m in Sources */,
 				CBE0CF851E67A6350027DAD2 /* DriverPeccancyResultVC.m in Sources */,
