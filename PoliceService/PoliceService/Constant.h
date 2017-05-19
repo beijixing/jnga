@@ -35,6 +35,39 @@ static const NSString *businessId = @"38ed36f8307443fa9765e35f6db0c032";
 
 #define Interface_PoliceMapList @"convenience/policemap/policeMap/wrapList"//警务地图列表
 
+
+/*
+ 参数名，类型，说明
+ sign
+ */
+#define Interface_BusicClass @"arch/busiclass"//户政业务大类
+/*
+ 参数名，类型，说明
+ id
+ sign
+ */
+#define Interface_SubBusicClass @"arch/business"//户政业务子类
+
+/*
+ 参数名，类型，说明
+ sign
+ */
+#define Interface_ArchPeriod @"arch/period"//户政时间段
+
+/*
+ 参数名，类型，说明
+ sign
+ */
+#define Interface_ArchPolice @"arch/police"//户政公安局
+
+/*
+ 参数名，类型，说明
+ id
+ sign
+ */
+#define Interface_ArchStation @"convenience/station"//户政派出所
+
+
 /*
  参数名，类型，说明
  id String 待查姓名

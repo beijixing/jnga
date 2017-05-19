@@ -24,6 +24,12 @@
 
 +(void)getPoliceServiceMapDataWithParamDict:(NSDictionary *)paramDict resultBlock:(void(^)(BOOL success,id object))resultBlock;
 
++(void)getArchBusicClassWithParamDict:(NSDictionary *)paramDict resultBlock:(void(^)(BOOL success,id object))resultBlock;
++ (void)getArchSubBusiClassWithParamDic:(NSDictionary *)paramDict resultBlock:(void (^)(BOOL success, id object))resultBlock;
++ (void)getArchPeriodWithResultBlock:(void (^)(BOOL success, id object))resultBlock;
++ (void)getArchPoliceWithResultBlock:(void (^)(BOOL success, id object))resultBlock;
++ (void)getArchStationWithParamDict:(NSDictionary *)paramDict resultBlock:(void (^)(BOOL success, id object))resultBlock;
+
 +(void)getNameNumWithParamDict:(NSDictionary *)paramDict resultBlock:(void(^)(BOOL success,id object))resultBlock;
 
 +(void)getStrayManListWithParamDict:(NSDictionary *)paramDict resultBlock:(void(^)(BOOL success,id object))resultBlock;

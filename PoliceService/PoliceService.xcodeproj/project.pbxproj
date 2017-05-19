@@ -11,6 +11,7 @@
 		5A8627711EC980DC008FA467 /* xx@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A8627701EC980DC008FA467 /* xx@3x.png */; };
 		5A8627751EC98305008FA467 /* DirectorMailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A8627731EC98305008FA467 /* DirectorMailVC.m */; };
 		5A8627761EC98305008FA467 /* DirectorMailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A8627741EC98305008FA467 /* DirectorMailVC.xib */; };
+		CB2C84941ECAF6270092B558 /* ReservationHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = CB2C84931ECAF6270092B558 /* ReservationHandle.m */; };
 		CB2DB1191E66A5D200D4FA40 /* CheckVersionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CB2DB1171E66A5D200D4FA40 /* CheckVersionVC.m */; };
 		CB2DB11A1E66A5D200D4FA40 /* CheckVersionVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB2DB1181E66A5D200D4FA40 /* CheckVersionVC.xib */; };
 		CB2DB11E1E66ADBE00D4FA40 /* ChangePasswordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CB2DB11C1E66ADBE00D4FA40 /* ChangePasswordVC.m */; };
@@ -869,6 +870,8 @@
 		5A8627721EC98305008FA467 /* DirectorMailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirectorMailVC.h; sourceTree = "<group>"; };
 		5A8627731EC98305008FA467 /* DirectorMailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DirectorMailVC.m; sourceTree = "<group>"; };
 		5A8627741EC98305008FA467 /* DirectorMailVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DirectorMailVC.xib; sourceTree = "<group>"; };
+		CB2C84921ECAF6270092B558 /* ReservationHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReservationHandle.h; sourceTree = "<group>"; };
+		CB2C84931ECAF6270092B558 /* ReservationHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReservationHandle.m; sourceTree = "<group>"; };
 		CB2DB1161E66A5D200D4FA40 /* CheckVersionVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckVersionVC.h; sourceTree = "<group>"; };
 		CB2DB1171E66A5D200D4FA40 /* CheckVersionVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckVersionVC.m; sourceTree = "<group>"; };
 		CB2DB1181E66A5D200D4FA40 /* CheckVersionVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CheckVersionVC.xib; sourceTree = "<group>"; };
@@ -1764,6 +1767,8 @@
 				CB42BA531E56EC5C0092CE91 /* ReservationDetailVC.h */,
 				CB42BA541E56EC5C0092CE91 /* ReservationDetailVC.m */,
 				CB42BA551E56EC5C0092CE91 /* ReservationDetailVC.xib */,
+				CB2C84921ECAF6270092B558 /* ReservationHandle.h */,
+				CB2C84931ECAF6270092B558 /* ReservationHandle.m */,
 				CBB02AC81E6E8472001EFCBA /* ReservationNoticeVC.h */,
 				CBB02AC91E6E8472001EFCBA /* ReservationNoticeVC.m */,
 				CBB02ACA1E6E8472001EFCBA /* ReservationNoticeVC.xib */,
@@ -3767,6 +3772,7 @@
 				CB3F5BFB1E5AED7D0013FCEF /* SimilarNameQueryVC.m in Sources */,
 				CBD98F0B1E4AB37A00C09DD2 /* README.md in Sources */,
 				CBD98F111E4AB37A00C09DD2 /* SDWebImageCompat.m in Sources */,
+				CB2C84941ECAF6270092B558 /* ReservationHandle.m in Sources */,
 				CBD98EE11E4AB37A00C09DD2 /* AFSecurityPolicy.m in Sources */,
 				CBD990D21E4ACB3E00C09DD2 /* README.mdown in Sources */,
 				CBD990231E4ABCC100C09DD2 /* GesturePasswordView.m in Sources */,

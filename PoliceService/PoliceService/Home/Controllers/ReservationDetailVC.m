@@ -16,14 +16,21 @@
 #import "RequestService.h"
 #import "WJHUD.h"
 #import "GlobalFunctionManager.h"
+#import "ReservationHandle.h"
+
+
 @interface ReservationDetailVC ()
+    
+
 @property (strong, nonatomic) IBOutlet UILabel *subbureauLabel;
 @property (strong, nonatomic) IBOutlet UILabel *policeSubstationLabel;
 @property (strong, nonatomic) IBOutlet UILabel *dateLabel;
 @property (strong, nonatomic) IBOutlet UILabel *durationLabel;
 @property (strong, nonatomic) UIView *dateContainerView;
 @property (strong, nonatomic) UIDatePicker *datePicker;
+@property (weak, nonatomic) IBOutlet UILabel *policeCategoryLabel;
 
+@property (nonatomic, strong) NSString *selectedArchBusicClassId;
 @property(nonatomic, strong) NSString *selectedPoliceSubstationId;
 @property(nonatomic, strong) NSString *selectedSubbureauId;
 @property(nonatomic, strong) NSString *selectedDurationId;
@@ -35,22 +42,29 @@
 @property(nonatomic, strong) NSString *businessId;
 @property(nonatomic, strong) NSArray *businessInfoArr;
 @property(nonatomic, strong) NSString *selectedBusiness;
-//@property (strong, nonatomic) PopoverView *popoverView;
 @property (strong, nonatomic) IBOutlet NSLayoutConstraint *businessHeightConstraint;
 @property (strong, nonatomic) IBOutlet UIView *jgywView;
 @property (strong, nonatomic) IBOutlet UILabel *businessLabel;
 @property (nonatomic) BOOL isSelectDate;
+
+//vm
+@property (nonatomic, strong) ReservationHandle *handle;
+
 @end
 
 @implementation ReservationDetailVC
 
 -(void)viewWillAppear:(BOOL)animated {
+  
     [super viewWillAppear: animated];
     if([self.keyword isEqualToString:@"jgyy"]){
         self.businessHeightConstraint.constant = 55;
         self.jgywView.hidden = NO;
         [self getJgyyBusinessInfo];
-    }else {
+    }else if ([self.keyword isEqualToString:@"hzhyy"]){
+        
+    }
+    else {
         self.businessHeightConstraint.constant = 0;
         self.jgywView.hidden = YES;
     }
@@ -63,6 +77,9 @@
     [self setUpLeftNavbarItem];
     [self getDepartmentData];
     [self getBusinessNotice];
+    
+    self.handle = [ReservationHandle new];
+    self.handle.keyword = self.keyword;
 }
 
 - (void)getJgyyBusinessInfo {
@@ -209,6 +226,47 @@
     }];
 }
 
+- (IBAction)policeCategoryLabelAction:(UITapGestureRecognizer *)sender {
+    
+    typeof(self) __weak wself = self;
+//    [RequestService getArchBusicClassWithParamDict:@{} resultBlock:^(BOOL success, id object) {
+//        if (success) {
+//            if ([[object objectForKey:@"error_code"] integerValue] == 0) {
+//                NSArray *ary = [object objectForKey: @"data"];
+//                NSMutableArray *popOverActions = [[NSMutableArray alloc] init];
+//                
+//                for (NSDictionary* subbureauDict in ary) {
+//                    PopoverAction *action = [PopoverAction actionWithTitle:subbureauDict[@"text"] handler:^(PopoverAction *action) {
+//                        wself.policeCategoryLabel.text = action.title;
+//                        wself.selectedArchBusicClassId = subbureauDict[@"value"];
+//                    }];
+//                    [popOverActions addObject:action];
+//                }
+//                [self showPopoverViewWithView:sender.view actions:popOverActions];
+//            }
+//        }
+//        
+//    }];
+    
+    [self.handle getBusiClassAry:^(id ary, BOOL success) {
+        if (success) {
+            NSMutableArray *popOverActions = [[NSMutableArray alloc] init];
+            
+            for (NSDictionary* subbureauDict in ary) {
+                PopoverAction *action = [PopoverAction actionWithTitle:subbureauDict[@"text"] handler:^(PopoverAction *action) {
+                    wself.policeCategoryLabel.text = action.title;
+                    wself.selectedArchBusicClassId = subbureauDict[@"value"];
+                    wself.handle.busiClassId = subbureauDict[@"value"];
+                }];
+                [popOverActions addObject:action];
+            }
+            [wself showPopoverViewWithView:sender.view actions:popOverActions];
+        }
+    }];
+
+    
+   
+}
 
 - (IBAction)subbureauLabelAction:(UITapGestureRecognizer * )sender {
         NSMutableArray *popOverActions = [[NSMutableArray alloc] init];
@@ -224,6 +282,9 @@
         }
     
    [self showPopoverViewWithView:sender.view actions:popOverActions];
+    
+
+
 }
 - (IBAction)policeSubstationLabelAcion:(UITapGestureRecognizer *)sender {
         NSMutableArray *popOverActions = [[NSMutableArray alloc] init];
@@ -291,19 +352,34 @@
 - (IBAction)selectBusinessAction:(UITapGestureRecognizer *)sender {
     //选择业务
     NSLog(@"selectBusiness");
-    NSMutableArray *popOverActions = [[NSMutableArray alloc] init];
+//    NSMutableArray *popOverActions = [[NSMutableArray alloc] init];
     typeof(self) __weak wself = self;
-    for (NSDictionary*businessDict in self.businessInfoArr) {
-        NSString *des = businessDict[@"label"];
-        
-        PopoverAction *action = [PopoverAction actionWithTitle:des handler:^(PopoverAction *action) {
-            wself.businessLabel.text = action.title;
-            wself.selectedBusiness = businessDict[@"value"];
-        }];
-        [popOverActions addObject:action];
-    }
+//    for (NSDictionary*businessDict in self.businessInfoArr) {
+//        NSString *des = businessDict[@"label"];
+//        
+//        PopoverAction *action = [PopoverAction actionWithTitle:des handler:^(PopoverAction *action) {
+//            wself.businessLabel.text = action.title;
+//            wself.selectedBusiness = businessDict[@"value"];
+//        }];
+//        [popOverActions addObject:action];
+//    }
+//    
+//    [self showPopoverViewWithView:sender.view actions:popOverActions];
     
-    [self showPopoverViewWithView:sender.view actions:popOverActions];
+    [self.handle getSubBusiClassAry:^(id ary, BOOL success) {
+        if (success) {
+            NSMutableArray *popOverActions = [[NSMutableArray alloc] init];
+            for (NSDictionary* subbureauDict in ary) {
+                PopoverAction *action = [PopoverAction actionWithTitle:subbureauDict[@"text"] handler:^(PopoverAction *action) {
+                    wself.businessLabel.text = action.title;
+                    wself.selectedBusiness = subbureauDict[@"value"];
+                }];
+                [popOverActions addObject:action];
+            }
+            [wself showPopoverViewWithView:sender.view actions:popOverActions];
+        }
+    }];
+    
 }
 
 - (NSString *)getFormatDurationTimeWith:(NSString *)startTime endTime:(NSString *)endTime {

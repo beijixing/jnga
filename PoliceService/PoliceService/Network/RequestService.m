@@ -67,6 +67,44 @@
         resultBlock(success, object);
     }];
 }
+
++(void)getArchBusicClassWithParamDict:(NSDictionary *)paramDict resultBlock:(void(^)(BOOL success,id object))resultBlock{
+    NSString *urlStr = [NSString stringWithFormat:@"%@%@", AppJNGAURL, Interface_BusicClass];
+    [[FSNetWorkManager manager] getDataWithHostUrl:urlStr parameters:[APISign paramSignedWithPagram:paramDict functionName:Interface_BusicClass]  result:^(BOOL success, id  _Nonnull object) {
+        resultBlock(success, object);
+    }];
+
+}
+
++ (void)getArchSubBusiClassWithParamDic:(NSDictionary *)paramDict resultBlock:(void (^)(BOOL success, id object))resultBlock
+{
+    NSString *urlStr = [NSString stringWithFormat:@"%@%@", AppJNGAURL, Interface_SubBusicClass];
+    [[FSNetWorkManager manager] getDataWithHostUrl:urlStr parameters:[APISign paramSignedWithPagram:paramDict functionName:Interface_BusicClass]  result:^(BOOL success, id  _Nonnull object) {
+        resultBlock(success, object);
+    }];
+}
+
++(void)getArchPeriodWithResultBlock:(void (^)(BOOL, id))resultBlock
+{
+    NSString *urlStr = [NSString stringWithFormat:@"%@%@", AppJNGAURL, Interface_ArchPeriod];
+    [[FSNetWorkManager manager] getDataWithHostUrl:urlStr parameters:[APISign paramSignedWithPagram:@{} functionName:Interface_BusicClass]  result:^(BOOL success, id  _Nonnull object) {
+        resultBlock(success, object);
+    }];
+}
++ (void)getArchPoliceWithResultBlock:(void (^)(BOOL success, id object))resultBlock{
+    NSString *urlStr = [NSString stringWithFormat:@"%@%@", AppJNGAURL, Interface_ArchPolice];
+    [[FSNetWorkManager manager] getDataWithHostUrl:urlStr parameters:[APISign paramSignedWithPagram:@{} functionName:Interface_BusicClass]  result:^(BOOL success, id  _Nonnull object) {
+        resultBlock(success, object);
+    }];
+}
++(void)getArchStationWithParamDict:(NSDictionary *)paramDict resultBlock:(void (^)(BOOL, id))resultBlock
+{
+    NSString *urlStr = [NSString stringWithFormat:@"%@%@", AppJNGAURL, Interface_ArchStation];
+    [[FSNetWorkManager manager] getDataWithHostUrl:urlStr parameters:[APISign paramSignedWithPagram:paramDict functionName:Interface_BusicClass]  result:^(BOOL success, id  _Nonnull object) {
+        resultBlock(success, object);
+    }];
+}
+
 +(void)getNameNumWithParamDict:(NSDictionary *)paramDict resultBlock:(void(^)(BOOL success,id object))resultBlock
 {
     NSString *urlStr = [NSString stringWithFormat:@"%@%@", AppJNGAURL, Interface_NameNum];
