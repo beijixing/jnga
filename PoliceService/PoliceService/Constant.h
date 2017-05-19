@@ -75,6 +75,12 @@ static const NSString *businessId = @"38ed36f8307443fa9765e35f6db0c032";
 #define Interface_NameNum @"convenience/namenum"//重名查询
 
 /*
+ 参数名，类型，说明
+ id String 待查汉字
+ */
+#define Interface_StrangeWord @"convenience/uncommon"//生僻字查询
+
+/*
  参数名，类型，说明pageNo Integer 页号
  pageSize Integer 页大小
  strayMan String 走失人

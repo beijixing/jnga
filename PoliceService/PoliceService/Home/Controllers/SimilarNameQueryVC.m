@@ -11,6 +11,7 @@
 #import "UIFactory.h"
 #import "WJHUD.h"
 #import "RequestService.h"
+#import "WJAttributeString.h"
 @interface SimilarNameQueryVC ()
 @property (strong, nonatomic) IBOutlet UITextField *searchTF;
 @property (strong, nonatomic) IBOutlet UIView *searchResultContainer;
@@ -59,8 +60,17 @@
             NSDictionary *dataDict = (NSDictionary *)object;
             if ([[dataDict objectForKey:@"error_code"] integerValue] == 0) {
                 
+                NSString *string1 = @"您好，本次查询内容仅限济宁市。查询重名操作成功，";
+                NSString *string2 = @"存在重名";
+                NSString *string3 = @"，重名个数";
+                NSString *string4 = [NSString stringWithFormat:@"%@",[dataDict objectForKey:@"data"]];
                 
-                self.searchResultLabel.text = [NSString stringWithFormat:@"您好，本次查询内容仅限济宁市。查询重名操作成功，存在重名，重名个数%@",[dataDict objectForKey:@"data"]];
+                string1.textColor = [UIColor blackColor];
+                string2.textColor = [UIColor redColor];
+                string3.textColor = [UIColor blackColor];
+                string4.textColor = [UIColor redColor];
+                self.searchResultLabel.attributedText = [NSAttributedString attributeStringWithArray:@[string1,string2,string3,string4]];
+
                 
                 self.resultContainerHeight.constant = 70;
                 self.resultContainerTopSpace.constant = 15;

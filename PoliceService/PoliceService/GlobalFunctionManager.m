@@ -78,7 +78,31 @@
             [self pushViewControllerWithName:@"PoliceServiceMapVC" from:vc];
         }
             break;
-            
+        case 7:
+        {
+            [self pushViewControllerWithName:@"StrangeWordQueryVC" from:vc];
+        }
+            break;
+        case 8:
+        {
+            [self pushViewControllerWithName:@"CertificateProgressQueryVC" from:vc];
+        }
+            break;
+        case 9:
+        {
+            [self pushViewControllerWithName:@"HightWayStatusVC" from:vc];
+        }
+            break;
+        case 10:
+        {
+            [self pushViewControllerWithStoryboardName:@"Colligation" withcontrollerName:@"RewardQueryTabelVC" from:vc];
+        }
+            break;
+        case 11:
+        {
+            [self pushViewControllerWithStoryboardName:@"Colligation" withcontrollerName:@"CashPrizeTableVC" from:vc];
+        }
+            break;
         default:
             break;
     }
@@ -136,6 +160,11 @@
     [vc.navigationController pushViewController:pushVc animated:YES];
 }
 
++ (void)pushViewControllerWithStoryboardName:(NSString *)storyboard withcontrollerName:(NSString *)name from:(UIViewController *)vc{
+    UITableViewController *pushVC = [[UIStoryboard storyboardWithName:storyboard bundle:nil]instantiateViewControllerWithIdentifier:name];
+    vc.hidesBottomBarWhenPushed = YES;
+    [vc.navigationController pushViewController:pushVC animated:YES];
+}
 
 + (void)pushViewControllerWithName:(NSString *)controllerName from:(UIViewController *)vc{
     UIViewController *pushVc = [[NSClassFromString(controllerName) alloc] init];
