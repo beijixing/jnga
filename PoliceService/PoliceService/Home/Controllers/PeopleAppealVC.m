@@ -104,7 +104,7 @@
     if (_headerTitleArr) {
         return _headerTitleArr;
     }
-    _headerTitleArr = @[@"警务热线", @"我要举报", @"我要建议", @"我要投诉", @"我要咨询", @"我要上访", @"我要评警", @"局长信箱"];
+    _headerTitleArr = @[@"警务热线", @"我要举报", @"我要建议", @"我要投诉", @"我要咨询", @"我要上访", @"我要评警", @"局长信箱", @"在线咨询", @"违法犯罪线索有奖举报"];
     
     return _headerTitleArr;
 }

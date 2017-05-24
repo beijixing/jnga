@@ -8,6 +8,9 @@
 
 #import "CashPrizeTableVC.h"
 #import "PopoverView.h"
+#import "Validator.h"
+#import "RequestService.h"
+#import "WJHUD.h"
 
 @interface CashPrizeTableVC (){
     NSArray *typeArray;//存放cell
@@ -61,6 +64,51 @@
 
 }
 - (IBAction)submit:(UITapGestureRecognizer *)sender {
+    
+    if (showType == CashPrizeTypeWX) {
+        if ([Validator isSpaceOrEmpty:self.wechatTF.text]) {
+            [WJHUD showText:@"请输入微信号" onView:self.view];
+            return;
+        }
+    }else if (showType == CashPrizeTypePhone){
+        if ([Validator isSpaceOrEmpty:self.phoneTF.text]) {
+            [WJHUD showText:@"请输入手机号" onView:self.view];
+            return;
+        }
+        
+    }else if (showType == CashPrizeTypeBank){
+        if ([Validator isSpaceOrEmpty:self.bankNameTF.text]) {
+            [WJHUD showText:@"请输入银行名称" onView:self.view];
+            return;
+        }
+        if ([Validator isSpaceOrEmpty:self.userNameTF.text]) {
+            [WJHUD showText:@"请输入姓名" onView:self.view];
+            return;
+        }
+        if ([Validator isSpaceOrEmpty:self.cardNumTF.text]) {
+            [WJHUD showText:@"请输入卡号" onView:self.view];
+            return;
+        }
+    }
+    if ([Validator isSpaceOrEmpty:self.cashCodeTF.text]) {
+        [WJHUD showText:@"请输入兑奖密码" onView:self.view];
+        return;
+    }
+    
+    [RequestService cashAwardWithParamDict:@{@"verification_code":_cashCodeTF.text ?: @"",
+                                             @"award_way":@"",
+                                             @"recharge_phone":_phoneTF.text ? :@"",
+                                             @"weixinnum":_wechatTF.text ? :@"",
+                                             @"bankcard":_cardNumTF.text ? :@"",
+                                             @"name":_userNameTF.text ? :@"",
+                                             @"phone":_bankNameTF.text ? :@""
+                                             } resultBlock:^(BOOL success, id object) {
+                                                 if (success) {
+                                                     
+                                                 }else{
+                                                 }
+    }];
+    
 
 }
 

@@ -106,6 +106,20 @@ static const NSString *businessId = @"38ed36f8307443fa9765e35f6db0c032";
 
 /*
  参数名，类型，说明
+ drivinglicenseNumber 驾驶证号
+ drivinglinceseFilenumber 驾驶证档案编号
+ imei 国际移动设备识别码（15位数字
+ */
+#define Interface_CheckDriverLicense @"convenience/drivinglicense/drivinglicenseScore/query"//驾驶证违法查询
+
+
+
+#define Interface_QueryAward @"convenience/awardreport/awardReport/query"//有奖举报查询
+
+#define Interface_CashAward @"convenience/awardreport/awardReport/fillAwardInfo"//有奖举报兑奖
+
+/*
+ 参数名，类型，说明
  businessId String 业务id
  */
 #define Interface_WrapBookingPageData @"onlinebooking/bookingmanage/onlineBookingRecord/wrapBookingPageData"//预约页面的数据

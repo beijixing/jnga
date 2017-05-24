@@ -165,7 +165,6 @@ static const NSString *homeItemId = @"38ed36f8307443fa9765e35f6db0c038";
         case 3:
             return 6;
             break;
-            
         default:
             return 0;
             break;
@@ -186,7 +185,7 @@ static const NSString *homeItemId = @"38ed36f8307443fa9765e35f6db0c038";
 
 - (void)collectionView:(UICollectionView *)collectionView willDisplayCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 2) {
-        NSArray *operationItems = self.dataModel.operate_items;
+        NSArray *operationItems = self.dataModel.operate_items; 
         HomeCollectionThirdSectionCell *showCell = (HomeCollectionThirdSectionCell*)cell;
          OperationItemModel *dmodel = operationItems[indexPath.row];
         showCell.iconImageView.image = [UIImage imageNamed:dmodel.img_url];

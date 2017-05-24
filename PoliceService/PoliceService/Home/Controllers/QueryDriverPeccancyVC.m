@@ -9,6 +9,9 @@
 #import "QueryDriverPeccancyVC.h"
 #import "VerifyCodeView.h"
 #import "DriverPeccancyResultVC.h"
+#import "Validator.h"
+#import "WJHUD.h"
+#import "RequestService.h"
 @interface QueryDriverPeccancyVC ()
 @property (strong, nonatomic) IBOutlet UITextField *driverIDNumberTF;
 @property (strong, nonatomic) IBOutlet UITextField *fileCodeTF;
@@ -33,8 +36,30 @@
     }];
 }
 - (IBAction)queryBtnAction:(UIButton *)sender {
-    self.hidesBottomBarWhenPushed = YES;
-    [self.navigationController pushViewController:[[DriverPeccancyResultVC alloc] init] animated:YES];
+    
+    if ([Validator isSpaceOrEmpty:self.driverIDNumberTF.text]) {
+        [WJHUD showText:@"请输入驾驶证号" onView:self.view];
+        return;
+    }
+    
+    if ([Validator isSpaceOrEmpty:self.fileCodeTF.text]) {
+        [WJHUD showText:@"请输入档案编号" onView:self.view];
+        return;
+    }
+    
+    [RequestService checkDriverLicenseWithParamDict:@{@"drivinglicenseNumber" : _driverIDNumberTF.text ?: @"",
+                                                      @"drivinglinceseFilenumber" : _fileCodeTF.text ?: @"",
+                                                      @"imei" : @""
+                                                      } resultBlock:^(BOOL success, id object) {
+                                                          if (success) {
+                                                              
+                                                              self.hidesBottomBarWhenPushed = YES;
+                                                              [self.navigationController pushViewController:[[DriverPeccancyResultVC alloc] init] animated:YES];
+                                                          }
+    }];
+    
+    
+
 }
 
 - (VerifyCodeView *)codeView {

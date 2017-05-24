@@ -7,7 +7,9 @@
 //
 
 #import "RewardQueryTabelVC.h"
-
+#import "Validator.h"
+#import "RequestService.h"
+#import "WJHUD.h"
 @interface RewardQueryTabelVC ()
 @property (weak, nonatomic) IBOutlet UITextField *acceptNumberTF;
 @property (weak, nonatomic) IBOutlet UITextField *acceptCodeTF;
@@ -38,6 +40,17 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)submit:(id)sender {
+    
+    if ([Validator isSpaceOrEmpty:self.acceptNumberTF.text]) {
+        [WJHUD showText:@"请输入受理编号" onView:self.view];
+        return;
+    }
+    
+    [RequestService queryAwardWithParamDict:@{
+                                              } resultBlock:^(BOOL success, id object) {
+        
+    }];
+    
 }
 
 #pragma mark - Table view data source

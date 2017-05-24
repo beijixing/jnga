@@ -265,4 +265,26 @@
     }];
 }
 
++(void)checkDriverLicenseWithParamDict:(NSDictionary *)paramDict resultBlock:(void (^)(BOOL, id))resultBlock{
+    NSString *urlStr = [NSString stringWithFormat:@"%@%@", AppURL, Interface_CheckDriverLicense];
+    [[FSNetWorkManager manager] postDataWithHostUrl:urlStr parameters:paramDict result:^(BOOL success, id  _Nonnull object) {
+        resultBlock(success, object);
+    }];
+    
+}
+
++(void)queryAwardWithParamDict:(NSDictionary *)paramDict resultBlock:(void (^)(BOOL, id))resultBlock{
+    NSString *urlStr = [NSString stringWithFormat:@"%@%@", AppURL, Interface_QueryAward];
+    [[FSNetWorkManager manager] postDataWithHostUrl:urlStr parameters:paramDict result:^(BOOL success, id  _Nonnull object) {
+        resultBlock(success, object);
+    }];
+}
+
++(void)cashAwardWithParamDict:(NSDictionary *)paramDict resultBlock:(void (^)(BOOL, id))resultBlock{
+    NSString *urlStr = [NSString stringWithFormat:@"%@%@", AppURL, Interface_CashAward];
+    [[FSNetWorkManager manager] postDataWithHostUrl:urlStr parameters:paramDict result:^(BOOL success, id  _Nonnull object) {
+        resultBlock(success, object);
+    }];
+}
+
 @end

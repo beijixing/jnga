@@ -27,6 +27,10 @@
 		5A8627711EC980DC008FA467 /* xx@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A8627701EC980DC008FA467 /* xx@3x.png */; };
 		5A8627751EC98305008FA467 /* DirectorMailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A8627731EC98305008FA467 /* DirectorMailVC.m */; };
 		5A8627761EC98305008FA467 /* DirectorMailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A8627741EC98305008FA467 /* DirectorMailVC.xib */; };
+		5AB6BB841ED53673003EC557 /* ConsultOnlineVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB6BB821ED53673003EC557 /* ConsultOnlineVC.m */; };
+		5AB6BB851ED53673003EC557 /* ConsultOnlineVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AB6BB831ED53673003EC557 /* ConsultOnlineVC.xib */; };
+		5AB6BB891ED536C0003EC557 /* CrimeReportVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB6BB871ED536C0003EC557 /* CrimeReportVC.m */; };
+		5AB6BB8A1ED536C0003EC557 /* CrimeReportVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AB6BB881ED536C0003EC557 /* CrimeReportVC.xib */; };
 		CB2C84941ECAF6270092B558 /* ReservationHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = CB2C84931ECAF6270092B558 /* ReservationHandle.m */; };
 		CB2DB1191E66A5D200D4FA40 /* CheckVersionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CB2DB1171E66A5D200D4FA40 /* CheckVersionVC.m */; };
 		CB2DB11A1E66A5D200D4FA40 /* CheckVersionVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB2DB1181E66A5D200D4FA40 /* CheckVersionVC.xib */; };
@@ -911,6 +915,12 @@
 		5A8627721EC98305008FA467 /* DirectorMailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirectorMailVC.h; sourceTree = "<group>"; };
 		5A8627731EC98305008FA467 /* DirectorMailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DirectorMailVC.m; sourceTree = "<group>"; };
 		5A8627741EC98305008FA467 /* DirectorMailVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DirectorMailVC.xib; sourceTree = "<group>"; };
+		5AB6BB811ED53673003EC557 /* ConsultOnlineVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConsultOnlineVC.h; sourceTree = "<group>"; };
+		5AB6BB821ED53673003EC557 /* ConsultOnlineVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConsultOnlineVC.m; sourceTree = "<group>"; };
+		5AB6BB831ED53673003EC557 /* ConsultOnlineVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConsultOnlineVC.xib; sourceTree = "<group>"; };
+		5AB6BB861ED536C0003EC557 /* CrimeReportVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrimeReportVC.h; sourceTree = "<group>"; };
+		5AB6BB871ED536C0003EC557 /* CrimeReportVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrimeReportVC.m; sourceTree = "<group>"; };
+		5AB6BB881ED536C0003EC557 /* CrimeReportVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CrimeReportVC.xib; sourceTree = "<group>"; };
 		CB2C84921ECAF6270092B558 /* ReservationHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReservationHandle.h; sourceTree = "<group>"; };
 		CB2C84931ECAF6270092B558 /* ReservationHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReservationHandle.m; sourceTree = "<group>"; };
 		CB2DB1161E66A5D200D4FA40 /* CheckVersionVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckVersionVC.h; sourceTree = "<group>"; };
@@ -1778,6 +1788,12 @@
 				5A8627721EC98305008FA467 /* DirectorMailVC.h */,
 				5A8627731EC98305008FA467 /* DirectorMailVC.m */,
 				5A8627741EC98305008FA467 /* DirectorMailVC.xib */,
+				5AB6BB811ED53673003EC557 /* ConsultOnlineVC.h */,
+				5AB6BB821ED53673003EC557 /* ConsultOnlineVC.m */,
+				5AB6BB831ED53673003EC557 /* ConsultOnlineVC.xib */,
+				5AB6BB861ED536C0003EC557 /* CrimeReportVC.h */,
+				5AB6BB871ED536C0003EC557 /* CrimeReportVC.m */,
+				5AB6BB881ED536C0003EC557 /* CrimeReportVC.xib */,
 			);
 			name = "民生诉求";
 			sourceTree = "<group>";
@@ -3442,6 +3458,7 @@
 				CB3F5C8F1E5D8E4D0013FCEF /* PoliceMapTableCell.xib in Resources */,
 				CBB02B531E7001F0001EFCBA /* xh@3x.png in Resources */,
 				CB42BA101E52F40F0092CE91 /* ChangePhoneNumberVC.xib in Resources */,
+				5AB6BB8A1ED536C0003EC557 /* CrimeReportVC.xib in Resources */,
 				CBB02AD71E6E9923001EFCBA /* ReservationSuccessVC.xib in Resources */,
 				CB61636D1E5E89F8002FD980 /* reservation_item.txt in Resources */,
 				CB6163D71E5E8A3C002FD980 /* yy_hzyw.png in Resources */,
@@ -3646,6 +3663,7 @@
 				CBB02B2A1E6FFFFF001EFCBA /* crj@3x.png in Resources */,
 				CBB02AB31E6CF8E5001EFCBA /* fazhi@3x.png in Resources */,
 				CBD990541E4AC64800C09DD2 /* Info.plist in Resources */,
+				5AB6BB851ED53673003EC557 /* ConsultOnlineVC.xib in Resources */,
 				CBAF393D1E9B3546005BB9C7 /* Affairsguide@3x.png in Resources */,
 				CBD98DB51E4AB2C400C09DD2 /* Main.storyboard in Resources */,
 				CBD991341E4ACC0300C09DD2 /* MJRefresh.bundle in Resources */,
@@ -3829,6 +3847,7 @@
 				CBD991A81E4AF30C00C09DD2 /* RoundButton.m in Sources */,
 				CB42B9EC1E51B3540092CE91 /* MyBusinessVC.m in Sources */,
 				CBE0CF941E67BBF40027DAD2 /* QueryLostThingsVC.m in Sources */,
+				5AB6BB891ED536C0003EC557 /* CrimeReportVC.m in Sources */,
 				CB42B9F61E5293F40092CE91 /* UIView+SGExtension.m in Sources */,
 				CB3F5C951E5D90EF0013FCEF /* MapInfoItemDataModel.m in Sources */,
 				CBD990B81E4AC7FF00C09DD2 /* IQPreviousNextView.m in Sources */,
@@ -3959,6 +3978,7 @@
 				CBD98F081E4AB37A00C09DD2 /* NSData+ImageContentType.m in Sources */,
 				CBD98E961E4AB37A00C09DD2 /* UIImageView+FSWebCache.m in Sources */,
 				CBD991281E4ACC0300C09DD2 /* MJRefreshBackStateFooter.m in Sources */,
+				5AB6BB841ED53673003EC557 /* ConsultOnlineVC.m in Sources */,
 				CBD991161E4ACC0300C09DD2 /* MJRefreshHeader.m in Sources */,
 				CBD991951E4AEEE100C09DD2 /* InteractionVC.m in Sources */,
 				CB42BA231E56854E0092CE91 /* AppSquareVC.m in Sources */,
