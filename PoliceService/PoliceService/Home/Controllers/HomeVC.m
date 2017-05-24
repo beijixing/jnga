@@ -530,7 +530,6 @@ static const NSString *homeItemId = @"38ed36f8307443fa9765e35f6db0c038";
     if (_hotTitleArr) {
         return _hotTitleArr;
     }
-
     _hotTitleArr = @[@"移车服务",@"交管预约",@"违章查询",@"违章查询"];
     return _hotTitleArr;
 }

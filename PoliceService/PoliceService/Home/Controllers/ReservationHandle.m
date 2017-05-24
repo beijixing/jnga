@@ -19,9 +19,38 @@
 @property (nonatomic, strong) NSArray *station_array;
 /**时间段*/
 @property (nonatomic, strong) NSArray *period_array;
+/**公告*/
+@property (nonatomic, strong) NSString *notice;
 @end
 
 @implementation ReservationHandle
+
+#pragma mark Notice
+-(void)getNotice:(reservationBlock)block
+{
+    typeof(self) __weak wself = self;
+    
+    if (_notice) {
+        block(wself.notice,YES);
+    }else{
+        [RequestService getBusinessNotesWithParamDict:@{@"keyword" : self.keyword} resultBlock:^(BOOL success, id object) {
+            if (success) {
+                if ([[object objectForKey:@"error_code"] integerValue] == 0) {
+                    NSArray *dataArr = [object objectForKey: @"data"];
+                    if (dataArr.count>0) {
+                        NSDictionary *dataDict = dataArr[0];
+                        wself.notice = dataDict[@"businesscontent"];
+                    }
+                    block(wself.notice,YES);
+                }else{
+                    block(@"",NO);
+                }
+            }else{
+                block(object,NO);
+            }
+        }];
+    }
+}
 
 #pragma mark 业务大类
 -(void)getBusiClassAry:(reservationBlock)block
@@ -58,15 +87,39 @@
 #pragma mark 业务子类
 -(void)getSubBusiClassAry:(reservationBlock)block
 {
-    if (_busiClassId) {
-        typeof(self) __weak wself = self;
+    typeof(self) __weak wself = self;
+
+    if ([self.keyword isEqualToString:@"hzhyy"]) {
+        if (_busiClassId) {
+            
+            if (_subBusiClass_array) {
+                block(wself.subBusiClass_array,YES);
+            }else{
+                [RequestService getArchSubBusiClassWithParamDic:@{@"id":self.busiClassId} resultBlock:^(BOOL success, id object) {
+                    if (success) {
+                        if ([[object objectForKey:@"error_code"] integerValue] == 0) {
+                            NSArray *ary = [object objectForKey: @"data"];
+                            wself.subBusiClass_array = ary;
+                            block(wself.subBusiClass_array,YES);
+                        }else{
+                            block(@"",NO);
+                        }
+                    }else{
+                        block(object,NO);
+                    }
+                }];
+            }
+        }else{
+            block(@"请先选择业务大类",NO);
+        }
+    }else{
         
         if (_subBusiClass_array) {
             block(wself.subBusiClass_array,YES);
         }else{
-            [RequestService getArchSubBusiClassWithParamDic:@{@"id":self.busiClassId} resultBlock:^(BOOL success, id object) {
+            [RequestService getAppDataDictWithParamDict:@{@"type":self.keyword} resultBlock:^(BOOL success, id object) {
                 if (success) {
-                    if ([[object objectForKey:@"error_code"] integerValue] == 0) {
+                    if ([[object objectForKey:@"code"] integerValue] == 1) {
                         NSArray *ary = [object objectForKey: @"data"];
                         wself.subBusiClass_array = ary;
                         block(wself.subBusiClass_array,YES);
@@ -78,9 +131,9 @@
                 }
             }];
         }
-    }else{
-        block(@"请先选择业务大类",NO);
+
     }
+   
 }
 
 #pragma mark 时间段
@@ -88,8 +141,8 @@
 {
     typeof(self) __weak wself = self;
     
-    if (_busiClass_array) {
-        block(wself.busiClass_array,YES);
+    if (_period_array) {
+        block(wself.period_array,YES);
     }else{
         [RequestService getArchPeriodWithResultBlock:^(BOOL success, id object) {
             if (success) {
@@ -146,7 +199,7 @@
         if (_station_array) {
             block(wself.station_array,YES);
         }else{
-            [RequestService getArchBusicClassWithParamDict:@{} resultBlock:^(BOOL success, id object) {
+            [RequestService getArchStationWithParamDict:@{@"id":_police} resultBlock:^(BOOL success, id object) {
                 if (success) {
                     if ([[object objectForKey:@"error_code"] integerValue] == 0) {
                         NSArray *ary = [object objectForKey: @"data"];

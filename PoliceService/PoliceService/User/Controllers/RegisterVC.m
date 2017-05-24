@@ -188,11 +188,10 @@
         if (success) {
             NSDictionary *dataDict = (NSDictionary *)object;
             if ([[dataDict objectForKey:@"code"] integerValue] ==1 ) {
-                NSLog(@"dataDict%@", dataDict);
-                [GlobalVariableManager manager].userId = [dataDict objectForKey:@"user_id"];
-                [GlobalVariableManager manager].loginToken = [dataDict objectForKey:@"token"];
+                [self dismissViewControllerAnimated:YES completion:NULL];
+//                [GlobalVariableManager manager].userId = [dataDict objectForKey:@"user_id"];
+//                [GlobalVariableManager manager].loginToken = [dataDict objectForKey:@"token"];
             }else {
-                NSLog(@"dataDict%@", dataDict);
                 [WJHUD showText:[dataDict objectForKey:@"message"] onView:wself.view];
             }
 

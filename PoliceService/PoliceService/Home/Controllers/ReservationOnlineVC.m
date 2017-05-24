@@ -77,7 +77,22 @@
         webViewVc.title = itemModel.operate_name;
         webViewVc.urlString = @"http://www.sdcrj.com/";
         [self.navigationController pushViewController:webViewVc animated:YES];
-        
+        return;
+    }
+    if (indexPath.row == 6) {
+        self.hidesBottomBarWhenPushed = YES;
+        CommonWebViewController *webViewVc = [[CommonWebViewController alloc] init];
+        webViewVc.title = itemModel.operate_name;
+        webViewVc.urlString = @"http://www.chinayzd.cn/yc/login.html";
+        [self.navigationController pushViewController:webViewVc animated:YES];
+        return;
+    }
+    if (indexPath.row == 7) {
+        self.hidesBottomBarWhenPushed = YES;
+        CommonWebViewController *webViewVc = [[CommonWebViewController alloc] init];
+        webViewVc.title = itemModel.operate_name;
+        webViewVc.urlString = @"http://sdcrj.jnzhwl.com/jnshjts.php";
+        [self.navigationController pushViewController:webViewVc animated:YES];
         return;
     }
     self.hidesBottomBarWhenPushed = YES;

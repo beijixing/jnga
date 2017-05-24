@@ -27,7 +27,7 @@ typedef id (^ZConfigCellDataBlock)(NSIndexPath *indexPath);
 /**
  *  初始化dataSource
  *
- *  @param serverData  服务器返回数据
+ *  @param data  服务器返回数据
  *
  *  @return Datasource
  */

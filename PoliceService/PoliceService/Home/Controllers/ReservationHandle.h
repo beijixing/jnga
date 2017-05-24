@@ -36,6 +36,8 @@ typedef void(^reservationBlock)(id ary, BOOL success);
 @property (nonatomic, strong) NSString *period;
 
 
+- (void)getNotice:(reservationBlock)block;
+
 - (void)getBusiClassAry:(reservationBlock)block;
 - (void)getSubBusiClassAry:(reservationBlock)block;
 - (void)getPoliceAry:(reservationBlock)block;
