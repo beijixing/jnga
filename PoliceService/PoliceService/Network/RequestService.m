@@ -282,7 +282,7 @@
 
 +(void)cashAwardWithParamDict:(NSDictionary *)paramDict resultBlock:(void (^)(BOOL, id))resultBlock{
     NSString *urlStr = [NSString stringWithFormat:@"%@%@", AppURL, Interface_CashAward];
-    NSLog(@"123");
+    NSLog(@"11111");
     [[FSNetWorkManager manager] postDataWithHostUrl:urlStr parameters:paramDict result:^(BOOL success, id  _Nonnull object) {
         resultBlock(success, object);
     }];
