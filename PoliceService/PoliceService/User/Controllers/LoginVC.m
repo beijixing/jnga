@@ -59,7 +59,8 @@
                     if ([[dataDict objectForKey:@"code"] integerValue] == 1) {
                         //临时设置 phone/loginToken作为登录用
                             [GlobalVariableManager manager].phone = wself.phoneTF.text;
-                            [GlobalVariableManager manager].pswd = wself.passwdTF.text;
+                        [GlobalVariableManager manager].pswd = wself.passwdTF.text;
+                        [GlobalVariableManager manager].codeId =[dataDict objectForKey:@"code_id"];
                         
                             [GlobalVariableManager manager].userId = [dataDict objectForKey:@"user_id"];
                             [GlobalVariableManager manager].loginToken = [dataDict objectForKey:@"token"];

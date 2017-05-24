@@ -21,9 +21,9 @@
         },
         {
             "id":3,
-            "keyword":"xfxzhshpyy",
+            "keyword":"xfshpyy",
             "operate_name": "消防行政审批预约",
-            "img_url": "hk"
+            "img_url": "mhq"
         },
         {
             "id":4,
@@ -42,12 +42,6 @@
             "keyword":"jdyy",
             "operate_name": "禁毒预约",
             "img_url": "qt"
-        },
-        {
-            "id":7,
-            "keyword":"xfspyy",
-            "operate_name": "消防审批预约",
-            "img_url": "mhq"
         },
         {
             "id":8,

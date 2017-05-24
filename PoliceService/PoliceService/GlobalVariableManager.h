@@ -19,5 +19,7 @@
 @property(nonatomic, copy) NSString *phone;
 //@property(nonatomic, copy) NSString *reservationBusinessId;
 @property(nonatomic, copy) NSString *pswd;
+@property(nonatomic, copy) NSString *codeId;
+
 
 @end

@@ -19,9 +19,19 @@
     return manager;
 }
 
+
+-(NSString *)userId
+{
+    return [[NSUserDefaults standardUserDefaults]objectForKey:@"userId"];
+}
+-(void)setUserId:(NSString *)userId
+{
+    [[NSUserDefaults standardUserDefaults]setObject:userId forKey:@"userId"];
+}
 -(NSString*)phone {
     return [[NSUserDefaults standardUserDefaults]objectForKey:@"phoneNumber"];
 }
+
 
 -(void)setPhone:(NSString *)phone {
     [[NSUserDefaults standardUserDefaults]setObject:phone forKey:@"phoneNumber"];
@@ -42,5 +52,11 @@
 -(void)setPswd:(NSString *)pswd {
     [[NSUserDefaults standardUserDefaults]setObject:pswd forKey:@"pswd"];
 }
+-(NSString *)codeId {
+    return [[NSUserDefaults standardUserDefaults]objectForKey:@"codeId"];
+}
 
+-(void)setCodeId:(NSString *)codeId{
+    [[NSUserDefaults standardUserDefaults]setObject:codeId forKey:@"codeId"];
+}
 @end
