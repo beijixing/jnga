@@ -68,5 +68,8 @@
 +(void)checkDriverLicenseWithParamDict:(NSDictionary *)paramDict resultBlock:(void(^)(BOOL success,id object))resultBlock;
 +(void)queryAwardWithParamDict:(NSDictionary *)paramDict resultBlock:(void(^)(BOOL success,id object))resultBlock;
 +(void)cashAwardWithParamDict:(NSDictionary *)paramDict resultBlock:(void(^)(BOOL success,id object))resultBlock;
++(void)consultOnlineWithParamDict:(NSDictionary *)paramDict resultBlock:(void(^)(BOOL success,id object))resultBlock;
+
++(void)reportCrimeWithMediaArray:(NSMutableArray *)array  withParamDict:(NSDictionary *)paramDict progress:(nullable void (^)(NSProgress * _Nonnull))progress resultBlock:(void(^_Nullable)(BOOL success,id _Nullable object))resultBlock;
 
 @end

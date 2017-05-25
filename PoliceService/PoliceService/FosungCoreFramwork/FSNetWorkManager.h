@@ -75,6 +75,10 @@ NS_ASSUME_NONNULL_BEGIN
                     progress:(nullable void (^)(NSProgress * _Nonnull))uploadProgress
                     result:(void(^)(BOOL success, id object))resultBlock;
 
+
+
+- (void)uploadFileWithMediaData:(NSMutableArray *)mediaDatas progress:(nullable void (^)(NSProgress * _Nonnull))progress url:(NSString *)url params:(id)params result:(void(^)(BOOL success, id object))resultBlock;
+
 /**
  下载文件，将结果用 resultBlock 返回给调用的地方进行处理。
  @param url 请求的url地址 如：http://xxx.xxx.com/download/file。

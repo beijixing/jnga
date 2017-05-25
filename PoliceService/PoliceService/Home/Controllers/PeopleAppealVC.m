@@ -16,6 +16,9 @@
 #import "GlobalFunctionManager.h"
 #import "UIApplication+CallSystemApp.h"
 #import "DirectorMailVC.h"
+#import "ConsultOnlineVC.h"
+#import "CrimeReportVC.h"
+
 @interface PeopleAppealVC ()<UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 @property(nonatomic, strong)UICollectionView *mainCollectionView;
 @property(nonatomic, strong) NSArray *headerTitleArr;
@@ -40,7 +43,7 @@
 
 #pragma mark --UITableViewDelegate/UITableViewDataSource
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 8;
+    return self.headerTitleArr.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -76,7 +79,15 @@
     }else if(indexPath.row == 7) {
         DirectorMailVC *commentVc = [[DirectorMailVC alloc] init];
         [self.navigationController pushViewController:commentVc animated:YES];
+    }else if(indexPath.row == 8) {
+        ConsultOnlineVC *commentVc = [[ConsultOnlineVC alloc] init];
+        [self.navigationController pushViewController:commentVc animated:YES];
+    }else if(indexPath.row == 9) {
+        CrimeReportVC *commentVc = [[CrimeReportVC alloc] init];
+        [self.navigationController pushViewController:commentVc animated:YES];
     }
+    
+    
 }
 
 -(UICollectionView *)mainCollectionView {

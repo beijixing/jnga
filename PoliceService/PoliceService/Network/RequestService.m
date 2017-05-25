@@ -282,10 +282,29 @@
 
 +(void)cashAwardWithParamDict:(NSDictionary *)paramDict resultBlock:(void (^)(BOOL, id))resultBlock{
     NSString *urlStr = [NSString stringWithFormat:@"%@%@", AppURL, Interface_CashAward];
-    NSLog(@"11111");
     [[FSNetWorkManager manager] postDataWithHostUrl:urlStr parameters:paramDict result:^(BOOL success, id  _Nonnull object) {
         resultBlock(success, object);
     }];
 }
+
++(void)consultOnlineWithParamDict:(NSDictionary *)paramDict resultBlock:(void (^)(BOOL, id))resultBlock{
+    NSString *urlStr = [NSString stringWithFormat:@"%@%@", AppURL, Interface_ConsultOnline];
+    [[FSNetWorkManager manager] postDataWithHostUrl:urlStr parameters:paramDict result:^(BOOL success, id  _Nonnull object) {
+        resultBlock(success, object);
+    }];
+}
+
++(void)reportCrimeWithMediaArray:(NSMutableArray *)array withParamDict:(NSDictionary *)paramDict progress:(nullable void (^)(NSProgress * _Nonnull))progress  resultBlock:(void (^)(BOOL, id))resultBlock{
+    
+    NSString *urlStr = [NSString stringWithFormat:@"%@%@", AppURL, Interface_ReportCrime];
+    [[FSNetWorkManager manager]uploadFileWithMediaData:array progress:^(NSProgress * _Nonnull upProgress) {
+        if (progress) {
+            progress(upProgress);
+        }
+    } url:urlStr params:paramDict result:^(BOOL success, id  _Nonnull object) {
+        resultBlock(success, object);
+    }];
+}
+
 
 @end
