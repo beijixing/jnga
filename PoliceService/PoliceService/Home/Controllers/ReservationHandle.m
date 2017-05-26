@@ -29,7 +29,10 @@
 -(void)getNotice:(reservationBlock)block
 {
     typeof(self) __weak wself = self;
-    
+    if ([self.keyword isEqualToString:@"hzhyy"]) {
+        block(@"",NO);
+        return;
+    }
     if (_notice) {
         block(wself.notice,YES);
     }else{

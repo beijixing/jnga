@@ -58,6 +58,7 @@
 		CB2DB12B1E66BBA300D4FA40 /* QueryLostMenDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CB2DB12A1E66BBA300D4FA40 /* QueryLostMenDetailVC.m */; };
 		CB2DB12F1E66BC8B00D4FA40 /* QueryLostMenDetailTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CB2DB12D1E66BC8B00D4FA40 /* QueryLostMenDetailTableCell.m */; };
 		CB2DB1301E66BC8B00D4FA40 /* QueryLostMenDetailTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB2DB12E1E66BC8B00D4FA40 /* QueryLostMenDetailTableCell.xib */; };
+		CB3DDDBB1ED6769800EFCFF7 /* HomePageSectionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3DDDBA1ED6769800EFCFF7 /* HomePageSectionModel.m */; };
 		CB3F5BF71E5AEBDC0013FCEF /* MultipleQueryVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3F5BF61E5AEBDC0013FCEF /* MultipleQueryVC.m */; };
 		CB3F5BFB1E5AED7D0013FCEF /* SimilarNameQueryVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3F5BF91E5AED7D0013FCEF /* SimilarNameQueryVC.m */; };
 		CB3F5BFC1E5AED7D0013FCEF /* SimilarNameQueryVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB3F5BFA1E5AED7D0013FCEF /* SimilarNameQueryVC.xib */; };
@@ -985,6 +986,8 @@
 		CB2DB12C1E66BC8B00D4FA40 /* QueryLostMenDetailTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QueryLostMenDetailTableCell.h; sourceTree = "<group>"; };
 		CB2DB12D1E66BC8B00D4FA40 /* QueryLostMenDetailTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueryLostMenDetailTableCell.m; sourceTree = "<group>"; };
 		CB2DB12E1E66BC8B00D4FA40 /* QueryLostMenDetailTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QueryLostMenDetailTableCell.xib; sourceTree = "<group>"; };
+		CB3DDDB91ED6769800EFCFF7 /* HomePageSectionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePageSectionModel.h; sourceTree = "<group>"; };
+		CB3DDDBA1ED6769800EFCFF7 /* HomePageSectionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePageSectionModel.m; sourceTree = "<group>"; };
 		CB3F5BF51E5AEBDC0013FCEF /* MultipleQueryVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultipleQueryVC.h; sourceTree = "<group>"; };
 		CB3F5BF61E5AEBDC0013FCEF /* MultipleQueryVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultipleQueryVC.m; sourceTree = "<group>"; };
 		CB3F5BF81E5AED7D0013FCEF /* SimilarNameQueryVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimilarNameQueryVC.h; sourceTree = "<group>"; };
@@ -3223,6 +3226,8 @@
 				CBE312FD1E7BB8BD000E1025 /* NewsCenterServerDataModel.m */,
 				CB3F5C791E5D75BC0013FCEF /* BannerDataModel.h */,
 				CB3F5C7A1E5D75BC0013FCEF /* BannerDataModel.m */,
+				CB3DDDB91ED6769800EFCFF7 /* HomePageSectionModel.h */,
+				CB3DDDBA1ED6769800EFCFF7 /* HomePageSectionModel.m */,
 				CB3F5C7C1E5D75F10013FCEF /* OperationItemModel.h */,
 				CB3F5C7D1E5D75F10013FCEF /* OperationItemModel.m */,
 				CB6163611E5E79A2002FD980 /* AffairsGuideDataModel.h */,
@@ -3912,6 +3917,7 @@
 				CBE312ED1E77EC0F000E1025 /* LostItemDataModel.m in Sources */,
 				CB6163661E5E8863002FD980 /* AffairsGuideSubDataModel.m in Sources */,
 				CB42BA4D1E56E4AB0092CE91 /* ReservationOnlineVC.m in Sources */,
+				CB3DDDBB1ED6769800EFCFF7 /* HomePageSectionModel.m in Sources */,
 				CBD9915A1E4AEDDE00C09DD2 /* BaseViewController.m in Sources */,
 				CBD990601E4AC64800C09DD2 /* MASLayoutConstraint.m in Sources */,
 				5A53F0D31ECC262A00162B2F /* HightWayStatusVC.m in Sources */,

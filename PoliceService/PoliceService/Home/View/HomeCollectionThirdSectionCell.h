@@ -10,5 +10,7 @@
 
 @interface HomeCollectionThirdSectionCell : UICollectionViewCell
 @property (strong, nonatomic) IBOutlet UIImageView *iconImageView;
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *descLabel;
 
 @end
