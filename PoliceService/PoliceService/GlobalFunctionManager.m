@@ -103,6 +103,11 @@
             [self pushViewControllerWithStoryboardName:@"Colligation" withcontrollerName:@"CashPrizeTableVC" from:vc];
         }
             break;
+        case 12:
+        {
+            [self pushViewControllerWithStoryboardName:@"Colligation" withcontrollerName:@"QueryBusinessPlaceVC" from:vc];
+        }
+            break;
         default:
             break;
     }

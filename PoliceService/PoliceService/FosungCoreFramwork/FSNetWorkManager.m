@@ -29,10 +29,9 @@ static FSNetWorkManager *manager = nil;
 - (void)uploadFileWithMediaData:(NSMutableArray *)mediaDatas progress:(nullable void (^)(NSProgress * _Nonnull))progress url:(NSString *)url params:(id)params  result:(void(^)(BOOL success, id object))resultBlock
 {
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/html",
-                                                         @"text/plain",
-                                                         @"application/json",nil];
     
+    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+     manager.requestSerializer = [AFJSONRequestSerializer serializer];
     [manager POST:url parameters:params constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
         if (mediaDatas.count > 0) {
             
@@ -47,21 +46,20 @@ static FSNetWorkManager *manager = nil;
                     [formData appendPartWithFileData:eachImgData name:@"picfile" fileName:[NSString stringWithFormat:@"img%d.png", i+1] mimeType:@"image/png"];
                     
                 }else if([firstObj isKindOfClass:[ALAsset class]]){
-                    
                     // 视频
                     ALAsset *asset = [mediaDatas objectAtIndex:i];
                     if (asset != nil) {
                         NSArray *documentPaths= NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
                         NSString *docuPath = [documentPaths objectAtIndex:0];
                         
-                        NSString *videoPath= [docuPath stringByAppendingPathComponent:[NSString stringWithFormat:@"%d.mov", 0]];    // 这里直接强制写一个即可，之前计划是用i++来区分不明视频
+                        NSString *videoPath= [docuPath stringByAppendingPathComponent:[NSString stringWithFormat:@"%d.mp4", 0]];    // 这里直接强制写一个即可，之前计划是用i++来区分不明视频
                         NSURL *url = [NSURL fileURLWithPath:videoPath];
                         NSError *theErro = nil;
                         BOOL exportResult = [asset exportDataToURL:url error:&theErro];
                         NSLog(@"exportResult=%@", exportResult?@"YES":@"NO");
                         
                         NSData *videoData = [NSData dataWithContentsOfURL:url];
-                        [formData appendPartWithFileData:videoData name:@"videosfile" fileName:@"video1.mov" mimeType:@"video/quicktime"];//name服务器字段名
+                        [formData appendPartWithFileData:videoData name:@"videosfile" fileName:@"video1.mp4" mimeType:@"video/mp4"];//name服务器字段名
                     }
                 }
             }
@@ -75,6 +73,9 @@ static FSNetWorkManager *manager = nil;
         resultBlock(YES, responseObject);
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSData * data = error.userInfo[@"com.alamofire.serialization.response.error.data"];
+        NSString * str = [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
+        NSLog(@"服务器的错误原因:%@",str);
         resultBlock(NO, error);
     }];
 

@@ -14,6 +14,8 @@
 #import "RequestService.h"
 #import "WJHUD.h"
 #import "Validator.h"
+#import "MBProgressHUD.h"
+#define CompressionVideoPath [NSHomeDirectory() stringByAppendingFormat:@"/Documents/CompressionVideoField"]
 
 @interface CrimeReportVC ()<UIImagePickerControllerDelegate,UINavigationControllerDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *nameTF;
@@ -30,6 +32,9 @@
 @property (strong, nonatomic) UIImage *reportImage;
 @property (strong, nonatomic) ALAsset *videoAsset;
 @property (strong, nonatomic) ALAssetsLibrary *library;
+@property (strong, nonatomic) NSURL *videoPathURL;
+@property (strong, nonatomic) UIAlertController *alert;
+@property (strong, nonatomic) NSMutableArray *mediaArray;
 @end
 
 @implementation CrimeReportVC
@@ -46,6 +51,10 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+-(void)dealloc{
+    [WJHUD hideFromView:self.view];
+    self.imagePicker = nil;
+}
 
 - (void)setUpLeftNavbarItem {
     [self setLeftNavigationBarButtonItemWithImage:@"back" andAction:^{
@@ -53,9 +62,9 @@
     }];
 }
 - (IBAction)choosePhoto:(id)sender {
-    static UIAlertController *alert;
-    if (!alert) {
-        alert = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+
+    if (!self.alert) {
+        self.alert = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
         
         UIAlertAction *photoLibrary = [UIAlertAction actionWithTitle:@"相册" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
             self.isVideo = NO;
@@ -72,12 +81,12 @@
         UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
             
         }];
-        [alert addAction:photoLibrary];
-        [alert addAction:camera];
-        [alert addAction:cancel];
+        [self.alert addAction:photoLibrary];
+        [self.alert addAction:camera];
+        [self.alert addAction:cancel];
     }
 
-    [self presentViewController:alert animated:YES completion:nil];
+    [self presentViewController:self.alert animated:YES completion:nil];
 
 
 }
@@ -106,21 +115,39 @@
         [WJHUD showText:@"请输入举报线索" onView:self.view];
         return;
     }
-    NSMutableArray *mediaArray =[NSMutableArray new];
+
+    if (!self.mediaArray) {
+        self.mediaArray =[NSMutableArray new];
+    }else{
+        [self.mediaArray removeAllObjects];
+    }
     if (_reportImage) {
-        [mediaArray addObject:_reportImage];
+        [self.mediaArray addObject:_reportImage];
     }
     if (_videoAsset) {
-        [mediaArray addObject:_videoAsset];
+        [self.mediaArray addObject:_videoAsset];
     }
-    
-    [RequestService reportCrimeWithMediaArray:mediaArray withParamDict:@{@"content":_contentTV.text,
-                                                                         @"informer":_nameTF.text,
-                                                                         @"informer_phone":_phoneTF.text,
-                                                                         } progress:^(NSProgress * _Nonnull progress) {
-        
+    [WJHUD showOnView:self.view];
+    [RequestService reportCrimeWithMediaArray:_mediaArray
+                                withParamDict:@{@"content":_contentTV.text,
+                                                @"informer":_nameTF.text,
+                                                @"informer_phone":_phoneTF.text,
+                                                @"id_number":_idCodeTF.text                                                } progress:^(NSProgress * _Nonnull progress) {
+                                                    
+                                                    if (progress.fractionCompleted == 1) {
+                                                        NSLog(@"%f",progress.fractionCompleted);
+                                                        dispatch_async(dispatch_get_main_queue(), ^{
+                                                            [WJHUD hideFromView:self.view];
+                                                        });
+                                                    }
     } resultBlock:^(BOOL success, id  _Nullable object) {
-        
+        if (success) {
+            [WJHUD showOnWindowWithText:@"提交成功"];
+            [self.navigationController popViewControllerAnimated:YES];
+        }else{
+            [WJHUD hideFromView:self.view];
+            NSLog(@"%@",object);
+        }
     }];
     
 }
@@ -147,11 +174,18 @@
         if (UIVideoAtPathIsCompatibleWithSavedPhotosAlbum(urlStr)) {
             //保存视频到相簿，注意也可以使用ALAssetsLibrary来保存
 //            UISaveVideoAtPathToSavedPhotosAlbum(urlStr, self, @selector(video:didFinishSavingWithError:contextInfo:), nil);//保存视频到相簿
-            [self saveVideoToPhotos:url];
+//            self.videoPathURL = url;
+            [WJHUD showOnView:self.view];
+            [self convertVideoQuailtyWithInputURL:url completeHandler:^(AVAssetExportSession *exportSession) {
+                [self saveVideoToPhotos:exportSession.outputURL];
+            }];
+
         }
     }
     
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [picker dismissViewControllerAnimated:YES completion:^{
+        
+    }];
 }
 -(void)imagePickerControllerDidCancel:(UIImagePickerController *)picker{
     NSLog(@"取消");
@@ -219,13 +253,16 @@
     [_library writeVideoAtPathToSavedPhotosAlbum:url completionBlock:^(NSURL *assetURL, NSError *error) {
         //录制完之后自动播放
         //            NSURL *url=[NSURL fileURLWithPath:url];
-        _player=[AVPlayer playerWithURL:url];
-        AVPlayerLayer *playerLayer=[AVPlayerLayer playerLayerWithPlayer:_player];
-        playerLayer.frame=CGRectMake(0, 0, 80, 80);
-        
-        [self.videoButton.layer addSublayer:playerLayer];
-        [_player play];
-        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            _player=[AVPlayer playerWithURL:url];
+            AVPlayerLayer *playerLayer=[AVPlayerLayer playerLayerWithPlayer:_player];
+            playerLayer.frame=CGRectMake(0, 0, 80, 80);
+            
+            [self.videoButton.layer addSublayer:playerLayer];
+            [_player play];
+            [WJHUD hideFromView:self.view];
+        });
+
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
 
             [weakSelf.library assetForURL:assetURL resultBlock:^(ALAsset *asset){//这里的asset便是我们所需要的图像对应的ALAsset了
@@ -237,7 +274,87 @@
     }];
 }
 
+//- (void) convertVideoWithModel:(RZProjectFileModel *) model
+//{
+//    model.filename = [NSString stringWithFormat:@"%ld.mp4",RandomNum];
+//    //保存至沙盒路径
+//    NSString *pathDocuments = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+//    NSString *videoPath = [NSString stringWithFormat:@"%@/Image", pathDocuments];
+//    model.sandBoxFilePath = [videoPath stringByAppendingPathComponent:model.filename];
+//    
+//    //转码配置
+//    AVURLAsset *asset = [AVURLAsset URLAssetWithURL:model.assetFilePath options:nil];
+//    AVAssetExportSession *exportSession= [[AVAssetExportSession alloc] initWithAsset:asset presetName:AVAssetExportPresetMediumQuality];
+//    exportSession.shouldOptimizeForNetworkUse = YES;
+//    exportSession.outputURL = [NSURL fileURLWithPath:model.sandBoxFilePath];
+//    exportSession.outputFileType = AVFileTypeMPEG4;
+//    [exportSession exportAsynchronouslyWithCompletionHandler:^{
+//        int exportStatus = exportSession.status;
+//        RZLog(@"%d",exportStatus);
+//        switch (exportStatus)
+//        {
+//            case AVAssetExportSessionStatusFailed:
+//            {
+//                // log error to text view
+//                NSError *exportError = exportSession.error;
+//                NSLog (@"AVAssetExportSessionStatusFailed: %@", exportError);
+//                break;
+//            }
+//            case AVAssetExportSessionStatusCompleted:
+//            {
+//                RZLog(@"视频转码成功");
+//                NSData *data = [NSData dataWithContentsOfFile:model.sandBoxFilePath];
+//                model.fileData = data;
+//            }
+//        }
+//    }];
+//    
+//}
+- (void) convertVideoQuailtyWithInputURL:(NSURL*)inputURL completeHandler:(void (^)(AVAssetExportSession*))handler
+{
 
+    NSDateFormatter *formater = [[NSDateFormatter alloc] init];// 用时间, 给文件重新命名, 防止视频存储覆盖,
+    
+    [formater setDateFormat:@"yyyy-MM-dd-HH:mm:ss"];
+    
+    NSFileManager *manager = [NSFileManager defaultManager];
+    
+    BOOL isExists = [manager fileExistsAtPath:CompressionVideoPath];
+    NSString *resultPath;
+    if (!isExists) {
+        
+        [manager createDirectoryAtPath:CompressionVideoPath withIntermediateDirectories:YES attributes:nil error:nil];
+    }
+    
+    resultPath = [CompressionVideoPath stringByAppendingPathComponent:[NSString stringWithFormat:@"outputJFVideo-%@.mp4", [formater stringFromDate:[NSDate date]]]];
+    
+    
+    
+    AVURLAsset *asset = [AVURLAsset URLAssetWithURL:inputURL options:nil];
+    AVAssetExportSession *exportSession= [[AVAssetExportSession alloc] initWithAsset:asset presetName:AVAssetExportPresetMediumQuality];
+    exportSession.outputURL = [NSURL fileURLWithPath:resultPath];
+    exportSession.outputFileType = AVFileTypeMPEG4;
+    
+    [exportSession exportAsynchronouslyWithCompletionHandler:^(void) {
+        int exportStatus = exportSession.status;
+        NSLog(@"%@",exportSession.error);
+        switch (exportStatus)
+        {
+            case AVAssetExportSessionStatusUnknown:
+                break;
+            case AVAssetExportSessionStatusWaiting:
+                break;
+            case AVAssetExportSessionStatusExporting:
+                break;
+            case AVAssetExportSessionStatusCompleted: {
+                handler(exportSession);
+                break;
+            }
+            case AVAssetExportSessionStatusFailed:
+                break;
+        }
+    }];
+}
 /*
 #pragma mark - Navigation
 

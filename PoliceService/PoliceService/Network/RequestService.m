@@ -306,5 +306,21 @@
     }];
 }
 
++(void)queryBusinessPlaceWithresultBlock:(void (^)(BOOL, id _Nullable))resultBlock{
+    
+    NSString *urlStr = [NSString stringWithFormat:@"%@%@", AppURL, Interface_QueryBusinessPlace];
+    [[FSNetWorkManager manager] postDataWithHostUrl:urlStr parameters:@[] result:^(BOOL success, id  _Nonnull object) {
+        resultBlock(success, object);
+    }];
+}
+
++(void)queryCityWithParamDict:(NSDictionary *)paramDict resultBlock:(void (^)(BOOL, id _Nullable))resultBlock{
+    NSString *urlStr = [NSString stringWithFormat:@"%@%@", AppURL, Interface_QueryCityDetail];
+    [[FSNetWorkManager manager] postDataWithHostUrl:urlStr parameters:@[] result:^(BOOL success, id  _Nonnull object) {
+        resultBlock(success, object);
+    }];
+    
+}
+
 
 @end

@@ -41,6 +41,9 @@
 		5A91D8871ED66AE1008D0393 /* WKTestAudioOutput.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A91D87B1ED66AE1008D0393 /* WKTestAudioOutput.m */; };
 		5A91D8881ED66AE1008D0393 /* WKVideoConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A91D87D1ED66AE1008D0393 /* WKVideoConverter.m */; };
 		5A91D88C1ED67E20008D0393 /* ALAsset+lExport.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A91D88B1ED67E20008D0393 /* ALAsset+lExport.m */; };
+		5AB151141ED80405006C9C19 /* QueryBusinessPlaceTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB151121ED80405006C9C19 /* QueryBusinessPlaceTableVC.m */; };
+		5AB151181ED81005006C9C19 /* BusinessPlaceDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB151171ED81005006C9C19 /* BusinessPlaceDetailVC.m */; };
+		5AB1511B1ED810CD006C9C19 /* BusinessPlaceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB1511A1ED810CD006C9C19 /* BusinessPlaceCell.m */; };
 		5AB6BB841ED53673003EC557 /* ConsultOnlineVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB6BB821ED53673003EC557 /* ConsultOnlineVC.m */; };
 		5AB6BB851ED53673003EC557 /* ConsultOnlineVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AB6BB831ED53673003EC557 /* ConsultOnlineVC.xib */; };
 		5AB6BB891ED536C0003EC557 /* CrimeReportVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB6BB871ED536C0003EC557 /* CrimeReportVC.m */; };
@@ -954,6 +957,12 @@
 		5A91D87D1ED66AE1008D0393 /* WKVideoConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKVideoConverter.m; sourceTree = "<group>"; };
 		5A91D88A1ED67E20008D0393 /* ALAsset+lExport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ALAsset+lExport.h"; sourceTree = "<group>"; };
 		5A91D88B1ED67E20008D0393 /* ALAsset+lExport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ALAsset+lExport.m"; sourceTree = "<group>"; };
+		5AB151111ED80405006C9C19 /* QueryBusinessPlaceTableVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QueryBusinessPlaceTableVC.h; sourceTree = "<group>"; };
+		5AB151121ED80405006C9C19 /* QueryBusinessPlaceTableVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueryBusinessPlaceTableVC.m; sourceTree = "<group>"; };
+		5AB151161ED81005006C9C19 /* BusinessPlaceDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusinessPlaceDetailVC.h; sourceTree = "<group>"; };
+		5AB151171ED81005006C9C19 /* BusinessPlaceDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusinessPlaceDetailVC.m; sourceTree = "<group>"; };
+		5AB151191ED810CD006C9C19 /* BusinessPlaceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusinessPlaceCell.h; sourceTree = "<group>"; };
+		5AB1511A1ED810CD006C9C19 /* BusinessPlaceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusinessPlaceCell.m; sourceTree = "<group>"; };
 		5AB6BB811ED53673003EC557 /* ConsultOnlineVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConsultOnlineVC.h; sourceTree = "<group>"; };
 		5AB6BB821ED53673003EC557 /* ConsultOnlineVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConsultOnlineVC.m; sourceTree = "<group>"; };
 		5AB6BB831ED53673003EC557 /* ConsultOnlineVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConsultOnlineVC.xib; sourceTree = "<group>"; };
@@ -1937,6 +1946,10 @@
 				5A53F0E01ECC2CC300162B2F /* CashPrizeTableVC.h */,
 				5A53F0E11ECC2CC300162B2F /* CashPrizeTableVC.m */,
 				5A53F0DB1ECC283F00162B2F /* Colligation.storyboard */,
+				5AB151111ED80405006C9C19 /* QueryBusinessPlaceTableVC.h */,
+				5AB151121ED80405006C9C19 /* QueryBusinessPlaceTableVC.m */,
+				5AB151161ED81005006C9C19 /* BusinessPlaceDetailVC.h */,
+				5AB151171ED81005006C9C19 /* BusinessPlaceDetailVC.m */,
 			);
 			name = "综合查询";
 			sourceTree = "<group>";
@@ -3282,6 +3295,8 @@
 				CBAF392C1E9727DB005BB9C7 /* SearchResultTableCell.h */,
 				CBAF392D1E9727DB005BB9C7 /* SearchResultTableCell.m */,
 				CBAF392E1E9727DB005BB9C7 /* SearchResultTableCell.xib */,
+				5AB151191ED810CD006C9C19 /* BusinessPlaceCell.h */,
+				5AB1511A1ED810CD006C9C19 /* BusinessPlaceCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -3831,6 +3846,7 @@
 				CBD98FAC1E4AB82500C09DD2 /* UIView+Additions.m in Sources */,
 				5A53F0DF1ECC2C8500162B2F /* RewardQueryTabelVC.m in Sources */,
 				CB42BA0A1E52D76D0092CE91 /* MyConsultingTableCell.m in Sources */,
+				5AB151141ED80405006C9C19 /* QueryBusinessPlaceTableVC.m in Sources */,
 				CBD990691E4AC64800C09DD2 /* NSArray+MASAdditions.m in Sources */,
 				CB3F5C9F1E5E70060013FCEF /* RecommendCollectionViewCell.m in Sources */,
 				CBD98E901E4AB37A00C09DD2 /* MKAnnotationView+FSWebCache.m in Sources */,
@@ -3838,6 +3854,7 @@
 				CBD98F2F1E4AB37A00C09DD2 /* UIImageView+HighlightedWebCache.m in Sources */,
 				5A91D8801ED66AE1008D0393 /* WCSPlayMovieController.m in Sources */,
 				CBE0CFB01E690EF60027DAD2 /* BaseTableDataSource.m in Sources */,
+				5AB1511B1ED810CD006C9C19 /* BusinessPlaceCell.m in Sources */,
 				CBE0CFB61E691FDE0027DAD2 /* MemberCenterTableDataSource.m in Sources */,
 				CBD98EF61E4AB37A00C09DD2 /* JSONModelClassProperty.m in Sources */,
 				CBD98F7C1E4AB69500C09DD2 /* NSKeyedUnarchiver+YYAdd.m in Sources */,
@@ -4008,6 +4025,7 @@
 				CBE0CF9C1E67C0800027DAD2 /* QueryLostThingsResultTableCell.m in Sources */,
 				CBD990A01E4AC7FF00C09DD2 /* IQUITextFieldView+Additions.m in Sources */,
 				CBD98F8B1E4AB69500C09DD2 /* NSString+YYAdd.m in Sources */,
+				5AB151181ED81005006C9C19 /* BusinessPlaceDetailVC.m in Sources */,
 				CBE0CFA61E68F5880027DAD2 /* SearchResultDataSource.m in Sources */,
 				CBD98E9F1E4AB37A00C09DD2 /* FSWKWebViewJSBridge.m in Sources */,
 				CBD98F761E4AB69500C09DD2 /* NSDate+YYAdd.m in Sources */,

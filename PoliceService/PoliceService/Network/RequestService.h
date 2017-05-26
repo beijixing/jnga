@@ -72,4 +72,7 @@
 
 +(void)reportCrimeWithMediaArray:(NSMutableArray *)array  withParamDict:(NSDictionary *)paramDict progress:(nullable void (^)(NSProgress * _Nonnull))progress resultBlock:(void(^_Nullable)(BOOL success,id _Nullable object))resultBlock;
 
++(void)queryBusinessPlaceWithresultBlock:(void(^_Nullable)(BOOL success,id _Nullable object))resultBlock;
++(void)queryCityWithParamDict:(NSDictionary *_Nullable)paramDict resultBlock:(void(^_Nullable)(BOOL success,id _Nullable object))resultBlock;
+
 @end
