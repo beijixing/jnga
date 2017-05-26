@@ -15,4 +15,7 @@
 @property(nonatomic) NSString<Optional> *operate_name;
 @property(nonatomic) NSString<Optional> *img_url;
 @property(nonatomic) NSString<Optional> *keyword;
+@property(nonatomic) NSString<Optional> *desc;
+@property(nonatomic) NSString<Optional> *vc;
+@property(nonatomic) BOOL shouldLogin;
 @end

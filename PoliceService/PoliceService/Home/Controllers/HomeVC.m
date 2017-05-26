@@ -66,7 +66,7 @@ static const NSString *homeItemId = @"38ed36f8307443fa9765e35f6db0c038";
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.title = @"济宁公安便民服务平台";
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.view.backgroundColor = [UIColor lightGrayColor];
     [self.view addSubview:self.messageView];
     [self.view addSubview:self.mainCollectionView];
     [self setUpRightNavbarItem];
@@ -156,17 +156,15 @@ static const NSString *homeItemId = @"38ed36f8307443fa9765e35f6db0c038";
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     switch (section) {
         case 0:
+            return 0;
         case 1:
             return 0;
             break;
         case 2:
-            return 3;
-            break;
-        case 3:
-            return 6;
+            return self.dataModel.operate_items.count;
             break;
         default:
-            return 0;
+            return ((HomePageSectionModel *)(self.dataModel.sections[section - 3])).itmes.count;
             break;
     }
 }
@@ -189,23 +187,21 @@ static const NSString *homeItemId = @"38ed36f8307443fa9765e35f6db0c038";
         HomeCollectionThirdSectionCell *showCell = (HomeCollectionThirdSectionCell*)cell;
          OperationItemModel *dmodel = operationItems[indexPath.row];
         showCell.iconImageView.image = [UIImage imageNamed:dmodel.img_url];
-    }else if(indexPath.section == 3){
+        showCell.titleLabel.text = dmodel.operate_name;
+        showCell.descLabel.text = dmodel.desc;
+    }else if(indexPath.section >= 3){
         HomeCollectionViewCell*showCell = (HomeCollectionViewCell*)cell;
-        NSArray *operationItems = self.dataModel.operate_items;
+        HomePageSectionModel *sectionModel =  self.dataModel.sections[indexPath.section - 3];
+        NSArray *operationItems = sectionModel.itmes;
+        OperationItemModel *dmodel = operationItems[indexPath.item];
+        showCell.titleLabel.text = dmodel.operate_name;
+        showCell.iconImageView.image = [UIImage imageNamed:dmodel.img_url];
 
-        if (indexPath.row+3 < operationItems.count) {
-            OperationItemModel *dmodel = operationItems[indexPath.row+3];
-            showCell.titleLabel.text = dmodel.operate_name;
-            showCell.iconImageView.image = [UIImage imageNamed:dmodel.img_url];
-        }else {
-            showCell.titleLabel.hidden = YES;
-            showCell.iconImageView.hidden = YES;
-        }
     }
 }
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-    return 4;
+    return 3+self.dataModel.sections.count;
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -233,15 +229,15 @@ static const NSString *homeItemId = @"38ed36f8307443fa9765e35f6db0c038";
             [headerView addSubview:[self getSearchView]];
             headerView.backgroundColor = COLOR_WITH_RGB(217, 217, 217);
         }else if(indexPath.section == 2) {
-//            UILabel *label = [self getHeaderLabelWithText:@"热点服务"];
-//            [headerView addSubview:label];
+            UILabel *label = [self getHeaderLabelWithText:@"快捷应用"];
+            [headerView addSubview:label];
             headerView.backgroundColor = COLOR_WITH_RGB(240, 244, 249);
-        }else if(indexPath.section == 3) {
-//            UILabel *label = [self getHeaderLabelWithText:@"便民服务"];
-//            [headerView addSubview:label];
+        }else if(indexPath.section >=  3) {
+            HomePageSectionModel *model = self.dataModel.sections[indexPath.section - 3];
+            UILabel *label = [self getHeaderLabelWithText:model.sectionTitle];
+            [headerView addSubview:label];
             headerView.backgroundColor = COLOR_WITH_RGB(240, 244, 249);
         }
-        
         return headerView;
     }
     else
@@ -253,10 +249,8 @@ static const NSString *homeItemId = @"38ed36f8307443fa9765e35f6db0c038";
 }
 
 - (UILabel *)getHeaderLabelWithText:(NSString *)text {
-    UILabel *label = [UIFactory createLabelWith:CGRectMake(0, 0, 100, 40*KSCALE) textColor:COLOR_WITH_RGB(90, 90, 90) text:text];
-    label.font = [UIFont fontWithName:@"Arial" size:12];
-    label.textAlignment = NSTextAlignmentCenter;
-    label.center = CGPointMake(SCREN_WIDTH/2, 20*KSCALE);
+    UILabel *label = [UIFactory createLabelWith:CGRectMake(8, 0, 100, 40*KSCALE) textColor:COLOR_WITH_RGB(90, 90, 90) text:text];
+    label.font = [UIFont fontWithName:@"Arial" size:15];
     return label;
 }
 
@@ -266,12 +260,13 @@ static const NSString *homeItemId = @"38ed36f8307443fa9765e35f6db0c038";
     }else if (section ==1 ) {
         return CGSizeMake(SCREN_WIDTH,80*KSCALE);
     }
-    return CGSizeMake(SCREN_WIDTH,15*KSCALE);//40*KSCALE);
+    return CGSizeMake(SCREN_WIDTH,40*KSCALE);//40*KSCALE);
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForFooterInSection:(NSInteger)section {
-    if (section == 3) {
-        return CGSizeMake(SCREN_WIDTH, 80*KSCALE);
+    if (section >= 3) {
+//        return CGSizeMake(SCREN_WIDTH, 80*KSCALE);
+        return CGSizeMake(SCREN_WIDTH, 1);
     }else {
         return CGSizeMake(0, 0);
     }
@@ -280,111 +275,120 @@ static const NSString *homeItemId = @"38ed36f8307443fa9765e35f6db0c038";
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     
-    switch (indexPath.section) {
-        case 2:
-        {
-            switch (indexPath.row) {
-                case 0:
-                {
-                    self.hidesBottomBarWhenPushed = YES;
-                    MoveCarServiceVC *moveCarVc = [[MoveCarServiceVC alloc] init];
-                    [self.navigationController pushViewController:moveCarVc animated:YES];
-                    self.hidesBottomBarWhenPushed = NO;
-                }
-                break;
-                case 1:
-                {
-                    if ([GlobalVariableManager manager].userId != nil){
-                        [self gotoReserVationDetailViewControleller];
-                    }else {
-                        typeof(self) __weak wself = self;
-                        [GlobalFunctionManager autoLoginOrLoginOnViewController:wself callBack:^{
-                            [wself gotoReserVationDetailViewControleller];
-                        }];
-                    }
-                }
-                    break;
-                    
-                case 2:
-                {
-                    self.hidesBottomBarWhenPushed = YES;
-                    CheckPeccancyVC *checkPeccancyVc = [[CheckPeccancyVC alloc] init];
-                    [self.navigationController pushViewController:checkPeccancyVc animated:YES];
-                    self.hidesBottomBarWhenPushed = NO;
-                }
-                    break;
-                    
-                default:
-                    break;
-            }
-        }
-            break;
-        case 3:
-        {
-            switch (indexPath.row) {
-                case 0:
-                {
-                    if ([GlobalVariableManager manager].userId != nil){
-                        [self gotoReserVationViewControleller];
-                    }else {
-                        typeof(self) __weak wself = self;
-                        [GlobalFunctionManager autoLoginOrLoginOnViewController:wself callBack:^{
-                            [wself gotoReserVationViewControleller];
-                        }];
-                    }
-                }
-                    break;
-                    
-                case 1:
-                {
-                    self.hidesBottomBarWhenPushed = YES;
-                    MultipleQueryVC *queryVc = [[MultipleQueryVC alloc] init];
-                    [self.navigationController pushViewController:queryVc animated:YES];
-                    self.hidesBottomBarWhenPushed = NO;
-                }
-                    break;
-                case 2:
-                {
-                    self.hidesBottomBarWhenPushed = YES;
-                    PeopleAppealVC *appealVc = [[PeopleAppealVC alloc] init];
-                    [self.navigationController pushViewController:appealVc animated:YES];
-                    self.hidesBottomBarWhenPushed = NO;
-                }
-                    break;
-                case 3:
-                {
-                    self.hidesBottomBarWhenPushed = YES;
-                    AffairsGuideVC *affairVc = [[AffairsGuideVC alloc] init];
-                    [self.navigationController pushViewController:affairVc animated:YES];
-                    self.hidesBottomBarWhenPushed = NO;
-                }
-                    break;
-                case 4:
-                {
-                    self.hidesBottomBarWhenPushed = YES;
-                    AffairsGuideVC *affairVc = [[AffairsGuideVC alloc] init];
-                    [self.navigationController pushViewController:affairVc animated:YES];
-                    self.hidesBottomBarWhenPushed = NO;
-                }
-                    break;
-                case 5:
-                {
-                    self.hidesBottomBarWhenPushed = YES;
-                    NewsCenterVC *newsCenterVc = [[NewsCenterVC alloc] init];
-                    [self.navigationController pushViewController:newsCenterVc animated:YES];
-                    self.hidesBottomBarWhenPushed = NO;
-                }
-                    break;
-                    
-                default:
-                    break;
-            }
-
-        }
-            break;
-        default:
-            break;
+    if (indexPath.section == 2) {
+        OperationItemModel *model = self.dataModel.operate_items[indexPath.item];
+        [GlobalFunctionManager pushViewControllerWithItem:model fromVC:self];
     }
+    if (indexPath.section >= 3) {
+        HomePageSectionModel *sectionModel = self.dataModel.sections[indexPath.section - 3];
+        OperationItemModel *model = sectionModel.itmes[indexPath.item];
+        [GlobalFunctionManager pushViewControllerWithItem:model fromVC:self];
+    }
+//    switch (indexPath.section) {
+//        case 2:
+//        {
+//            switch (indexPath.row) {
+//                case 0:
+//                {
+//                    self.hidesBottomBarWhenPushed = YES;
+//                    MoveCarServiceVC *moveCarVc = [[MoveCarServiceVC alloc] init];
+//                    [self.navigationController pushViewController:moveCarVc animated:YES];
+//                    self.hidesBottomBarWhenPushed = NO;
+//                }
+//                break;
+//                case 1:
+//                {
+//                    if ([GlobalVariableManager manager].userId != nil){
+//                        [self gotoReserVationDetailViewControleller];
+//                    }else {
+//                        typeof(self) __weak wself = self;
+//                        [GlobalFunctionManager autoLoginOrLoginOnViewController:wself callBack:^{
+//                            [wself gotoReserVationDetailViewControleller];
+//                        }];
+//                    }
+//                }
+//                    break;
+//                    
+//                case 2:
+//                {
+//                    self.hidesBottomBarWhenPushed = YES;
+//                    CheckPeccancyVC *checkPeccancyVc = [[CheckPeccancyVC alloc] init];
+//                    [self.navigationController pushViewController:checkPeccancyVc animated:YES];
+//                    self.hidesBottomBarWhenPushed = NO;
+//                }
+//                    break;
+//                    
+//                default:
+//                    break;
+//            }
+//        }
+//            break;
+//        case 3:
+//        {
+//            switch (indexPath.row) {
+//                case 0:
+//                {
+//                    if ([GlobalVariableManager manager].userId != nil){
+//                        [self gotoReserVationViewControleller];
+//                    }else {
+//                        typeof(self) __weak wself = self;
+//                        [GlobalFunctionManager autoLoginOrLoginOnViewController:wself callBack:^{
+//                            [wself gotoReserVationViewControleller];
+//                        }];
+//                    }
+//                }
+//                    break;
+//                    
+//                case 1:
+//                {
+//                    self.hidesBottomBarWhenPushed = YES;
+//                    MultipleQueryVC *queryVc = [[MultipleQueryVC alloc] init];
+//                    [self.navigationController pushViewController:queryVc animated:YES];
+//                    self.hidesBottomBarWhenPushed = NO;
+//                }
+//                    break;
+//                case 2:
+//                {
+//                    self.hidesBottomBarWhenPushed = YES;
+//                    PeopleAppealVC *appealVc = [[PeopleAppealVC alloc] init];
+//                    [self.navigationController pushViewController:appealVc animated:YES];
+//                    self.hidesBottomBarWhenPushed = NO;
+//                }
+//                    break;
+//                case 3:
+//                {
+//                    self.hidesBottomBarWhenPushed = YES;
+//                    AffairsGuideVC *affairVc = [[AffairsGuideVC alloc] init];
+//                    [self.navigationController pushViewController:affairVc animated:YES];
+//                    self.hidesBottomBarWhenPushed = NO;
+//                }
+//                    break;
+//                case 4:
+//                {
+//                    self.hidesBottomBarWhenPushed = YES;
+//                    AffairsGuideVC *affairVc = [[AffairsGuideVC alloc] init];
+//                    [self.navigationController pushViewController:affairVc animated:YES];
+//                    self.hidesBottomBarWhenPushed = NO;
+//                }
+//                    break;
+//                case 5:
+//                {
+//                    self.hidesBottomBarWhenPushed = YES;
+//                    NewsCenterVC *newsCenterVc = [[NewsCenterVC alloc] init];
+//                    [self.navigationController pushViewController:newsCenterVc animated:YES];
+//                    self.hidesBottomBarWhenPushed = NO;
+//                }
+//                    break;
+//                    
+//                default:
+//                    break;
+//            }
+//
+//        }
+//            break;
+//        default:
+//            break;
+//    }
     
  }
 
@@ -501,20 +505,21 @@ static const NSString *homeItemId = @"38ed36f8307443fa9765e35f6db0c038";
         return _mainCollectionView;
     }
     UICollectionViewFlowLayout *flowlayout = [[UICollectionViewFlowLayout alloc]init];
-    CGFloat itemWidth = [flowlayout fixSlit:CGRectMake(0, 0, SCREN_WIDTH, SCREN_HEIGHT-49-64) colCount:4 space:0];
+//    CGFloat itemWidth = [flowlayout fixSlit:CGRectMake(0, 0, SCREN_WIDTH, SCREN_HEIGHT-49-64) colCount:3 space:1];
+    CGFloat itemWidth = (SCREN_WIDTH -2)/3;
     self.generalCellSize = CGSizeMake(itemWidth, itemWidth);
 //    CGFloat itemWidth2 = [flowlayout fixSlit:CGRectMake(0, 0, SCREN_WIDTH, SCREN_HEIGHT-49-64) colCount:3 space:0];
-    self.thirdSectionCellSize = CGSizeMake(SCREN_WIDTH/3, itemWidth+20*KSCALE);
+    self.thirdSectionCellSize = CGSizeMake((SCREN_WIDTH-1)/2, SCREN_WIDTH/3);
 //    flowlayout.itemSize = CGSizeMake(itemWidth, itemWidth);
-    flowlayout.minimumInteritemSpacing = 0;
-    flowlayout.minimumLineSpacing = 0;//未设置这个参数会导致有列间隙
+    flowlayout.minimumInteritemSpacing = 1;
+    flowlayout.minimumLineSpacing = 1;//未设置这个参数会导致有列间隙
     flowlayout.sectionInset = UIEdgeInsetsMake(0, 0, 0, 0);//这里设置了属性值之后，不要再实现相应的代理方法了，否则属性设置无效。
     flowlayout.scrollDirection = UICollectionViewScrollDirectionVertical;
     
-    _mainCollectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(SCREN_WIDTH-itemWidth*4, 50*KSCALE, itemWidth*4, SCREN_HEIGHT-30-49-64) collectionViewLayout:flowlayout];
+    _mainCollectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 50*KSCALE, SCREN_WIDTH, SCREN_HEIGHT-30-49-64) collectionViewLayout:flowlayout];
     _mainCollectionView.delegate = self;
     _mainCollectionView.dataSource = self;
-    _mainCollectionView.backgroundColor = COLOR_WITH_RGB(255, 255, 255);
+    _mainCollectionView.backgroundColor = COLOR_WITH_RGB(240, 244, 249);;
     [_mainCollectionView registerNib:[UINib nibWithNibName:@"HomeCollectionViewCell" bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:@"collectioncell"];
     [_mainCollectionView registerNib:[UINib nibWithNibName:@"HomeCollectionThirdSectionCell" bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:@"HomeCollectionThirdSectionCell"];
 

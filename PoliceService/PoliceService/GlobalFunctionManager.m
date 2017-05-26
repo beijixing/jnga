@@ -15,6 +15,7 @@
 #import "WJHUD.h"
 #import "RequestService.h"
 #import "SuggestionVC.h"
+#import "OperationItemModel.h"
 @implementation GlobalFunctionManager
 //+(instancetype)manager {
 //    static GlobalFunctionManager *manager;
@@ -35,6 +36,24 @@
         
     }];
 }
+
++(void)pushViewControllerWithItem:(OperationItemModel *)item fromVC:(UIViewController *)vc
+{
+    NSDictionary *dict = @{@"keyword":item.keyword};
+    if (item.shouldLogin) {
+        if ([GlobalVariableManager manager].userId != nil){
+            [self pushViewControllerWithName:item.vc pagram:dict fromVC:vc];
+        }else {
+            [GlobalFunctionManager autoLoginOrLoginOnViewController:vc callBack:^{
+                [self pushViewControllerWithName:item.vc pagram:dict fromVC:vc];
+            }];
+        }
+    }else{
+        [self pushViewControllerWithName:item.vc pagram:dict fromVC:vc];
+    }
+}
+
+
 
 +(void)pushQuerySubviewWithController:(UIViewController *)vc switchId:(NSInteger)idx {
     switch (idx) {
@@ -167,9 +186,22 @@
 }
 
 + (void)pushViewControllerWithName:(NSString *)controllerName from:(UIViewController *)vc{
+    [self pushViewControllerWithName:controllerName pagram:nil fromVC:vc];
+}
++ (void)pushViewControllerWithName:(NSString *)controllerName pagram:(NSDictionary *)dict fromVC:(UIViewController *)vc{
+    BOOL hideBottomWhenPushed = vc.hidesBottomBarWhenPushed;
     UIViewController *pushVc = [[NSClassFromString(controllerName) alloc] init];
+    if (dict) {
+        [dict enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
+            if ([pushVc respondsToSelector:NSSelectorFromString(key)]) {
+                [pushVc setValue:obj forKey:key];
+            }
+        }];
+    }
     vc.hidesBottomBarWhenPushed = YES;
     [vc.navigationController pushViewController:pushVc animated:YES];
+    vc.hidesBottomBarWhenPushed = hideBottomWhenPushed;
+
 }
 
 + (void)pushViewControllerWithName:(NSString *)controllerName title:(NSString *)title from:(UIViewController *)vc{

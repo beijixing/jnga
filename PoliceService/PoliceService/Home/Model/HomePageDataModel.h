@@ -9,7 +9,10 @@
 #import "FSJSONModel.h"
 #import "BannerDataModel.h"
 #import "OperationItemModel.h"
+#import "HomePageSectionModel.h"
 @interface HomePageDataModel : JSONModel
 @property(nonatomic, strong) NSArray<BannerDataModel> *banners;
-@property(nonatomic, strong) NSArray<OperationItemModel> *operate_items;
+@property(nonatomic, strong) NSArray<HomePageSectionModel> *sections;
+@property (nonatomic, strong) NSArray <OperationItemModel> *operate_items;
+
 @end

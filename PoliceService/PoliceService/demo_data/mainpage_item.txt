@@ -1,68 +1,330 @@
 {
-     "banners":
-    [
-        {
-            "id": 0,
-            "title": "",
-            "img_url": "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1487759796214&di=89ec0f3049ebb33aca3fe3fed58720ef&imgtype=0&src=http%3A%2F%2Ftpic.home.news.cn%2FxhCloudNewsPic%2Fxhpic001%2FM08%2F67%2F4E%2FwKhTg1WjpusEAAAAAAAAAAAAAAA708.jpg"
-        },
-        {
-            "id": 1,
-            "title": "",
-            "img_url": "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1487759828565&di=ab82818a9a333d70b8dca81b35bd836c&imgtype=0&src=http%3A%2F%2Fpic.qiantucdn.com%2F58pic%2F18%2F55%2F25%2F33A58PIC2kT_1024.jpg"
-        },
-        {
-            "id": 2,
-            "title": "",
-            "img_url": "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1487759957830&di=43de65bdd79772a1a82ec664027d4b7e&imgtype=0&src=http%3A%2F%2Fscimg.jb51.net%2Fallimg%2F160826%2F102-160R6161035395.jpg"
-        }
-    ],
-    "operate_items": 
-    [
-        {
-            "id":0,
-            "operate_name": "移车服务",
-            "img_url": "movecar"
-        },
-        {
-            "id":1,
-            "operate_name": "交管预约",
-            "img_url": "jiaoguanyuyue"
-        },
-        {
-            "id":2,
-            "operate_name": "违章查询",
-            "img_url": "weizhangchaxun"
-        },
-        {
-            "id":3,
-            "operate_name": "网上预约",
-            "img_url": "wangshang.png"
-        },
-        {
-            "id":4,
-            "operate_name": "综合查询",
-            "img_url": "zonghe.png"
-        },
-        {
-            "id":5,
-            "operate_name": "民生诉求",
-            "img_url": "minsheng.png"
-        },
-        {
-            "id":6,
-            "operate_name": "业务办理",
-            "img_url": "banshi.png"
-        },
-        {
-            "id":7,
-            "operate_name": "办事指南",
-            "img_url": "Affairsguide"
-        },
-        {
-            "id":8,
-            "operate_name": "警务资讯",
-            "img_url": "jingwuzixun"
-        }
-    ]
+"banners": [
+{
+"id": 0,
+"title": "",
+"img_url": "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1487759796214&di=89ec0f3049ebb33aca3fe3fed58720ef&imgtype=0&src=http%3A%2F%2Ftpic.home.news.cn%2FxhCloudNewsPic%2Fxhpic001%2FM08%2F67%2F4E%2FwKhTg1WjpusEAAAAAAAAAAAAAAA708.jpg"
+},
+{
+"id": 1,
+"title": "",
+"img_url": "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1487759828565&di=ab82818a9a333d70b8dca81b35bd836c&imgtype=0&src=http%3A%2F%2Fpic.qiantucdn.com%2F58pic%2F18%2F55%2F25%2F33A58PIC2kT_1024.jpg"
+},
+{
+"id": 2,
+"title": "",
+"img_url": "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1487759957830&di=43de65bdd79772a1a82ec664027d4b7e&imgtype=0&src=http%3A%2F%2Fscimg.jb51.net%2Fallimg%2F160826%2F102-160R6161035395.jpg"
+}
+],
+"operate_items": [
+{
+"id": 0,
+"operate_name": "移车服务",
+"img_url": "ych_yy",
+"desc": "移车服务",
+"keyword": "ych_kj",
+"vc":"MoveCarServiceVC",
+"shouldLogin":1
+
+},
+{
+"id": 1,
+"operate_name": "交管缴罚",
+"img_url": "jg_yy",
+"desc": "交管缴罚",
+"keyword": "jgkj",
+"vc":"MoveCarServiceVC",
+"shouldLogin":1
+},
+{
+"id": 2,
+"operate_name": "有奖举报",
+"img_url": "yj_yy",
+"desc": "有奖举报",
+"keyword": "yjkj",
+"vc":"CrimeReportVC",
+"shouldLogin":1
+},
+{
+"id": 3,
+"operate_name": "违法查询",
+"img_url": "wf_yy",
+"desc": "违法查询",
+"keyword": "wfkj",
+"vc":"MoveCarServiceVC",
+"shouldLogin":1
+}
+],
+"sections": [
+{
+"sectionTitle": "网上预约",
+"itmes": [
+{
+"id": 0,
+"operate_name": "交管预约",
+"img_url": "jg_yy",
+"keyword": "jgyy",
+"vc":"MoveCarServiceVC",
+"shouldLogin":1
+},
+{
+"id": 1,
+"operate_name": "户政预约",
+"img_url": "hzh_yy",
+"keyword": "hzhyy",
+"vc":"MoveCarServiceVC",
+"shouldLogin":1
+},
+{
+"id": 2,
+"operate_name": "出入境预约",
+"img_url": "chrj_yy",
+"keyword": "chrjyy",
+"vc":"MoveCarServiceVC",
+"shouldLogin":1
+},
+{
+"id": 3,
+"operate_name": "治安审批预约",
+"img_url": "zha_yy",
+"keyword": "zhayy",
+"vc":"MoveCarServiceVC",
+"shouldLogin":1
+},
+{
+"id": 4,
+"operate_name": "消防预约",
+"img_url": "xf_yy",
+"keyword": "xfyy",
+"vc":"MoveCarServiceVC",
+"shouldLogin":1
+},
+{
+"id": 5,
+"operate_name": "更多",
+"img_url": "gd",
+"keyword": "gdyy",
+"vc":"ReservationOnlineVC",
+"shouldLogin":1
+},
+
+]
+},
+{
+"sectionTitle": "业务办理",
+"itmes": [
+{
+"id": 0,
+"operate_name": "交警",
+"img_url": "jj_bl",
+"keyword": "jjbl",
+"vc":"MoveCarServiceVC",
+"shouldLogin":1
+},
+{
+"id": 1,
+"operate_name": "户政",
+"img_url": "hzh_bl",
+"keyword": "hzhbl",
+"vc":"MoveCarServiceVC",
+"shouldLogin":1
+},
+{
+"id": 2,
+"operate_name": "出入境",
+"img_url": "chrj_bl",
+"keyword": "chrjbl",
+"vc":"MoveCarServiceVC",
+"shouldLogin":1
+},
+{
+"id": 3,
+"operate_name": "网警",
+"img_url": "wj_bl",
+"keyword": "wjbl",
+"vc":"MoveCarServiceVC",
+"shouldLogin":1
+},
+{
+"id": 4,
+"operate_name": "高速",
+"img_url": "gs_bl",
+"keyword": "gsbl",
+"vc":"MoveCarServiceVC",
+"shouldLogin":1
+},
+{
+"id": 5,
+"operate_name": "更多",
+"img_url": "gd",
+"keyword": "gdbl",
+"vc":"AffairsGuideVC",
+"shouldLogin":1
+},
+
+]
+},
+{
+"sectionTitle": "综合查询",
+"itmes": [
+{
+"id": 0,
+"operate_name": "机动车违法信息",
+"img_url": "jdch_cx",
+"keyword": "jdchcx",
+"vc":"MoveCarServiceVC",
+"shouldLogin":1
+},
+{
+"id": 1,
+"operate_name": "驾驶人交通违法",
+"img_url": "jshr_cx",
+"keyword": "jshrcx",
+"vc":"MoveCarServiceVC",
+"shouldLogin":1
+},
+{
+"id": 2,
+"operate_name": "出入境办证进度",
+"img_url": "chrj_cx",
+"keyword": "chrjcx",
+"vc":"MoveCarServiceVC",
+"shouldLogin":1
+},
+{
+"id": 3,
+"operate_name": "执法办案公开查询",
+"img_url": "zf_cx",
+"keyword": "zhfcx",
+"vc":"MoveCarServiceVC",
+"shouldLogin":1
+},
+{
+"id": 4,
+"operate_name": "办事场所",
+"img_url": "bs_cx",
+"keyword": "bshcx",
+"vc":"MoveCarServiceVC",
+"shouldLogin":1
+},
+{
+"id": 5,
+"operate_name": "更多",
+"img_url": "gd",
+"keyword": "gdcx",
+"vc":"MultipleQueryVC",
+"shouldLogin":1
+},
+
+]
+},
+{
+"sectionTitle": "民生诉求",
+"itmes": [
+{
+"id": 0,
+"operate_name": "警务热线",
+"img_url": "jw_sq",
+"keyword": "jwsq",
+"vc":"MoveCarServiceVC",
+"shouldLogin":1
+},
+{
+"id": 1,
+"operate_name": "违法有奖举报",
+"img_url": "wf_sq",
+"keyword": "wfsq",
+"vc":"MoveCarServiceVC",
+"shouldLogin":1
+},
+{
+"id": 2,
+"operate_name": "我要咨询",
+"img_url": "zx_sq",
+"keyword": "zxsq",
+"vc":"MoveCarServiceVC",
+"shouldLogin":1
+},
+{
+"id": 3,
+"operate_name": "局长信箱",
+"img_url": "jzh_sq",
+"keyword": "jzhsq",
+"vc":"MoveCarServiceVC",
+"shouldLogin":1
+},
+{
+"id": 4,
+"operate_name": "我要建议",
+"img_url": "jy_sq",
+"keyword": "jysq",
+"vc":"MoveCarServiceVC",
+"shouldLogin":1
+},
+{
+"id": 5,
+"operate_name": "更多",
+"img_url": "gd",
+"keyword": "gdsq",
+"vc":"PeopleAppealVC",
+"shouldLogin":1
+},
+
+]
+},
+{
+"sectionTitle": "办事指南",
+"itmes": [
+{
+"id": 0,
+"operate_name": "交警",
+"img_url": "jj_zn",
+"keyword": "jjzn",
+"vc":"MoveCarServiceVC",
+"shouldLogin":1
+},
+{
+"id": 1,
+"operate_name": "户政",
+"img_url": "hzh_zn",
+"keyword": "hzhzn",
+"vc":"MoveCarServiceVC",
+"shouldLogin":1
+},
+{
+"id": 2,
+"operate_name": "出入境",
+"img_url": "chrj_zn",
+"keyword": "chrjzn",
+"vc":"MoveCarServiceVC",
+"shouldLogin":1
+},
+{
+"id": 3,
+"operate_name": "治安",
+"img_url": "za_zn",
+"keyword": "zhazn",
+"vc":"MoveCarServiceVC",
+"shouldLogin":1
+},
+{
+"id": 4,
+"operate_name": "法制",
+"img_url": "fzh_zn",
+"keyword": "fzhzn",
+"vc":"MoveCarServiceVC",
+"shouldLogin":1
+},
+{
+"id": 5,
+"operate_name": "更多",
+"img_url": "gd",
+"keyword": "gdzn",
+"vc":"AffairsGuideVC",
+"shouldLogin":1
+},
+
+]
+}
+]
 }
