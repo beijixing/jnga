@@ -120,6 +120,17 @@ static const NSString *businessId = @"38ed36f8307443fa9765e35f6db0c032";
 
 /*
  参数名，类型，说明
+ fcard 身份证号码
+ id 派出所编码
+ ftitle 主题
+ fdetail 内容
+ */
+#define Interface_ConsultOnline @"convenience/consult"//在线咨询
+
+#define Interface_ReportCrime @"convenience/awardreport/awardReport/save"//违法犯罪线索有奖举报
+
+/*
+ 参数名，类型，说明
  businessId String 业务id
  */
 #define Interface_WrapBookingPageData @"onlinebooking/bookingmanage/onlineBookingRecord/wrapBookingPageData"//预约页面的数据
