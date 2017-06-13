@@ -12,8 +12,9 @@
 #pragma mark - Host
 //http://124.133.15.93/jngateam/jnga_ios.git gitlab
 static NSString * const Host_IP = @"http://124.133.15.90:8780/";
+static NSString * const AppURL = @"http://119.188.169.79:8081/jnga/appService/";
 
-static NSString * const AppURL = @"http://124.133.15.90:8780/jnga/appService/";
+//static NSString * const AppURL = @"http://124.133.15.90:8780/jnga/appService/";
 static NSString * const AppJNGAURL = @"http://60.211.249.228/api/";
 //static NSString * const AppURL = @"http://192.168.106.128:8080/appService/";//老钱
 
@@ -254,4 +255,10 @@ static const NSString *businessId = @"38ed36f8307443fa9765e35f6db0c032";
 #define Interface_appListByPhoneZt @"peopleappeal/most/peopleappealMost/appListByPhoneZt"
 /*-----------------------业务须知----------------------------------*/
 #define Interface_BusinessNotesTJn @"convenience/businessnotes/businessNotesTJn/businessList"
+
+
+/*---------------------------移车服务----------------------------------*/
+#define Interface_MoveCar @"move/car/moveCar/getByApi"
+
+
 #endif /* Constant_h */

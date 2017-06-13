@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 NS_ASSUME_NONNULL_BEGIN
 @interface FSNetWorkManager : NSObject
 /*
@@ -61,6 +62,13 @@ NS_ASSUME_NONNULL_BEGIN
                 suffix:(NSString *)suffix
                 progress:(nullable void (^)(NSProgress * _Nonnull))uploadProgress
                 result:(void(^)(BOOL success, id object))resultBlock;
+
+- (void)uploadImageWithUrl:(NSString *)url
+                parameters:(id)parameter
+                 image:(UIImage *)imagePath
+                    suffix:(NSString *)suffix
+                  progress:(nullable void (^)(NSProgress * _Nonnull))uploadProgress
+                    result:(void(^)(BOOL success, id object))resultBlock;
 /**
     上传文件到服务器，将结果用 resultBlock 返回给调用的地方进行处理。
  @param url 请求的url地址 如：http://xxx.xxx.com/upload。

@@ -321,5 +321,15 @@
     
 }
 
++(void)moveCarWithParamDict:(NSDictionary *_Nullable)paramDict image:(UIImage *_Nullable)image resultBlock:(void(^_Nullable)(BOOL success,id _Nullable object))resultBlock{
+    NSString *urlStr = [NSString stringWithFormat:@"%@%@", AppURL, Interface_MoveCar];
+    [[FSNetWorkManager manager]uploadImageWithUrl:urlStr parameters:paramDict image:image suffix:@"png" progress:^(NSProgress * _Nonnull progress) {
+        
+    } result:^(BOOL success, id  _Nonnull object) {
+        resultBlock(success, object);
+
+    }];
+}
+
 
 @end

@@ -139,6 +139,32 @@ static FSNetWorkManager *manager = nil;
     }];
 }
 
+
+- (void)uploadImageWithUrl:(NSString *)url
+                parameters:(id)parameter
+                     image:(UIImage *)imagePath
+                    suffix:(NSString *)suffix
+                  progress:(nullable void (^)(NSProgress * _Nonnull))uploadProgress
+                    result:(void(^)(BOOL success, id object))resultBlock{
+    AFHTTPSessionManager *manager = [[AFHTTPSessionManager alloc] initWithBaseURL:self.baseUrl sessionConfiguration:self.urlConfig];
+    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript", @"text/html", @"text/plain", @"image/jpeg", @"image/png",nil];
+    [manager POST:url parameters:parameter constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+        NSString *imageSuffix = suffix!=nil ? [suffix lowercaseString] : @"png";
+        if ([imageSuffix isEqualToString:@"png"]) {
+            [formData appendPartWithFormData:UIImagePNGRepresentation(imagePath) name:@"imagePath"];
+        }else if([imageSuffix isEqualToString:@"jpeg"]) {
+            [formData appendPartWithFileData: UIImageJPEGRepresentation(imagePath, 1.0) name:@"FileData" fileName:@"imagePath" mimeType:@"image/jpeg"];
+        }
+    } progress:^(NSProgress * _Nonnull progress) {
+        if (uploadProgress) {
+            uploadProgress(progress);
+        }
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        resultBlock(YES, responseObject);
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        resultBlock(NO, error);
+    }];
+}
 - (void)uploadFileWithUrl:(NSString *)url
                  filePath:(NSString *)filePath
                  progress:(nullable void (^)(NSProgress * _Nonnull))uploadProgress

@@ -74,5 +74,6 @@
 
 +(void)queryBusinessPlaceWithresultBlock:(void(^_Nullable)(BOOL success,id _Nullable object))resultBlock;
 +(void)queryCityWithParamDict:(NSDictionary *_Nullable)paramDict resultBlock:(void(^_Nullable)(BOOL success,id _Nullable object))resultBlock;
++(void)moveCarWithParamDict:(NSDictionary *_Nullable)paramDict image:(UIImage *_Nullable)image resultBlock:(void(^_Nullable)(BOOL success,id _Nullable object))resultBlock;
 
 @end
