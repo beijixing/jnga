@@ -164,7 +164,7 @@
         [WJHUD showText:@"输入的验证码不正确" onView:self.view];
         return;
     }
-    if (self.userNameTF.text.length<6) {
+    if (self.userNameTF.text.length<2) {
         [WJHUD showText:@"请输入姓名" onView:self.view];
         return;
     }

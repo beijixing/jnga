@@ -70,7 +70,7 @@ static const NSString *homeItemId = @"38ed36f8307443fa9765e35f6db0c038";
     [self.view addSubview:self.messageView];
     [self.view addSubview:self.mainCollectionView];
     [self setUpRightNavbarItem];
-    [self getTopNewsListData];
+//    [self getTopNewsListData];
     [self getNoticeList];
     [GlobalFunctionManager checkVersionOnViewController:self];
 }
@@ -92,19 +92,19 @@ static const NSString *homeItemId = @"38ed36f8307443fa9765e35f6db0c038";
     }];
 }
 
-- (void)getTopNewsListData {
-    typeof(self) __weak wself = self;
-    [WJHUD showOnView:self.view];
-    [RequestService getTopListWithParamDict:@{} resultBlock:^(BOOL success, id object) {
-        [WJHUD hideFromView:wself.view];
-        [GlobalFunctionManager handleServerDataWithController:wself result:success dataObj:object successBlock:^{
-            NSLog(@"object = %@", object);
-            NSDictionary *dataDict = object[@"data"];
-            wself.bannerDataArr = dataDict[@"list"];
-            [wself.mainCollectionView reloadData];
-        }];
-    }];
-}
+//- (void)getTopNewsListData {
+//    typeof(self) __weak wself = self;
+//    [WJHUD showOnView:self.view];
+//    [RequestService getTopListWithParamDict:@{} resultBlock:^(BOOL success, id object) {
+//        [WJHUD hideFromView:wself.view];
+//        [GlobalFunctionManager handleServerDataWithController:wself result:success dataObj:object successBlock:^{
+//            NSLog(@"object = %@", object);
+//            NSDictionary *dataDict = object[@"data"];
+//            wself.bannerDataArr = dataDict[@"list"];
+//            [wself.mainCollectionView reloadData];
+//        }];
+//    }];
+//}
 
 - (void)setUpRightNavbarItem {
     typeof(self) __weak wself = self;
@@ -414,20 +414,18 @@ static const NSString *homeItemId = @"38ed36f8307443fa9765e35f6db0c038";
 - (UIView *)scrollHeaderView {
     
     NSMutableArray *imageArr = [[NSMutableArray alloc] init];
-    NSMutableArray *titleArr = [[NSMutableArray alloc] init];
+//    NSMutableArray *titleArr = [[NSMutableArray alloc] init];
 //    [self.dataModel.banners enumerateObjectsUsingBlock:^(BannerDataModel *bannerModel, NSUInteger idx, BOOL * _Nonnull stop) {
 //        [imageArr addObject:bannerModel.img_url];
 //        [titleArr addObject:@"孙立成同志到济宁调查知道工作"];
 //    }];
-    if (self.bannerDataArr) {
-        [self.bannerDataArr enumerateObjectsUsingBlock:^(NSDictionary *dataDict, NSUInteger idx, BOOL * _Nonnull stop) {
-            [imageArr addObject: [dataDict objectForKey:@"image"]];
-            [titleArr addObject: [dataDict objectForKey:@"title"]];
+    if (self.dataModel.banners) {
+        [self.dataModel.banners enumerateObjectsUsingBlock:^(BannerDataModel *dataDict, NSUInteger idx, BOOL * _Nonnull stop) {
+            NSString *imageUrl = dataDict.img_url;
+            [imageArr addObject: imageUrl];
         }];
     }
-    
-    ScrollImage *scrl = [[ScrollImage alloc] initWithCurrentController:self urlString:imageArr viewFrame:CGRectMake(0,0, SCREN_WIDTH, SCROLL_HEADER_HEIGHT) placeholderImage:[UIImage imageNamed:@"police1"]   title:titleArr];
-    
+    ScrollImage *scrl = [[ScrollImage alloc] initWithCurrentController:self imageNames:imageArr viewFrame:CGRectMake(0,0, SCREN_WIDTH, SCROLL_HEADER_HEIGHT) placeholderImage:[UIImage imageNamed:@"police1"]];
     scrl.delegate = self;
     scrl.timeInterval = 2.0;
     return scrl.view;
@@ -492,12 +490,12 @@ static const NSString *homeItemId = @"38ed36f8307443fa9765e35f6db0c038";
 #pragma mark --ScrollImageDelegate
 - (void)scrollImage:(ScrollImage *)scrollImage clickedAtIndex:(NSInteger)index {
     
-    NewsDetailVC *newsVc = [[NewsDetailVC alloc] init];
-    NSDictionary *dataDict = self.bannerDataArr[index];
-    newsVc.newsId = dataDict[@"id"];
-    self.hidesBottomBarWhenPushed = YES;
-    [self.navigationController pushViewController:newsVc animated:YES];
-    self.hidesBottomBarWhenPushed = NO;
+//    NewsDetailVC *newsVc = [[NewsDetailVC alloc] init];
+//    NSDictionary *dataDict = self.bannerDataArr[index];
+//    newsVc.newsId = dataDict[@"id"];
+//    self.hidesBottomBarWhenPushed = YES;
+//    [self.navigationController pushViewController:newsVc animated:YES];
+//    self.hidesBottomBarWhenPushed = NO;
 }
 
 -(UICollectionView *)mainCollectionView {
