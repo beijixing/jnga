@@ -180,20 +180,20 @@
                         <constraint firstAttribute="height" constant="80" id="7RT-3N-mBO"/>
                         <constraint firstAttribute="width" constant="80" id="Zci-QE-5lk"/>
                     </constraints>
-                    <state key="normal" title="上传照片">
+                    <state key="normal" backgroundImage="tp">
                         <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
                         <action selector="choosePhoto:" destination="-1" eventType="touchUpInside" id="dFm-38-GXG"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o7M-jr-ehG">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o7M-jr-ehG">
                     <rect key="frame" x="98" y="489" width="80" height="80"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="80" id="96R-YD-ObE"/>
                         <constraint firstAttribute="width" constant="80" id="GrN-QG-xqP"/>
                     </constraints>
-                    <state key="normal" title="上传视频">
+                    <state key="normal" title="上传视频" image="sp">
                         <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
@@ -230,4 +230,8 @@
             <point key="canvasLocation" x="-86.5" y="42.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="sp" width="118" height="118"/>
+        <image name="tp" width="118" height="118"/>
+    </resources>
 </document>

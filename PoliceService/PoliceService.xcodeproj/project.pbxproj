@@ -17,6 +17,9 @@
 		5A0DDF011ECAA27A0053AAEE /* NSString+WJAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0DDEFE1ECAA27A0053AAEE /* NSString+WJAttribute.m */; };
 		5A0DDF051ECAA6370053AAEE /* CertificateProgressQueryVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0DDF031ECAA6370053AAEE /* CertificateProgressQueryVC.m */; };
 		5A0DDF061ECAA6370053AAEE /* CertificateProgressQueryVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A0DDF041ECAA6370053AAEE /* CertificateProgressQueryVC.xib */; };
+		5A517DE51EEF838700D46703 /* wffz.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A517DE41EEF838600D46703 /* wffz.png */; };
+		5A517DE91EEF91C200D46703 /* HighWayStatusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A517DE71EEF91C200D46703 /* HighWayStatusCell.m */; };
+		5A517DEA1EEF91C200D46703 /* HighWayStatusCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A517DE81EEF91C200D46703 /* HighWayStatusCell.xib */; };
 		5A53F0D31ECC262A00162B2F /* HightWayStatusVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A53F0D11ECC262A00162B2F /* HightWayStatusVC.m */; };
 		5A53F0D41ECC262A00162B2F /* HightWayStatusVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A53F0D21ECC262A00162B2F /* HightWayStatusVC.xib */; };
 		5A53F0DC1ECC283F00162B2F /* Colligation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A53F0DB1ECC283F00162B2F /* Colligation.storyboard */; };
@@ -27,7 +30,6 @@
 		5A8627711EC980DC008FA467 /* xx@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A8627701EC980DC008FA467 /* xx@3x.png */; };
 		5A8627751EC98305008FA467 /* DirectorMailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A8627731EC98305008FA467 /* DirectorMailVC.m */; };
 		5A8627761EC98305008FA467 /* DirectorMailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A8627741EC98305008FA467 /* DirectorMailVC.xib */; };
-		5A91D8601ED6689B008D0393 /* wffz.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A91D85F1ED6689B008D0393 /* wffz.png */; };
 		5A91D8621ED66924008D0393 /* zxzx.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A91D8611ED66924008D0393 /* zxzx.png */; };
 		5A91D87E1ED66AE1008D0393 /* UIImageView+PlayGIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A91D8671ED66AE1008D0393 /* UIImageView+PlayGIF.m */; };
 		5A91D87F1ED66AE1008D0393 /* WCSCaptureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A91D86A1ED66AE1008D0393 /* WCSCaptureViewController.m */; };
@@ -918,6 +920,10 @@
 		5A0DDF021ECAA6370053AAEE /* CertificateProgressQueryVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CertificateProgressQueryVC.h; sourceTree = "<group>"; };
 		5A0DDF031ECAA6370053AAEE /* CertificateProgressQueryVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CertificateProgressQueryVC.m; sourceTree = "<group>"; };
 		5A0DDF041ECAA6370053AAEE /* CertificateProgressQueryVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CertificateProgressQueryVC.xib; sourceTree = "<group>"; };
+		5A517DE41EEF838600D46703 /* wffz.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wffz.png; sourceTree = "<group>"; };
+		5A517DE61EEF91C200D46703 /* HighWayStatusCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HighWayStatusCell.h; sourceTree = "<group>"; };
+		5A517DE71EEF91C200D46703 /* HighWayStatusCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HighWayStatusCell.m; sourceTree = "<group>"; };
+		5A517DE81EEF91C200D46703 /* HighWayStatusCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HighWayStatusCell.xib; sourceTree = "<group>"; };
 		5A53F0D01ECC262A00162B2F /* HightWayStatusVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HightWayStatusVC.h; sourceTree = "<group>"; };
 		5A53F0D11ECC262A00162B2F /* HightWayStatusVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HightWayStatusVC.m; sourceTree = "<group>"; };
 		5A53F0D21ECC262A00162B2F /* HightWayStatusVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HightWayStatusVC.xib; sourceTree = "<group>"; };
@@ -933,7 +939,6 @@
 		5A8627721EC98305008FA467 /* DirectorMailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirectorMailVC.h; sourceTree = "<group>"; };
 		5A8627731EC98305008FA467 /* DirectorMailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DirectorMailVC.m; sourceTree = "<group>"; };
 		5A8627741EC98305008FA467 /* DirectorMailVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DirectorMailVC.xib; sourceTree = "<group>"; };
-		5A91D85F1ED6689B008D0393 /* wffz.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wffz.png; sourceTree = "<group>"; };
 		5A91D8611ED66924008D0393 /* zxzx.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zxzx.png; sourceTree = "<group>"; };
 		5A91D8661ED66AE1008D0393 /* UIImageView+PlayGIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+PlayGIF.h"; sourceTree = "<group>"; };
 		5A91D8671ED66AE1008D0393 /* UIImageView+PlayGIF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+PlayGIF.m"; sourceTree = "<group>"; };
@@ -2113,10 +2118,10 @@
 				CBB02AE01E6FFFF0001EFCBA /* 综合查询 */,
 				CBB02A8A1E6CF8E5001EFCBA /* 办事指南IOS */,
 				CB6163FF1E5EC8A9002FD980 /* cmcx.png */,
+				5A517DE41EEF838600D46703 /* wffz.png */,
 				CB6164001E5EC8A9002FD980 /* jdcwz.png */,
 				CB6164011E5EC8A9002FD980 /* jsr.png */,
 				CB6164021E5EC8A9002FD980 /* jwrx.png */,
-				5A91D85F1ED6689B008D0393 /* wffz.png */,
 				5A91D8611ED66924008D0393 /* zxzx.png */,
 				CB6164031E5EC8A9002FD980 /* swzl.png */,
 				CB6164041E5EC8A9002FD980 /* wyds.png */,
@@ -3302,6 +3307,9 @@
 				CBAF392E1E9727DB005BB9C7 /* SearchResultTableCell.xib */,
 				5AB151191ED810CD006C9C19 /* BusinessPlaceCell.h */,
 				5AB1511A1ED810CD006C9C19 /* BusinessPlaceCell.m */,
+				5A517DE61EEF91C200D46703 /* HighWayStatusCell.h */,
+				5A517DE71EEF91C200D46703 /* HighWayStatusCell.m */,
+				5A517DE81EEF91C200D46703 /* HighWayStatusCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -3560,6 +3568,7 @@
 				CBB02B421E7001F0001EFCBA /* fj@2x.png in Resources */,
 				CB61640F1E5EC8A9002FD980 /* jsr.png in Resources */,
 				CBB02ADC1E6E9E90001EFCBA /* MyAppointmentDetailVC.xib in Resources */,
+				5A517DE51EEF838700D46703 /* wffz.png in Resources */,
 				CBB02AAC1E6CF8E5001EFCBA /* wangjing@2x.png in Resources */,
 				CBB02B4A1E7001F0001EFCBA /* xh@2x.png in Resources */,
 				CB6163CA1E5E8A3C002FD980 /* sfzyy.png in Resources */,
@@ -3637,11 +3646,11 @@
 				CBB02AB21E6CF8E5001EFCBA /* churujing@3x.png in Resources */,
 				CBD991F71E4C189200C09DD2 /* DistrictDemoViewController.xib in Resources */,
 				CB56DBFB1E963FFE004249CE /* NoticeDetailVC.xib in Resources */,
+				5A517DEA1EEF91C200D46703 /* HighWayStatusCell.xib in Resources */,
 				CBD98EF01E4AB37A00C09DD2 /* Info.plist in Resources */,
 				CBB02AA91E6CF8E5001EFCBA /* jindu@2x.png in Resources */,
 				CBB02AF81E6FFFF0001EFCBA /* cm@3x.png in Resources */,
 				CBB02ACC1E6E8472001EFCBA /* ReservationNoticeVC.xib in Resources */,
-				5A91D8601ED6689B008D0393 /* wffz.png in Resources */,
 				CBB02B451E7001F0001EFCBA /* qc@2x.png in Resources */,
 				CB6163F01E5E8A3C002FD980 /* yy_zfba.png in Resources */,
 				CBD98DBA1E4AB2C400C09DD2 /* LaunchScreen.storyboard in Resources */,
@@ -4078,6 +4087,7 @@
 				CB3F5C041E5BDD9A0013FCEF /* PeopleAppealVC.m in Sources */,
 				5A91D87F1ED66AE1008D0393 /* WCSCaptureViewController.m in Sources */,
 				CBD990B21E4AC7FF00C09DD2 /* IQTextView.m in Sources */,
+				5A517DE91EEF91C200D46703 /* HighWayStatusCell.m in Sources */,
 				CBD98DAC1E4AB2C400C09DD2 /* main.m in Sources */,
 				5A91D8871ED66AE1008D0393 /* WKTestAudioOutput.m in Sources */,
 				CBD991F41E4C189200C09DD2 /* DistrictDemoViewController.mm in Sources */,

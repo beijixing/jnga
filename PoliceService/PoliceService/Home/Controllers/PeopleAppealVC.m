@@ -30,12 +30,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"民生诉求";
-     self.view.backgroundColor = [UIColor whiteColor];
+    self.view.backgroundColor = [UIColor whiteColor];
     [self setUpLeftNavbarItem];
     [self.view addSubview:self.mainCollectionView];
 }
 - (void)setUpLeftNavbarItem {
-    typeof(self) __weak wself = self;
+//    typeof(self) __weak wself = self;
     [self setLeftNavigationBarButtonItemWithImage:@"back" andAction:^{
         
     }];

@@ -179,13 +179,11 @@
             [self convertVideoQuailtyWithInputURL:url completeHandler:^(AVAssetExportSession *exportSession) {
                 [self saveVideoToPhotos:exportSession.outputURL];
             }];
-
         }
     }
-    
     [picker dismissViewControllerAnimated:YES completion:^{
-        
     }];
+    
 }
 -(void)imagePickerControllerDidCancel:(UIImagePickerController *)picker{
     NSLog(@"取消");
@@ -325,7 +323,6 @@
         
         [manager createDirectoryAtPath:CompressionVideoPath withIntermediateDirectories:YES attributes:nil error:nil];
     }
-    
     resultPath = [CompressionVideoPath stringByAppendingPathComponent:[NSString stringWithFormat:@"outputJFVideo-%@.mp4", [formater stringFromDate:[NSDate date]]]];
     
     

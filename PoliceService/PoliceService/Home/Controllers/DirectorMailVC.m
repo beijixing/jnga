@@ -61,7 +61,6 @@
     
     typeof(self) __weak wself = self;
     
-    
     for (NSString* fontName in titleArr) {
         PopoverAction *action = [PopoverAction actionWithTitle:fontName handler:^(PopoverAction *action) {
             NSLog(@"fontName = %@", fontName);
@@ -90,7 +89,6 @@
         [popOverActions addObject:action];
     }];
     
-    
     PopoverView *popoverView = [PopoverView popoverView];
     popoverView.style = PopoverViewStyleDark;
     popoverView.hideAfterTouchOutside = YES; // 点击外部时允许隐藏
@@ -113,12 +111,12 @@
         [popOverActions addObject:action];
     }];
     
-    
     PopoverView *popoverView = [PopoverView popoverView];
     popoverView.style = PopoverViewStyleDark;
     popoverView.hideAfterTouchOutside = YES; // 点击外部时允许隐藏
     [popoverView showToView:sender.view withActions:popOverActions];
 }
+
 - (IBAction)commitAction:(id)sender {
     /*
      String type;  // 类型（必填）
@@ -178,6 +176,7 @@
                                                             }];
                                                         }];
 }
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

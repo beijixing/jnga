@@ -270,7 +270,6 @@
     [[FSNetWorkManager manager] postDataWithHostUrl:urlStr parameters:paramDict result:^(BOOL success, id  _Nonnull object) {
         resultBlock(success, object);
     }];
-    
 }
 
 +(void)queryAwardWithParamDict:(NSDictionary *)paramDict resultBlock:(void (^)(BOOL, id))resultBlock{
