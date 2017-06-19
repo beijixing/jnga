@@ -98,8 +98,8 @@
 - (IBAction)selectClassLabelAction:(UITapGestureRecognizer *)sender {
     
     NSMutableArray *popOverActions = [[NSMutableArray alloc] init];
-    NSArray *titleArr = @[@"1治安", @"2民政", @"3交警", @"4消防", @"5出入境",
-                          @"6网安", @"7法制", @"8刑侦", @"9技防", @"10禁毒", @"11经侦", @"12其他"];
+    NSArray *titleArr = @[@"治安", @"民政", @"交警", @"消防", @"出入境",
+                          @"网安", @"法制", @"刑侦", @"技防", @"禁毒", @"经侦", @"其他"];
     
     typeof(self) __weak wself = self;
     [titleArr enumerateObjectsUsingBlock:^(NSString  *businessName, NSUInteger idx, BOOL * _Nonnull stop) {
@@ -172,7 +172,7 @@
                                                         } resultBlock:^(BOOL success, id object) {
                                                             [WJHUD hideFromView:wself.view];
                                                             [GlobalFunctionManager handleServerDataWithController:wself result:success dataObj:object successBlock:^{
-                                                                [WJHUD showText:@"提交成功" onView:wself.view];
+//                                                                [WJHUD showText:@"提交成功" onView:wself.view];
                                                             }];
                                                         }];
 }

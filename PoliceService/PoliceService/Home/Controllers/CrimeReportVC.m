@@ -255,7 +255,7 @@
             _player=[AVPlayer playerWithURL:url];
             AVPlayerLayer *playerLayer=[AVPlayerLayer playerLayerWithPlayer:_player];
             playerLayer.frame=CGRectMake(0, 0, 80, 80);
-            
+            [self.videoButton setBackgroundImage:nil forState:UIControlStateNormal];
             [self.videoButton.layer addSublayer:playerLayer];
             [_player play];
             [WJHUD hideFromView:self.view];

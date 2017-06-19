@@ -54,7 +54,7 @@
 - (void)collectionView:(UICollectionView *)collectionView willDisplayCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath {
     PeopleAppealCollectionViewCell *showCell = (PeopleAppealCollectionViewCell*)cell;
     OperationItemModel *itemModel = self.dataModel.datas[indexPath.row];
-    showCell.titleLabel.text = itemModel.operate_name;
+    showCell.titleLabel.text = itemModel.title;
     showCell.iconImageView.image = [UIImage imageNamed:itemModel.img_url];
     
 }

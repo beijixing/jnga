@@ -3,52 +3,52 @@
     [
         {
             "id":0,
-            "operate_name": "警务热线",
+            "title": "警务热线",
             "img_url": "jw"
         },
         {
             "id":1,
-            "operate_name": "我要举报",
+            "title": "我要举报",
             "img_url": "jb"
         },
         {
             "id":2,
-            "operate_name": "我要建议",
+            "title": "我要建议",
             "img_url": "jy"
         },
         {
             "id":3,
-            "operate_name": "我要投诉",
+            "title": "我要投诉",
             "img_url": "ts"
         },
         {
             "id":4,
-            "operate_name": "我要咨询",
+            "title": "我要咨询",
             "img_url": "zx"
         },
         {
             "id":5,
-            "operate_name": "我要信访",
+            "title": "我要信访",
             "img_url": "xf"
         },
         {
             "id":6,
-            "operate_name": "我要评警",
+            "title": "我要评警",
             "img_url": "pj"
         },
         {
             "id":7,
-            "operate_name": "局长信箱",
+            "title": "局长信箱",
             "img_url": "xx"
         },
         {
             "id":8,
-            "operate_name": "在线咨询",
+            "title": "在线咨询",
             "img_url": "zxzx"
         },
         {
             "id":9,
-            "operate_name": "违法犯罪线索有奖举报",
+            "title": "违法犯罪线索有奖举报",
             "img_url": "wffz"
         }
     ]

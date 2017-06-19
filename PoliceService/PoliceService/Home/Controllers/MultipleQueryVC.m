@@ -55,7 +55,7 @@
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
     ReservationOnlineTableCell* showCell = (ReservationOnlineTableCell*)cell;
     OperationItemModel *dModel = self.dataModel.datas[indexPath.row];
-    showCell.titleLabel.text = dModel.operate_name;
+    showCell.titleLabel.text = dModel.title;
     showCell.iconImageView.image = [UIImage imageNamed:dModel.img_url];
 }
 

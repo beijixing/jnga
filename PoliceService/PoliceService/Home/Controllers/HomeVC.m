@@ -187,14 +187,14 @@ static const NSString *homeItemId = @"38ed36f8307443fa9765e35f6db0c038";
         HomeCollectionThirdSectionCell *showCell = (HomeCollectionThirdSectionCell*)cell;
          OperationItemModel *dmodel = operationItems[indexPath.row];
         showCell.iconImageView.image = [UIImage imageNamed:dmodel.img_url];
-        showCell.titleLabel.text = dmodel.operate_name;
+        showCell.titleLabel.text = dmodel.title;
         showCell.descLabel.text = dmodel.desc;
     }else if(indexPath.section >= 3){
         HomeCollectionViewCell*showCell = (HomeCollectionViewCell*)cell;
         HomePageSectionModel *sectionModel =  self.dataModel.sections[indexPath.section - 3];
         NSArray *operationItems = sectionModel.itmes;
         OperationItemModel *dmodel = operationItems[indexPath.item];
-        showCell.titleLabel.text = dmodel.operate_name;
+        showCell.titleLabel.text = dmodel.title;
         showCell.iconImageView.image = [UIImage imageNamed:dmodel.img_url];
 
     }

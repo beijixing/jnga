@@ -77,11 +77,10 @@
         return;
     }
 
-    [RequestService consultOnlineWithParamDict:
-                                                @{@"fcard":[GlobalVariableManager manager].codeId ?:@"",
-                                                 @"id":_selectedPoliceSubstationId ?:@"",
-                                                 @"ftitle":_themTF.text?:@"",
-                                                 @"fdetail":_contentTV.text?:@""}
+    [RequestService consultOnlineWithParamDict:@{@"fcard":[GlobalVariableManager manager].codeId ?:@"",
+                                                 @"id":_selectedPoliceSubstationId,
+                                                 @"ftitle":_themTF.text,
+                                                 @"fdetail":_contentTV.text}
                                    resultBlock:^(BOOL success, id object) {
                                        if (success) {
                                            [WJHUD showText:@"提交成功" onView:self.view];

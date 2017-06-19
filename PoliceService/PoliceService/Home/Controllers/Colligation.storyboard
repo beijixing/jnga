@@ -50,7 +50,7 @@
                         <sections>
                             <tableViewSection id="2ka-gz-C0E">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="50" id="e08-Tt-2xA">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="50" id="e08-Tt-2xA">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="e08-Tt-2xA" id="USg-qz-JZ1">
@@ -104,6 +104,7 @@
                     </tableView>
                     <connections>
                         <outlet property="acceptNumberTF" destination="HVq-za-wY8" id="G4O-78-zbG"/>
+                        <segue destination="Tx5-Xy-Mxt" kind="push" identifier="PushToCashPrize" id="43o-2d-mJK"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ThB-Tj-oWY" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -154,6 +155,7 @@
                             <outlet property="delegate" destination="Tx5-Xy-Mxt" id="ZFH-Nm-h8M"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="kZU-n3-wqn"/>
                     <connections>
                         <outlet property="acceptTypeLabel" destination="LMc-Ce-x6Z" id="tVw-qt-bYq"/>
                         <outlet property="bankCardNumCell" destination="4Sj-1S-3uc" id="Gag-9f-RSt"/>
@@ -601,6 +603,9 @@
                             <outlet property="delegate" destination="jwa-7i-LUb" id="EyN-cs-JfX"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <segue destination="cWZ-XQ-7lM" kind="push" identifier="PushToDetail" id="UdO-Ba-HlL"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hNA-19-dl6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -615,7 +620,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="80" id="2Od-6H-1su" customClass="BusinessPlaceCell">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BusinessPalaceCellID" rowHeight="80" id="2Od-6H-1su" customClass="BusinessPlaceCell">
                                 <rect key="frame" x="0.0" y="28" width="375" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2Od-6H-1su" id="edI-Eq-NiC">
@@ -640,7 +645,7 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="地址" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ImU-TX-otM">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="地址" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ImU-TX-otM">
                                             <rect key="frame" x="8" y="30" width="359" height="23.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <nil key="textColor"/>
@@ -672,6 +677,7 @@
                             <outlet property="delegate" destination="cWZ-XQ-7lM" id="nkR-5I-A9X"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="x26-Bc-vUn"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hg2-MC-xzM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

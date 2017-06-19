@@ -75,7 +75,6 @@
             [WJHUD showText:@"请输入手机号" onView:self.view];
             return;
         }
-        
     }else if (showType == CashPrizeTypeBank){
         if ([Validator isSpaceOrEmpty:self.bankNameTF.text]) {
             [WJHUD showText:@"请输入银行名称" onView:self.view];

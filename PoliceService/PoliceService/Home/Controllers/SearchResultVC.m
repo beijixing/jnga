@@ -45,7 +45,7 @@
 
 }
 - (void)setUpLeftNavbarItem {
-    typeof(self) __weak wself = self;
+//    typeof(self) __weak wself = self;
     [self setLeftNavigationBarButtonItemWithImage:@"back" andAction:^{
         
     }];

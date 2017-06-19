@@ -9,6 +9,7 @@
 #import "QueryBusinessPlaceTableVC.h"
 #import "RequestService.h"
 #import "WJHUD.h"
+#import "BusinessPlaceDetailVC.h"
 
 @interface QueryBusinessPlaceTableVC ()
 @property (strong, nonatomic) NSMutableArray *dataArray;
@@ -28,7 +29,7 @@
         [self getGloablData];
         self.title = @"办事场所细分项查询";
     }
-
+    self.tableView.tableFooterView = [[UIView alloc]initWithFrame:CGRectZero];
     [self setUpLeftNavbarItem];
 
 }
@@ -107,20 +108,25 @@
         vc.isPolice = YES;
         [self.navigationController pushViewController:vc animated:YES];
     }else{
-        
+        [self performSegueWithIdentifier:@"PushToDetail" sender:_dataArray[indexPath.row]];
     }
-    
 }
 
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString:@"PushToDetail"]) {
+        BusinessPlaceDetailVC *vc = segue.destinationViewController;
+        vc.searchString = sender;
+    }
+    
+    
 }
-*/
+
 
 @end

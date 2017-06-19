@@ -39,7 +39,7 @@
 
 +(void)pushViewControllerWithItem:(OperationItemModel *)item fromVC:(UIViewController *)vc
 {
-    NSDictionary *dict = @{@"keyword":item.keyword};
+    NSDictionary *dict = item.toDictionary;
     if (item.shouldLogin) {
         if ([GlobalVariableManager manager].userId != nil){
             [self pushViewControllerWithName:item.vc pagram:dict fromVC:vc];

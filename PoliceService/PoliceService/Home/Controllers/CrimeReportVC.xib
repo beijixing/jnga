@@ -193,7 +193,7 @@
                         <constraint firstAttribute="height" constant="80" id="96R-YD-ObE"/>
                         <constraint firstAttribute="width" constant="80" id="GrN-QG-xqP"/>
                     </constraints>
-                    <state key="normal" title="上传视频" image="sp">
+                    <state key="normal" backgroundImage="sp">
                         <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>

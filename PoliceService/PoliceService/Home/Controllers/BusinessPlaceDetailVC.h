@@ -10,4 +10,6 @@
 
 @interface BusinessPlaceDetailVC : BaseTableViewController
 
+@property (strong, nonatomic) NSString *searchString;
+
 @end

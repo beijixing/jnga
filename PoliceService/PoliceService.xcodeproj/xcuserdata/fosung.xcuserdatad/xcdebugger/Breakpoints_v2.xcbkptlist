@@ -19,5 +19,165 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PoliceService/Home/Controllers/ConsultOnlineVC.m"
+            timestampString = "519200743.716864"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
+            landmarkName = "-submit:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PoliceService/Network/RequestService.m"
+            timestampString = "519200797.626606"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "291"
+            endingLineNumber = "291"
+            landmarkName = "+consultOnlineWithParamDict:resultBlock:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "+[RequestService consultOnlineWithParamDict:resultBlock:]"
+                  moduleName = "PoliceService"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fosung/Documents/JiNingGongAn/PoliceService/PoliceService/Network/RequestService.m"
+                  timestampString = "519202301.705585"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "291"
+                  endingLineNumber = "291"
+                  offsetFromSymbolStart = "176">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__57+[RequestService consultOnlineWithParamDict:resultBlock:]_block_invoke"
+                  moduleName = "PoliceService"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fosung/Documents/JiNingGongAn/PoliceService/PoliceService/Network/RequestService.m"
+                  timestampString = "519202301.707155"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "291"
+                  endingLineNumber = "291"
+                  offsetFromSymbolStart = "24">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PoliceService/Home/Controllers/DirectorMailVC.m"
+            timestampString = "519201968.623993"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "174"
+            endingLineNumber = "174"
+            landmarkName = "-commitAction:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__31-[DirectorMailVC commitAction:]_block_invoke"
+                  moduleName = "PoliceService"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fosung/Documents/JiNingGongAn/PoliceService/PoliceService/Home/Controllers/DirectorMailVC.m"
+                  timestampString = "519202301.710928"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "174"
+                  endingLineNumber = "174"
+                  offsetFromSymbolStart = "172">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__31-[DirectorMailVC commitAction:]_block_invoke_2"
+                  moduleName = "PoliceService"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fosung/Documents/JiNingGongAn/PoliceService/PoliceService/Home/Controllers/DirectorMailVC.m"
+                  timestampString = "519202301.712441"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "176"
+                  endingLineNumber = "176"
+                  offsetFromSymbolStart = "12">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PoliceService/Network/RequestService.m"
+            timestampString = "519202361.602026"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "229"
+            endingLineNumber = "229"
+            landmarkName = "+postPeopleappealMostWithParamDict:resultBlock:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "+[RequestService postPeopleappealMostWithParamDict:resultBlock:]"
+                  moduleName = "PoliceService"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fosung/Documents/JiNingGongAn/PoliceService/PoliceService/Network/RequestService.m"
+                  timestampString = "519202361.825962"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "229"
+                  endingLineNumber = "229"
+                  offsetFromSymbolStart = "176">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__64+[RequestService postPeopleappealMostWithParamDict:resultBlock:]_block_invoke"
+                  moduleName = "PoliceService"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fosung/Documents/JiNingGongAn/PoliceService/PoliceService/Network/RequestService.m"
+                  timestampString = "519202361.827892"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "229"
+                  endingLineNumber = "229"
+                  offsetFromSymbolStart = "24">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

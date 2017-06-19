@@ -56,7 +56,7 @@
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
     ReservationOnlineTableCell* showCell = (ReservationOnlineTableCell*)cell;
     OperationItemModel *itemModel = self.dataModel.datas[indexPath.row];
-    showCell.titleLabel.text = itemModel.operate_name;
+    showCell.titleLabel.text = itemModel.title;
     showCell.iconImageView.image = [UIImage imageNamed:itemModel.img_url];
 }
 
@@ -71,26 +71,26 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     OperationItemModel *itemModel = self.dataModel.datas[indexPath.row];
-    if (indexPath.row == 7) {
+    if (indexPath.row == 8) {
         self.hidesBottomBarWhenPushed = YES;
         CommonWebViewController *webViewVc = [[CommonWebViewController alloc] init];
-        webViewVc.title = itemModel.operate_name;
+        webViewVc.title = itemModel.title;
         webViewVc.urlString = @"http://www.sdcrj.com/";
         [self.navigationController pushViewController:webViewVc animated:YES];
         return;
     }
-    if (indexPath.row == 6) {
+    if (indexPath.row == 7) {
         self.hidesBottomBarWhenPushed = YES;
         CommonWebViewController *webViewVc = [[CommonWebViewController alloc] init];
-        webViewVc.title = itemModel.operate_name;
+        webViewVc.title = itemModel.title;
         webViewVc.urlString = @"http://www.chinayzd.cn/yc/login.html";
         [self.navigationController pushViewController:webViewVc animated:YES];
         return;
     }
-    if (indexPath.row == 7) {
+    if (indexPath.row == 8) {
         self.hidesBottomBarWhenPushed = YES;
         CommonWebViewController *webViewVc = [[CommonWebViewController alloc] init];
-        webViewVc.title = itemModel.operate_name;
+        webViewVc.title = itemModel.title;
         webViewVc.urlString = @"http://sdcrj.jnzhwl.com/jnshjts.php";
         [self.navigationController pushViewController:webViewVc animated:YES];
         return;
@@ -98,7 +98,7 @@
     self.hidesBottomBarWhenPushed = YES;
     ReservationDetailVC *reservationDetailVc = [[ReservationDetailVC alloc] init];
     reservationDetailVc.keyword = itemModel.keyword;
-    reservationDetailVc.title = itemModel.operate_name;
+    reservationDetailVc.title = itemModel.title;
     [self.navigationController pushViewController:reservationDetailVc animated:YES];
 }
 

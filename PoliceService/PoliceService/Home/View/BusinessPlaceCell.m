@@ -23,8 +23,8 @@
 
 -(void)setContentWithObject:(NSDictionary *)dic{
     self.businessPlaceNameLabel.text = [dic objectForKey:@"name"];
-    self.businessPlaceNameLabel.text = [dic objectForKey:@"address"];
-    self.businessPlaceNameLabel.text = [dic objectForKey:@"tel"];
+    self.businessPlaceAddressLabel.text = [dic objectForKey:@"address"];
+    self.businessPlacePhoneLabel.text = [dic objectForKey:@"tel"];
 }
 
 @end

@@ -12,10 +12,14 @@
 @property(nonatomic) NSString *id;
 @property(nonatomic) NSString<Optional> *name;
 @property(nonatomic) NSString<Optional> *photo;
-@property(nonatomic) NSString<Optional> *operate_name;
+@property(nonatomic) NSString<Optional> *title;
 @property(nonatomic) NSString<Optional> *img_url;
 @property(nonatomic) NSString<Optional> *keyword;
 @property(nonatomic) NSString<Optional> *desc;
 @property(nonatomic) NSString<Optional> *vc;
 @property(nonatomic) BOOL shouldLogin;
+@property(nonatomic) NSString<Optional> *urlString;
+
+
+
 @end

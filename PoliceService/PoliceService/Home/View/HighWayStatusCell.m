@@ -20,5 +20,9 @@
 
     // Configure the view for the selected state
 }
-
+-(void)setContentWithObject:(NSDictionary *)dic{
+    self.nameLabel.text = [dic objectForKey:@"title"];
+    self.timeLabel.text = [dic objectForKey:@"createTime"];
+    self.contentLabel.text = [dic objectForKey:@"content"];
+}
 @end

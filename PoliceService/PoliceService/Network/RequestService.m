@@ -315,7 +315,7 @@
 
 +(void)queryCityWithParamDict:(NSDictionary *)paramDict resultBlock:(void (^)(BOOL, id _Nullable))resultBlock{
     NSString *urlStr = [NSString stringWithFormat:@"%@%@", AppURL, Interface_QueryCityDetail];
-    [[FSNetWorkManager manager] postDataWithHostUrl:urlStr parameters:@[] result:^(BOOL success, id  _Nonnull object) {
+    [[FSNetWorkManager manager] postDataWithHostUrl:urlStr parameters:paramDict result:^(BOOL success, id  _Nonnull object) {
         resultBlock(success, object);
     }];
     
@@ -329,6 +329,14 @@
         resultBlock(success, object);
 
     }];
+}
++(void)checkHightWayStatusWithParamDict:(NSDictionary *)paramDict resultBlock:(void (^)(BOOL, id _Nullable))resultBlock{
+    
+    NSString *urlStr = [NSString stringWithFormat:@"%@%@", AppURL, Interface_HighWayStatus];
+    [[FSNetWorkManager manager] postDataWithHostUrl:urlStr parameters:paramDict result:^(BOOL success, id  _Nonnull object) {
+        resultBlock(success, object);
+    }];
+    
 }
 
 

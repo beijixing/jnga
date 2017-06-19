@@ -10,6 +10,7 @@
 #import "Validator.h"
 #import "RequestService.h"
 #import "WJHUD.h"
+#import "CashPrizeTableVC.h"
 @interface RewardQueryTabelVC ()
 @property (weak, nonatomic) IBOutlet UITextField *acceptNumberTF;
 @property (weak, nonatomic) IBOutlet UITextField *acceptCodeTF;
@@ -46,11 +47,41 @@
         return;
     }
     
-    [RequestService queryAwardWithParamDict:@{
-                                              } resultBlock:^(BOOL success, id object) {
-        
-    }];
+    [RequestService queryAwardWithParamDict:
+     @{@"verificationCode":_acceptNumberTF.text
+       } resultBlock:^(BOOL success, id object) {
+           [self delMessageWithObject:object withStatus:success];
+       }];
     
+}
+-(void)delMessageWithObject:(id)object withStatus:(BOOL)success{
+    
+    NSString *des = [object objectForKey:@"message"];
+    NSDictionary *dataDic = [object objectForKey:@"data"];
+    
+//    BOOL isTrue = [dataDic objectForKey:@"isNewRecord"];
+    if (success) {
+        if ([dataDic objectForKey:@"auditOption"] != NULL && ![[dataDic objectForKey:@"auditOption"] isEqualToString:@""]) {
+            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"温馨提示" message:des preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertAction *goCash = [UIAlertAction actionWithTitle:@"去兑奖" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                [self performSegueWithIdentifier:@"PushToCashPrize" sender:nil];
+            }];
+            UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+                
+            }];
+            [alert addAction:goCash];
+            [alert addAction:cancel];
+            [self presentViewController:alert animated:YES completion:nil];
+        }else{
+            
+            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"温馨提示" message:@"您的举报未被审核采纳或未达到奖励标准,请再接再厉哦~" preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+                
+            }];
+            [alert addAction:cancel];
+            [self presentViewController:alert animated:YES completion:nil];
+        }
+    }
 }
 
 #pragma mark - Table view data source
