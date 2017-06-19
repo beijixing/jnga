@@ -48,7 +48,6 @@
         },
         {
             "id":9,
-<<<<<<< HEAD
             "operate_name": "高速路况",
             "img_url": "gslk"
         },
@@ -71,25 +70,5 @@
             "id":13,
             "operate_name": "高速路占道施工查询",
             "img_url": "zdsg_ic"
-=======
-            "title": "高速路况",
-            "img_url": "rx"
-        },
-        {
-            "id":10,
-            "title": "违法犯罪线索有奖举报奖励查询",
-            "img_url": "spz"
-        },
-        {
-            "id":11,
-            "title": "违法犯罪线索有奖举报兑奖",
-            "img_url": "crj"
-        },
-        {
-            "id":12,
-            "title": "办事场所地址电话快速查询",
-            "img_url": "crj"
->>>>>>> c730220aeadc0f538aad0953383bd47620cb15b7
-        }
     ]
 }
