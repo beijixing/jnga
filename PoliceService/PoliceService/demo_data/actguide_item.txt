@@ -21,62 +21,62 @@
     [
         {
             "id":0,
-            "operate_name": "交管",
+            "title": "交管",
             "img_url": "bsjiaoguan"
         },
         {
             "id":1,
-            "operate_name": "户政",
+            "title": "户政",
             "img_url": "huzheng"
         },
         {
             "id":2,
-            "operate_name": "出入境",
+            "title": "出入境",
             "img_url": "churujing"
         },
         {
             "id":3,
-            "operate_name": "消防",
+            "title": "消防",
             "img_url": "xinfangmhq"
         },
         {
             "id":4,
-            "operate_name": "法制",
+            "title": "法制",
             "img_url": "fazhi"
         },
         {
             "id":5,
-            "operate_name": "治安",
+            "title": "治安",
             "img_url": "zhian"
         },
         {
             "id":6,
-            "operate_name": "刑警",
+            "title": "刑警",
             "img_url": "xingjing"
         },
         {
             "id":7,
-            "operate_name": "经侦",
+            "title": "经侦",
             "img_url": "jingzhen"
         },
         {
             "id":8,
-            "operate_name": "网警",
+            "title": "网警",
             "img_url": "wangjing"
         },
         {
             "id":9,
-            "operate_name": "禁毒",
+            "title": "禁毒",
             "img_url": "jindu"
         },
         {
             "id":10,
-            "operate_name": "科技",
+            "title": "科技",
             "img_url": "keji"
         },
         {
             "id":11,
-            "operate_name": "信访",
+            "title": "信访",
             "img_url": "xinfang"
         }
     ]
