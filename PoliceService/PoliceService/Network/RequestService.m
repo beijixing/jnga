@@ -16,7 +16,7 @@
 +(void)registerWithParamDict:(NSDictionary *)paramDict resultBlock:(void(^)(BOOL success,id object))resultBlock {
     NSString *urlStr = [NSString stringWithFormat:@"%@%@", AppURL, Interface_PhoneReg];
     
-    [[FSNetWorkManager manager] postDataWithHostUrl:urlStr parameters:[self addAddtionalParamWith:paramDict] result:^(BOOL success, id  _Nonnull object) {
+    [[FSNetWorkManager manager] postDataWithHostUrl:urlStr parameters:paramDict result:^(BOOL success, id  _Nonnull object) {
         resultBlock(success, object);
     }];
 }

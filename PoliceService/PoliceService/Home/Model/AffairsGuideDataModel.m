@@ -13,5 +13,8 @@
 @end
 
 @implementation AffairsGuideDataModel
-
++(BOOL)propertyIsOptional:(NSString *)propertyName
+{
+    return YES;
+}
 @end

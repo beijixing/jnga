@@ -884,6 +884,8 @@
 		CBE312F81E7BB82D000E1025 /* NewsDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE312F71E7BB82D000E1025 /* NewsDetailVC.m */; };
 		CBE312FB1E7BB897000E1025 /* NewsItemDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE312FA1E7BB897000E1025 /* NewsItemDataModel.m */; };
 		CBE312FE1E7BB8BD000E1025 /* NewsCenterServerDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE312FD1E7BB8BD000E1025 /* NewsCenterServerDataModel.m */; };
+		CBE3D2011EF771BD008BBF50 /* BusinessHandleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE3D1FF1EF771BD008BBF50 /* BusinessHandleViewController.m */; };
+		CBE3D2021EF771BD008BBF50 /* BusinessHandleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBE3D2001EF771BD008BBF50 /* BusinessHandleViewController.xib */; };
 		F588545B1EA09ECD0004DBC0 /* MyAppointmentDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F588545A1EA09ECD0004DBC0 /* MyAppointmentDataModel.m */; };
 /* End PBXBuildFile section */
 
@@ -1757,6 +1759,9 @@
 		CBE312FA1E7BB897000E1025 /* NewsItemDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsItemDataModel.m; sourceTree = "<group>"; };
 		CBE312FC1E7BB8BD000E1025 /* NewsCenterServerDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsCenterServerDataModel.h; sourceTree = "<group>"; };
 		CBE312FD1E7BB8BD000E1025 /* NewsCenterServerDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsCenterServerDataModel.m; sourceTree = "<group>"; };
+		CBE3D1FE1EF771BD008BBF50 /* BusinessHandleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusinessHandleViewController.h; sourceTree = "<group>"; };
+		CBE3D1FF1EF771BD008BBF50 /* BusinessHandleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusinessHandleViewController.m; sourceTree = "<group>"; };
+		CBE3D2001EF771BD008BBF50 /* BusinessHandleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BusinessHandleViewController.xib; sourceTree = "<group>"; };
 		F58854591EA09ECD0004DBC0 /* MyAppointmentDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyAppointmentDataModel.h; sourceTree = "<group>"; };
 		F588545A1EA09ECD0004DBC0 /* MyAppointmentDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyAppointmentDataModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -1876,7 +1881,7 @@
 			path = WKMovieRecorder;
 			sourceTree = "<group>";
 		};
-		CB2DB1201E66B37A00D4FA40 /* 业务办理 */ = {
+		CB2DB1201E66B37A00D4FA40 /* 办事指南 */ = {
 			isa = PBXGroup;
 			children = (
 				CB3F5C1A1E5BF1510013FCEF /* AffairsGuideVC.h */,
@@ -1887,7 +1892,7 @@
 				CB3F5C1E1E5BF19C0013FCEF /* AffairsGuideDetailVC.m */,
 				CB3F5C1F1E5BF19C0013FCEF /* AffairsGuideDetailVC.xib */,
 			);
-			name = "业务办理";
+			name = "办事指南";
 			sourceTree = "<group>";
 		};
 		CB2DB1211E66B3A900D4FA40 /* 民生诉求 */ = {
@@ -3209,10 +3214,11 @@
 				CBE0CF9F1E67C8D00027DAD2 /* SearchResultVC.m */,
 				CBE0CFA41E68F5880027DAD2 /* SearchResultDataSource.h */,
 				CBE0CFA51E68F5880027DAD2 /* SearchResultDataSource.m */,
+				CBE3D1FD1EF76E5F008BBF50 /* 业务办理 */,
 				CB2DB1231E66B43C00D4FA40 /* 网上预约 */,
 				CB2DB1221E66B3BA00D4FA40 /* 综合查询 */,
 				CB2DB1211E66B3A900D4FA40 /* 民生诉求 */,
-				CB2DB1201E66B37A00D4FA40 /* 业务办理 */,
+				CB2DB1201E66B37A00D4FA40 /* 办事指南 */,
 				CBAF39341E98C73B005BB9C7 /* CommonWebViewController.h */,
 				CBAF39351E98C73B005BB9C7 /* CommonWebViewController.m */,
 				CBAF39361E98C73B005BB9C7 /* CommonWebViewController.xib */,
@@ -3438,6 +3444,16 @@
 				CBCCD0AC1EC8555200CBE18A /* APISign.m */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		CBE3D1FD1EF76E5F008BBF50 /* 业务办理 */ = {
+			isa = PBXGroup;
+			children = (
+				CBE3D1FE1EF771BD008BBF50 /* BusinessHandleViewController.h */,
+				CBE3D1FF1EF771BD008BBF50 /* BusinessHandleViewController.m */,
+				CBE3D2001EF771BD008BBF50 /* BusinessHandleViewController.xib */,
+			);
+			name = "业务办理";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -3730,6 +3746,7 @@
 				CBD990CC1E4ACB3E00C09DD2 /* LICENSE in Resources */,
 				CB6163C91E5E8A3C002FD980 /* qitrh.png in Resources */,
 				CB6163EA1E5E8A3C002FD980 /* yy_wyzx.png in Resources */,
+				CBE3D2021EF771BD008BBF50 /* BusinessHandleViewController.xib in Resources */,
 				CBAF39301E9727DB005BB9C7 /* SearchResultTableCell.xib in Resources */,
 				CB3F5C341E5D21010013FCEF /* AffairsDetailViewCell.xib in Resources */,
 				CB6163DD1E5E8A3C002FD980 /* yy_jwrx.png in Resources */,
@@ -3923,6 +3940,7 @@
 				CBD990631E4AC64800C09DD2 /* MASViewAttribute.m in Sources */,
 				CBD98E871E4AB37A00C09DD2 /* FSJSONModelError.m in Sources */,
 				5A0DDF051ECAA6370053AAEE /* CertificateProgressQueryVC.m in Sources */,
+				CBE3D2011EF771BD008BBF50 /* BusinessHandleViewController.m in Sources */,
 				CBE312ED1E77EC0F000E1025 /* LostItemDataModel.m in Sources */,
 				CB6163661E5E8863002FD980 /* AffairsGuideSubDataModel.m in Sources */,
 				CB42BA4D1E56E4AB0092CE91 /* ReservationOnlineVC.m in Sources */,

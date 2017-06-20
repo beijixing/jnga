@@ -1,83 +1,83 @@
 {
-    "banners":
-    [
-        {
-            "id": 0,
-            "title": "",
-            "img_url": "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1487759796214&di=89ec0f3049ebb33aca3fe3fed58720ef&imgtype=0&src=http%3A%2F%2Ftpic.home.news.cn%2FxhCloudNewsPic%2Fxhpic001%2FM08%2F67%2F4E%2FwKhTg1WjpusEAAAAAAAAAAAAAAA708.jpg"
-        },
-        {
-            "id": 1,
-            "title": "",
-            "img_url": "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1487759828565&di=ab82818a9a333d70b8dca81b35bd836c&imgtype=0&src=http%3A%2F%2Fpic.qiantucdn.com%2F58pic%2F18%2F55%2F25%2F33A58PIC2kT_1024.jpg"
-        },
-        {
-            "id": 2,
-            "title": "",
-            "img_url": "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1487759957830&di=43de65bdd79772a1a82ec664027d4b7e&imgtype=0&src=http%3A%2F%2Fscimg.jb51.net%2Fallimg%2F160826%2F102-160R6161035395.jpg"
-        }
-    ],
-    "operate_items": 
-    [
-        {
-            "id":0,
-            "title": "交管",
-            "img_url": "bsjiaoguan"
-        },
-        {
-            "id":1,
-            "title": "户政",
-            "img_url": "huzheng"
-        },
-        {
-            "id":2,
-            "title": "出入境",
-            "img_url": "churujing"
-        },
-        {
-            "id":3,
-            "title": "消防",
-            "img_url": "xinfangmhq"
-        },
-        {
-            "id":4,
-            "title": "法制",
-            "img_url": "fazhi"
-        },
-        {
-            "id":5,
-            "title": "治安",
-            "img_url": "zhian"
-        },
-        {
-            "id":6,
-            "title": "刑警",
-            "img_url": "xingjing"
-        },
-        {
-            "id":7,
-            "title": "经侦",
-            "img_url": "jingzhen"
-        },
-        {
-            "id":8,
-            "title": "网警",
-            "img_url": "wangjing"
-        },
-        {
-            "id":9,
-            "title": "禁毒",
-            "img_url": "jindu"
-        },
-        {
-            "id":10,
-            "title": "科技",
-            "img_url": "keji"
-        },
-        {
-            "id":11,
-            "title": "信访",
-            "img_url": "xinfang"
-        }
-    ]
+"banners":
+[
+{
+"id": 0,
+"title": "",
+"img_url": "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1487759796214&di=89ec0f3049ebb33aca3fe3fed58720ef&imgtype=0&src=http%3A%2F%2Ftpic.home.news.cn%2FxhCloudNewsPic%2Fxhpic001%2FM08%2F67%2F4E%2FwKhTg1WjpusEAAAAAAAAAAAAAAA708.jpg"
+},
+{
+"id": 1,
+"title": "",
+"img_url": "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1487759828565&di=ab82818a9a333d70b8dca81b35bd836c&imgtype=0&src=http%3A%2F%2Fpic.qiantucdn.com%2F58pic%2F18%2F55%2F25%2F33A58PIC2kT_1024.jpg"
+},
+{
+"id": 2,
+"title": "",
+"img_url": "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1487759957830&di=43de65bdd79772a1a82ec664027d4b7e&imgtype=0&src=http%3A%2F%2Fscimg.jb51.net%2Fallimg%2F160826%2F102-160R6161035395.jpg"
+}
+],
+"data":
+[
+{
+"id":0,
+"title": "交管",
+"img_url": "bsjiaoguan"
+},
+{
+"id":1,
+"title": "户政",
+"img_url": "huzheng"
+},
+{
+"id":2,
+"title": "出入境",
+"img_url": "churujing"
+},
+{
+"id":3,
+"title": "消防",
+"img_url": "xinfangmhq"
+},
+{
+"id":4,
+"title": "法制",
+"img_url": "fazhi"
+},
+{
+"id":5,
+"title": "治安",
+"img_url": "zhian"
+},
+{
+"id":6,
+"title": "刑警",
+"img_url": "xingjing"
+},
+{
+"id":7,
+"title": "经侦",
+"img_url": "jingzhen"
+},
+{
+"id":8,
+"title": "网警",
+"img_url": "wangjing"
+},
+{
+"id":9,
+"title": "禁毒",
+"img_url": "jindu"
+},
+{
+"id":10,
+"title": "科技",
+"img_url": "keji"
+},
+{
+"id":11,
+"title": "信访",
+"img_url": "xinfang"
+}
+]
 }

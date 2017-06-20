@@ -11,12 +11,16 @@
 @protocol AffairsItemDataModel;
 @interface AffairsItemDataModel : FSJSONModel
 @property(nonatomic, copy) NSString *id;
-@property(nonatomic, copy) NSString *name;
+@property(nonatomic, copy) NSString<Optional>*name;
+@property(nonatomic, copy) NSString<Optional>*title;
+
 @property(nonatomic, copy) NSString<Optional> *imgUrl;
+@property(nonatomic, copy) NSString<Optional> *img_url;
 @end
 
 
 @interface AffairsGuideDataModel : FSJSONModel
 //@property(nonatomic, strong) NSArray<BannerDataModel> *banners;
 @property(nonatomic, strong) NSArray<AffairsItemDataModel> *data;
+@property(nonatomic, strong) NSArray<BannerDataModel> *banners;
 @end

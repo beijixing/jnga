@@ -164,7 +164,7 @@
 "title": "更多",
 "img_url": "gd",
 "keyword": "gdbl",
-"vc":"AffairsGuideVC",
+"vc":"BusinessHandleViewController",
 "shouldLogin":1
 },
 

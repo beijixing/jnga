@@ -1,12 +1,12 @@
 //
-//  AffairsGuideVC.m
+//  BusinessHandleViewController.m
 //  PoliceService
 //
-//  Created by horse on 2017/2/21.
+//  Created by WenJie on 2017/6/19.
 //  Copyright © 2017年 zgl. All rights reserved.
 //
 
-#import "AffairsGuideVC.h"
+#import "BusinessHandleViewController.h"
 #import "ScrollImage.h"
 #import "RoundButton.h"
 #import "FSMacro.h"
@@ -27,51 +27,47 @@
 #define SCROLL_HEADER_HEIGHT (280*KSCALE)
 #define MODULE_HEADER_HEIGHT (280*KSCALE)
 #define DEEDS_HEADER_HEIGHT (40*KSCALE)
-
-
-@interface AffairsGuideVC ()<UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, ScrollImageDelegate >
+@interface BusinessHandleViewController ()<UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, ScrollImageDelegate >
 @property(nonatomic, strong)UICollectionView *mainCollectionView;
 @property(nonatomic, strong)ScrollMessageView* messageView;
 @property(nonatomic, strong)NSArray *serviceTitleArr;
 @property(nonatomic, strong) AffairsGuideDataModel *dataModel;
-
 @end
 
-@implementation AffairsGuideVC
+@implementation BusinessHandleViewController
 
 #pragma mark --ViewController life cycle
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationItem.title = @"办事指南";
+    self.navigationItem.title = @"业务办理";
     self.view.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.mainCollectionView];
     [self setUpLeftNavbarItem];
-    [self getServerData];
 }
 
-- (void)getServerData{
-    [WJHUD showOnView:self.view];
-    typeof(self) __weak wself = self;
-    [RequestService getGuideListWithParamDict:@{@"parentid":businessId} resultBlock:^(BOOL success, id object) {
-        [WJHUD hideFromView:wself.view];
-        if (success) {
-            NSDictionary *dataDict = (NSDictionary *)object;
-            if ([[dataDict objectForKey:@"code"] integerValue] == 1) {
-                NSError *error;
-                wself.dataModel = [[AffairsGuideDataModel alloc] initWithDictionary:dataDict error:&error];
-                [wself.mainCollectionView reloadData];
-                NSLog(@"%@", dataDict);
-            }else {
-                [WJHUD showText:[dataDict objectForKey:@"message"] onView:wself.view];
-            }
-        }else {
-            NSLog(@"object=%@", object);
-        }
-    }];
-}
+//- (void)getServerData{
+//    [WJHUD showOnView:self.view];
+//    typeof(self) __weak wself = self;
+//    [RequestService getGuideListWithParamDict:@{@"parentid":businessId} resultBlock:^(BOOL success, id object) {
+//        [WJHUD hideFromView:wself.view];
+//        if (success) {
+//            NSDictionary *dataDict = (NSDictionary *)object;
+//            if ([[dataDict objectForKey:@"code"] integerValue] == 1) {
+//                NSError *error;
+//                wself.dataModel = [[AffairsGuideDataModel alloc] initWithDictionary:dataDict error:&error];
+//                [wself.mainCollectionView reloadData];
+//                NSLog(@"%@", dataDict);
+//            }else {
+//                [WJHUD showText:[dataDict objectForKey:@"message"] onView:wself.view];
+//            }
+//        }else {
+//            NSLog(@"object=%@", object);
+//        }
+//    }];
+//}
 
 - (void)setUpLeftNavbarItem {
-//    typeof(self) __weak wself = self;
+    //    typeof(self) __weak wself = self;
     [self setLeftNavigationBarButtonItemWithImage:@"back" andAction:^{
         
     }];
@@ -80,6 +76,10 @@
 #pragma mark --UITableViewDelegate/UITableViewDataSource
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     return self.dataModel.data.count;
+}
+-(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
+{
+    return 1;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -91,13 +91,11 @@
 - (void)collectionView:(UICollectionView *)collectionView willDisplayCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath {
     PeopleAppealCollectionViewCell*showCell = (PeopleAppealCollectionViewCell*)cell;
     AffairsItemDataModel *dmodel = self.dataModel.data[indexPath.row];
-    showCell.titleLabel.text = dmodel.name;
-    [showCell.iconImageView sd_setImageWithURL:[NSURL URLWithString:dmodel.imgUrl] placeholderImage:[UIImage imageNamed:@"bsjiaoguan"]];
+    showCell.titleLabel.text = dmodel.title;
+    [showCell.iconImageView sd_setImageWithURL:[NSURL URLWithString:dmodel.img_url] placeholderImage:[UIImage imageNamed:@"bsjiaoguan"]];
 }
 
-- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-    return 1;
-}
+
 
 
 -(UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
@@ -127,19 +125,19 @@
     AffairsSubVC *affairsSubVc = [[AffairsSubVC alloc] init];
     affairsSubVc.parentId = dmodel.id;
     [self.navigationController pushViewController:affairsSubVc animated:YES];
-//    self.hidesBottomBarWhenPushed = NO;
+    //    self.hidesBottomBarWhenPushed = NO;
     
 }
 
 #pragma mark --Private Methods
 - (UIView *)scrollHeaderView {
     NSMutableArray *imageArr = [[NSMutableArray alloc] init];
-    for (int i=0; i<3; i++) {
-        [imageArr addObject:@"police1"];
+    for (AffairsItemDataModel *model in self.dataModel.data) {
+        [imageArr addObject:model.img_url];
     }
-//    [self.dataModel.banners enumerateObjectsUsingBlock:^(BannerDataModel *bannerModel, NSUInteger idx, BOOL * _Nonnull stop) {
-//        [imageArr addObject:bannerModel.img_url];
-//    }];
+    //    [self.dataModel.banners enumerateObjectsUsingBlock:^(BannerDataModel *bannerModel, NSUInteger idx, BOOL * _Nonnull stop) {
+    //        [imageArr addObject:bannerModel.img_url];
+    //    }];
     
     
     ScrollImage *scrl = [[ScrollImage alloc] initWithCurrentController:self urlString:imageArr viewFrame:CGRectMake(0,0, SCREN_WIDTH, SCROLL_HEADER_HEIGHT) placeholderImage:[UIImage imageNamed:@"police1"]];
@@ -174,36 +172,28 @@
     _mainCollectionView.backgroundColor = COLOR_WITH_RGB(255, 255, 255);
     [_mainCollectionView registerNib:[UINib nibWithNibName:@"PeopleAppealCollectionViewCell" bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:@"collectioncell"];
     [_mainCollectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"header"];
-//    [self dataModel];
+    //    [self dataModel];
     return _mainCollectionView;
 }
 
 
--(NSArray *)serviceTitleArr {
-    if (_serviceTitleArr) {
-        return _serviceTitleArr;
+-(AffairsGuideDataModel *)dataModel {
+    if (_dataModel) {
+        return _dataModel;
     }
-    _serviceTitleArr = @[@"交管",@"户政",@"出入境",@"消防",@"法制",@"治安",@"刑警",@"经侦",@"网警",@"禁毒",@"科技"];
-    return _serviceTitleArr;
-}
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"actguide_item" ofType:@"txt"];
+    NSError *error;
+    NSString *str = [NSString stringWithContentsOfFile:path encoding: NSUTF8StringEncoding error:&error];
+    if (error) {
+        NSLog(@"error = %@", error);
+    }
 
-//-(AffairsGuideDataModel *)dataModel {
-//    if (_dataModel) {
-//        return _dataModel;
-//    }
-//    NSString *path = [[NSBundle mainBundle] pathForResource:@"actguide_item" ofType:@"txt"];
-//    NSError *error;
-//    NSString *str = [NSString stringWithContentsOfFile:path encoding: NSUTF8StringEncoding error:&error];
-//    if (error) {
-//        NSLog(@"error = %@", error);
-//    }
-//    
-//    if (str) {
-//        NSLog(@"str= %@", str);
-//    }
-//    _dataModel = [[AffairsGuideDataModel alloc] initWithString:str error:nil];
-//    
-//    return _dataModel;
-//}
+    if (str) {
+        NSLog(@"str= %@", str);
+    }
+    _dataModel = [[AffairsGuideDataModel alloc] initWithString:str error:&error];
+
+    return _dataModel;
+}
 
 @end

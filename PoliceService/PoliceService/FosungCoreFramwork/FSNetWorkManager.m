@@ -71,7 +71,6 @@ static FSNetWorkManager *manager = nil;
         }
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         resultBlock(YES, responseObject);
-        
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSData * data = error.userInfo[@"com.alamofire.serialization.response.error.data"];
         NSString * str = [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
