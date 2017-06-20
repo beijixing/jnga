@@ -339,5 +339,18 @@
     
 }
 
++(void)getNotifiListWithParamDict:(NSDictionary *)paramDict resultBlock:(void (^)(BOOL, id _Nullable))resultBlock{
+    NSString *urlStr = [NSString stringWithFormat:@"%@%@", AppURL, Interface_NotifiList];
+    [[FSNetWorkManager manager] postDataWithHostUrl:urlStr parameters:paramDict result:^(BOOL success, id  _Nonnull object) {
+        resultBlock(success, object);
+    }];
+    
+}
++(void)getNotifiDetailWithParamDict:(NSDictionary *)paramDict resultBlock:(void (^)(BOOL, id _Nullable))resultBlock{
+    NSString *urlStr = [NSString stringWithFormat:@"%@%@", AppURL, Interface_NotifiDetail];
+    [[FSNetWorkManager manager] getDataWithHostUrl:urlStr parameters:paramDict result:^(BOOL success, id  _Nonnull object) {
+        resultBlock(success, object);
+    }];
+}
 
 @end

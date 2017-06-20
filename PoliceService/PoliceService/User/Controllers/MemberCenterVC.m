@@ -23,6 +23,9 @@
 #import "RequestService.h"
 #import "GlobalFunctionManager.h"
 #import "WJHUD.h"
+#import "NotifiViewController.h"
+#import "HuzhengYeWuVC.h"
+
 NSString *cellIdentifier = @"cell";
 @interface MemberCenterVC ()
 @property(nonatomic, strong) UITableView *operationTableview;
@@ -146,7 +149,8 @@ NSString *cellIdentifier = @"cell";
     [self.sectionOneTitleArr addObject:@{@"title":@"我的业务", @"icon":@"yw"}];
     [self.sectionOneTitleArr addObject:@{@"title":@"我的预约", @"icon":@"yy"}];
     [self.sectionOneTitleArr addObject:@{@"title":@"我的咨询", @"icon":@"zx"}];
- 
+    [self.sectionOneTitleArr addObject:@{@"title":@"户政业务", @"icon":@"huzheng"}];
+    [self.sectionOneTitleArr addObject:@{@"title":@"通知公告", @"icon":@"my_tzgg"}];
     
     self.sectionTwoTitleArr = [[NSMutableArray alloc] init];
     [self.sectionTwoTitleArr addObject:@{@"title":@"手机号变更", @"icon":@"sjh"}];
@@ -253,6 +257,16 @@ NSString *cellIdentifier = @"cell";
                         [wself checkLoginAndGotoNextVC:@"MyConsultingVC"];
                     }
                         break;
+                    case 3:
+                    {
+                        [wself goHuZheng];
+                    }
+                        break;
+                    case 4:
+                    {
+                        [wself goNotifi];
+                    }
+                        break;
                     default:
                         break;
                 }
@@ -313,8 +327,14 @@ NSString *cellIdentifier = @"cell";
     [self.navigationController pushViewController:pushVc animated:YES];
     self.hidesBottomBarWhenPushed = NO;
 }
-
-
+- (void)goNotifi{
+    NotifiViewController *vc = [[UIStoryboard storyboardWithName:@"User" bundle:nil]instantiateViewControllerWithIdentifier:@"NotifiVC"];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+- (void)goHuZheng{
+    HuzhengYeWuVC *vc = [[UIStoryboard storyboardWithName:@"User" bundle:nil]instantiateViewControllerWithIdentifier:@"HuzhengYeWuVCID"];
+    [self.navigationController pushViewController:vc animated:YES];
+}
 
 
 @end

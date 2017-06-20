@@ -20,6 +20,13 @@
 		5A517DE51EEF838700D46703 /* wffz.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A517DE41EEF838600D46703 /* wffz.png */; };
 		5A517DE91EEF91C200D46703 /* HighWayStatusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A517DE71EEF91C200D46703 /* HighWayStatusCell.m */; };
 		5A517DEA1EEF91C200D46703 /* HighWayStatusCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A517DE81EEF91C200D46703 /* HighWayStatusCell.xib */; };
+		5A517DEE1EF7A57200D46703 /* NotifiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A517DED1EF7A57200D46703 /* NotifiViewController.m */; };
+		5A517DF01EF7A57E00D46703 /* User.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A517DEF1EF7A57E00D46703 /* User.storyboard */; };
+		5A517DF31EF7A6D200D46703 /* NotifiTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A517DF21EF7A6D200D46703 /* NotifiTableCell.m */; };
+		5A517DF61EF7AFE500D46703 /* NotifiDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A517DF51EF7AFE500D46703 /* NotifiDetailVC.m */; };
+		5A517DF91EF7B26900D46703 /* NotifiDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A517DF81EF7B26900D46703 /* NotifiDetailCell.m */; };
+		5A517DFC1EF7BF4400D46703 /* HuzhengYeWuVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A517DFB1EF7BF4300D46703 /* HuzhengYeWuVC.m */; };
+		5A517DFF1EF8C51B00D46703 /* TempStorageBusinessVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A517DFE1EF8C51B00D46703 /* TempStorageBusinessVC.m */; };
 		5A53F0D31ECC262A00162B2F /* HightWayStatusVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A53F0D11ECC262A00162B2F /* HightWayStatusVC.m */; };
 		5A53F0D41ECC262A00162B2F /* HightWayStatusVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A53F0D21ECC262A00162B2F /* HightWayStatusVC.xib */; };
 		5A53F0DC1ECC283F00162B2F /* Colligation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A53F0DB1ECC283F00162B2F /* Colligation.storyboard */; };
@@ -926,6 +933,19 @@
 		5A517DE61EEF91C200D46703 /* HighWayStatusCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HighWayStatusCell.h; sourceTree = "<group>"; };
 		5A517DE71EEF91C200D46703 /* HighWayStatusCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HighWayStatusCell.m; sourceTree = "<group>"; };
 		5A517DE81EEF91C200D46703 /* HighWayStatusCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HighWayStatusCell.xib; sourceTree = "<group>"; };
+		5A517DEC1EF7A57200D46703 /* NotifiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotifiViewController.h; sourceTree = "<group>"; };
+		5A517DED1EF7A57200D46703 /* NotifiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotifiViewController.m; sourceTree = "<group>"; };
+		5A517DEF1EF7A57E00D46703 /* User.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = User.storyboard; sourceTree = "<group>"; };
+		5A517DF11EF7A6D200D46703 /* NotifiTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotifiTableCell.h; sourceTree = "<group>"; };
+		5A517DF21EF7A6D200D46703 /* NotifiTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotifiTableCell.m; sourceTree = "<group>"; };
+		5A517DF41EF7AFE500D46703 /* NotifiDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotifiDetailVC.h; sourceTree = "<group>"; };
+		5A517DF51EF7AFE500D46703 /* NotifiDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotifiDetailVC.m; sourceTree = "<group>"; };
+		5A517DF71EF7B26900D46703 /* NotifiDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotifiDetailCell.h; sourceTree = "<group>"; };
+		5A517DF81EF7B26900D46703 /* NotifiDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotifiDetailCell.m; sourceTree = "<group>"; };
+		5A517DFA1EF7BF4300D46703 /* HuzhengYeWuVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HuzhengYeWuVC.h; sourceTree = "<group>"; };
+		5A517DFB1EF7BF4300D46703 /* HuzhengYeWuVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HuzhengYeWuVC.m; sourceTree = "<group>"; };
+		5A517DFD1EF8C51B00D46703 /* TempStorageBusinessVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TempStorageBusinessVC.h; sourceTree = "<group>"; };
+		5A517DFE1EF8C51B00D46703 /* TempStorageBusinessVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TempStorageBusinessVC.m; sourceTree = "<group>"; };
 		5A53F0D01ECC262A00162B2F /* HightWayStatusVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HightWayStatusVC.h; sourceTree = "<group>"; };
 		5A53F0D11ECC262A00162B2F /* HightWayStatusVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HightWayStatusVC.m; sourceTree = "<group>"; };
 		5A53F0D21ECC262A00162B2F /* HightWayStatusVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HightWayStatusVC.xib; sourceTree = "<group>"; };
@@ -3386,6 +3406,15 @@
 				CB2DB11B1E66ADBE00D4FA40 /* ChangePasswordVC.h */,
 				CB2DB11C1E66ADBE00D4FA40 /* ChangePasswordVC.m */,
 				CB2DB11D1E66ADBE00D4FA40 /* ChangePasswordVC.xib */,
+				5A517DEC1EF7A57200D46703 /* NotifiViewController.h */,
+				5A517DED1EF7A57200D46703 /* NotifiViewController.m */,
+				5A517DF41EF7AFE500D46703 /* NotifiDetailVC.h */,
+				5A517DF51EF7AFE500D46703 /* NotifiDetailVC.m */,
+				5A517DEF1EF7A57E00D46703 /* User.storyboard */,
+				5A517DFA1EF7BF4300D46703 /* HuzhengYeWuVC.h */,
+				5A517DFB1EF7BF4300D46703 /* HuzhengYeWuVC.m */,
+				5A517DFD1EF8C51B00D46703 /* TempStorageBusinessVC.h */,
+				5A517DFE1EF8C51B00D46703 /* TempStorageBusinessVC.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -3418,6 +3447,10 @@
 				CB42BA071E52D76D0092CE91 /* MyConsultingTableCell.h */,
 				CB42BA081E52D76D0092CE91 /* MyConsultingTableCell.m */,
 				CB42BA091E52D76D0092CE91 /* MyConsultingTableCell.xib */,
+				5A517DF11EF7A6D200D46703 /* NotifiTableCell.h */,
+				5A517DF21EF7A6D200D46703 /* NotifiTableCell.m */,
+				5A517DF71EF7B26900D46703 /* NotifiDetailCell.h */,
+				5A517DF81EF7B26900D46703 /* NotifiDetailCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -3695,6 +3728,7 @@
 				CBB02B4B1E7001F0001EFCBA /* fj@3x.png in Resources */,
 				CBE0CF901E67AEAB0027DAD2 /* CheckPeccancyResultTableCell.xib in Resources */,
 				CB6163EF1E5E8A3C002FD980 /* yy_zayw.png in Resources */,
+				5A517DF01EF7A57E00D46703 /* User.storyboard in Resources */,
 				CBB02ABA1E6CF8E5001EFCBA /* xinfang@3x.png in Resources */,
 				CBB02AAD1E6CF8E5001EFCBA /* xiaofang@2x.png in Resources */,
 				CB6164141E5EC8A9002FD980 /* wyjy.png in Resources */,
@@ -3872,6 +3906,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A517DF61EF7AFE500D46703 /* NotifiDetailVC.m in Sources */,
 				CBD98E931E4AB37A00C09DD2 /* UIButton+FSWebCache.m in Sources */,
 				CBD991191E4ACC0300C09DD2 /* MJRefreshAutoGifFooter.m in Sources */,
 				CBD98FAC1E4AB82500C09DD2 /* UIView+Additions.m in Sources */,
@@ -3946,6 +3981,7 @@
 				CB42BA4D1E56E4AB0092CE91 /* ReservationOnlineVC.m in Sources */,
 				CB3DDDBB1ED6769800EFCFF7 /* HomePageSectionModel.m in Sources */,
 				CBD9915A1E4AEDDE00C09DD2 /* BaseViewController.m in Sources */,
+				5A517DFC1EF7BF4400D46703 /* HuzhengYeWuVC.m in Sources */,
 				CBD990601E4AC64800C09DD2 /* MASLayoutConstraint.m in Sources */,
 				5A53F0D31ECC262A00162B2F /* HightWayStatusVC.m in Sources */,
 				CBE0CFBA1E6959270027DAD2 /* RequestService.m in Sources */,
@@ -3981,6 +4017,7 @@
 				CBAF39331E977437005BB9C7 /* NewsListVC.m in Sources */,
 				5A91D8861ED66AE1008D0393 /* WKProgressView.m in Sources */,
 				CBB02AC21E6D50C0001EFCBA /* MyAnimatedAnnotationView.m in Sources */,
+				5A517DFF1EF8C51B00D46703 /* TempStorageBusinessVC.m in Sources */,
 				CB42BA3D1E56D0830092CE91 /* CheckPeccancyVC.m in Sources */,
 				CBD98E811E4AB37A00C09DD2 /* FSJSONKeyMapper.m in Sources */,
 				CBD98FD11E4ABA2000C09DD2 /* DeviceModel.m in Sources */,
@@ -4026,6 +4063,7 @@
 				CBD98F141E4AB37A00C09DD2 /* SDWebImageDecoder.m in Sources */,
 				CBD990AF1E4AC7FF00C09DD2 /* IQKeyboardReturnKeyHandler.m in Sources */,
 				CBE0CFB31E6919B50027DAD2 /* UITableViewCell+TableDataBase.m in Sources */,
+				5A517DF91EF7B26900D46703 /* NotifiDetailCell.m in Sources */,
 				CBE312E51E77CCCD000E1025 /* StrayManServerDataModel.m in Sources */,
 				CBD98EED1E4AB37A00C09DD2 /* README.md in Sources */,
 				CBD98EFC1E4AB37A00C09DD2 /* JSONKeyMapper.m in Sources */,
@@ -4041,6 +4079,7 @@
 				CB3F5BFB1E5AED7D0013FCEF /* SimilarNameQueryVC.m in Sources */,
 				CBD98F0B1E4AB37A00C09DD2 /* README.md in Sources */,
 				CBD98F111E4AB37A00C09DD2 /* SDWebImageCompat.m in Sources */,
+				5A517DF31EF7A6D200D46703 /* NotifiTableCell.m in Sources */,
 				CB2C84941ECAF6270092B558 /* ReservationHandle.m in Sources */,
 				CBD98EE11E4AB37A00C09DD2 /* AFSecurityPolicy.m in Sources */,
 				CBD990D21E4ACB3E00C09DD2 /* README.mdown in Sources */,
@@ -4120,6 +4159,7 @@
 				CBD9905A1E4AC64800C09DD2 /* MASConstraint.m in Sources */,
 				CB3F5BF71E5AEBDC0013FCEF /* MultipleQueryVC.m in Sources */,
 				CB3F5C921E5D90A30013FCEF /* ServiceMapDataModel.m in Sources */,
+				5A517DEE1EF7A57200D46703 /* NotifiViewController.m in Sources */,
 				CBD990A61E4AC7FF00C09DD2 /* IQUIViewController+Additions.m in Sources */,
 				CBD98FAF1E4AB82600C09DD2 /* UIView+CornerRadius.m in Sources */,
 				CBD98EF91E4AB37A00C09DD2 /* JSONModelError.m in Sources */,

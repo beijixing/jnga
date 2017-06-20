@@ -58,7 +58,7 @@
                   moduleName = "PoliceService"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/fosung/Documents/JiNingGongAn/PoliceService/PoliceService/Network/RequestService.m"
-                  timestampString = "519202301.705585"
+                  timestampString = "519636170.039574"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "291"
@@ -73,7 +73,7 @@
                   moduleName = "PoliceService"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/fosung/Documents/JiNingGongAn/PoliceService/PoliceService/Network/RequestService.m"
-                  timestampString = "519202301.707155"
+                  timestampString = "519636170.041254"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "291"
@@ -106,7 +106,7 @@
                   moduleName = "PoliceService"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/fosung/Documents/JiNingGongAn/PoliceService/PoliceService/Home/Controllers/DirectorMailVC.m"
-                  timestampString = "519202301.710928"
+                  timestampString = "519636170.045036"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "174"
@@ -121,7 +121,7 @@
                   moduleName = "PoliceService"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/fosung/Documents/JiNingGongAn/PoliceService/PoliceService/Home/Controllers/DirectorMailVC.m"
-                  timestampString = "519202301.712441"
+                  timestampString = "519636170.04673"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "176"
@@ -154,7 +154,7 @@
                   moduleName = "PoliceService"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/fosung/Documents/JiNingGongAn/PoliceService/PoliceService/Network/RequestService.m"
-                  timestampString = "519202361.825962"
+                  timestampString = "519636170.050174"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "229"
@@ -169,7 +169,7 @@
                   moduleName = "PoliceService"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/fosung/Documents/JiNingGongAn/PoliceService/PoliceService/Network/RequestService.m"
-                  timestampString = "519202361.827892"
+                  timestampString = "519636170.051644"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "229"
@@ -177,6 +177,38 @@
                   offsetFromSymbolStart = "24">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PoliceService/Network/RequestService.m"
+            timestampString = "519550870.045143"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "352"
+            endingLineNumber = "352"
+            landmarkName = "+getNotifiDetailWithParamDict:resultBlock:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PoliceService/User/Controllers/TempStorageBusinessVC.m"
+            timestampString = "519632139.553208"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "-viewDidLoad"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
