@@ -23,6 +23,9 @@
         udid = (__bridge_transfer NSString* )CFUUIDCreateString (kCFAllocatorDefault,uuidRef);
         [keychin setObject:udid forKey:(id)kSecValueData];
     }
+    if ([udid containsString:@"-"]) {
+       udid = [udid stringByReplacingOccurrencesOfString:@"-" withString:@""];
+    }
     return udid;
 }
 

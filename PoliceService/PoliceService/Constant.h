@@ -133,6 +133,10 @@ static const NSString *businessId = @"38ed36f8307443fa9765e35f6db0c032";
 #define Interface_QueryBusinessPlace @"convenience/officeaddrestelinquiries/officeaddresTelinquiries/querySubdivisionProject"//办事场所地址电话快捷查询
 #define Interface_QueryCityDetail @"convenience/officeaddrestelinquiries/officeaddresTelinquiries/queryCounties"//根据细分项查询县市区列表
 #define Interface_HighWayStatus @"convenience/highwaytrafficinfo/highwayTrafficInfo/queryHighwayTrafficInfo"//高速路况查询
+#define Interface_NotifiList @"notice/appNotice/noticeList"//通知公告
+#define Interface_NotifiDetail @"notice/appNotice/getNotice"//通知公告详情
+
+
 
 /*
  参数名，类型，说明
