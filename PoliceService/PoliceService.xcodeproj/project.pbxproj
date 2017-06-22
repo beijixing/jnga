@@ -27,6 +27,11 @@
 		5A517DF91EF7B26900D46703 /* NotifiDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A517DF81EF7B26900D46703 /* NotifiDetailCell.m */; };
 		5A517DFC1EF7BF4400D46703 /* HuzhengYeWuVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A517DFB1EF7BF4300D46703 /* HuzhengYeWuVC.m */; };
 		5A517DFF1EF8C51B00D46703 /* TempStorageBusinessVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A517DFE1EF8C51B00D46703 /* TempStorageBusinessVC.m */; };
+		5A517E021EFA03A000D46703 /* MyConsult2VC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A517E011EFA03A000D46703 /* MyConsult2VC.m */; };
+		5A517E081EFA03D300D46703 /* MyAppointment2VC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A517E071EFA03D300D46703 /* MyAppointment2VC.m */; };
+		5A517E0B1EFA53AF00D46703 /* MyBusiness2VC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A517E0A1EFA53AF00D46703 /* MyBusiness2VC.m */; };
+		5A517E0F1EFB526F00D46703 /* MyAppointment2Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A517E0D1EFB526F00D46703 /* MyAppointment2Cell.m */; };
+		5A517E101EFB526F00D46703 /* MyAppointment2Cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A517E0E1EFB526F00D46703 /* MyAppointment2Cell.xib */; };
 		5A53F0D31ECC262A00162B2F /* HightWayStatusVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A53F0D11ECC262A00162B2F /* HightWayStatusVC.m */; };
 		5A53F0D41ECC262A00162B2F /* HightWayStatusVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A53F0D21ECC262A00162B2F /* HightWayStatusVC.xib */; };
 		5A53F0DC1ECC283F00162B2F /* Colligation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A53F0DB1ECC283F00162B2F /* Colligation.storyboard */; };
@@ -946,6 +951,15 @@
 		5A517DFB1EF7BF4300D46703 /* HuzhengYeWuVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HuzhengYeWuVC.m; sourceTree = "<group>"; };
 		5A517DFD1EF8C51B00D46703 /* TempStorageBusinessVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TempStorageBusinessVC.h; sourceTree = "<group>"; };
 		5A517DFE1EF8C51B00D46703 /* TempStorageBusinessVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TempStorageBusinessVC.m; sourceTree = "<group>"; };
+		5A517E001EFA03A000D46703 /* MyConsult2VC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyConsult2VC.h; sourceTree = "<group>"; };
+		5A517E011EFA03A000D46703 /* MyConsult2VC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyConsult2VC.m; sourceTree = "<group>"; };
+		5A517E061EFA03D300D46703 /* MyAppointment2VC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyAppointment2VC.h; sourceTree = "<group>"; };
+		5A517E071EFA03D300D46703 /* MyAppointment2VC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyAppointment2VC.m; sourceTree = "<group>"; };
+		5A517E091EFA53AF00D46703 /* MyBusiness2VC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyBusiness2VC.h; sourceTree = "<group>"; };
+		5A517E0A1EFA53AF00D46703 /* MyBusiness2VC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyBusiness2VC.m; sourceTree = "<group>"; };
+		5A517E0C1EFB526F00D46703 /* MyAppointment2Cell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyAppointment2Cell.h; sourceTree = "<group>"; };
+		5A517E0D1EFB526F00D46703 /* MyAppointment2Cell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyAppointment2Cell.m; sourceTree = "<group>"; };
+		5A517E0E1EFB526F00D46703 /* MyAppointment2Cell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyAppointment2Cell.xib; sourceTree = "<group>"; };
 		5A53F0D01ECC262A00162B2F /* HightWayStatusVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HightWayStatusVC.h; sourceTree = "<group>"; };
 		5A53F0D11ECC262A00162B2F /* HightWayStatusVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HightWayStatusVC.m; sourceTree = "<group>"; };
 		5A53F0D21ECC262A00162B2F /* HightWayStatusVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HightWayStatusVC.xib; sourceTree = "<group>"; };
@@ -3413,8 +3427,14 @@
 				5A517DEF1EF7A57E00D46703 /* User.storyboard */,
 				5A517DFA1EF7BF4300D46703 /* HuzhengYeWuVC.h */,
 				5A517DFB1EF7BF4300D46703 /* HuzhengYeWuVC.m */,
+				5A517E091EFA53AF00D46703 /* MyBusiness2VC.h */,
+				5A517E0A1EFA53AF00D46703 /* MyBusiness2VC.m */,
 				5A517DFD1EF8C51B00D46703 /* TempStorageBusinessVC.h */,
 				5A517DFE1EF8C51B00D46703 /* TempStorageBusinessVC.m */,
+				5A517E001EFA03A000D46703 /* MyConsult2VC.h */,
+				5A517E011EFA03A000D46703 /* MyConsult2VC.m */,
+				5A517E061EFA03D300D46703 /* MyAppointment2VC.h */,
+				5A517E071EFA03D300D46703 /* MyAppointment2VC.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -3451,6 +3471,9 @@
 				5A517DF21EF7A6D200D46703 /* NotifiTableCell.m */,
 				5A517DF71EF7B26900D46703 /* NotifiDetailCell.h */,
 				5A517DF81EF7B26900D46703 /* NotifiDetailCell.m */,
+				5A517E0C1EFB526F00D46703 /* MyAppointment2Cell.h */,
+				5A517E0D1EFB526F00D46703 /* MyAppointment2Cell.m */,
+				5A517E0E1EFB526F00D46703 /* MyAppointment2Cell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -3847,6 +3870,7 @@
 				CBAF393F1E9B3585005BB9C7 /* Affairsguide@2x.png in Resources */,
 				CB6163E21E5E8A3C002FD980 /* yy_swqr.png in Resources */,
 				CBB02B501E7001F0001EFCBA /* sf@3x.png in Resources */,
+				5A517E101EFB526F00D46703 /* MyAppointment2Cell.xib in Resources */,
 				CBB02B2A1E6FFFFF001EFCBA /* crj@3x.png in Resources */,
 				CBB02AB31E6CF8E5001EFCBA /* fazhi@3x.png in Resources */,
 				CBD990541E4AC64800C09DD2 /* Info.plist in Resources */,
@@ -4004,6 +4028,7 @@
 				CBD991221E4ACC0300C09DD2 /* MJRefreshBackGifFooter.m in Sources */,
 				CBD990721E4AC64800C09DD2 /* ViewController+MASAdditions.m in Sources */,
 				CBD98E991E4AB37A00C09DD2 /* FSWebViewJSBase.m in Sources */,
+				5A517E021EFA03A000D46703 /* MyConsult2VC.m in Sources */,
 				CBD990B51E4AC7FF00C09DD2 /* IQBarButtonItem.m in Sources */,
 				CBD98F7F1E4AB69500C09DD2 /* NSNotificationCenter+YYAdd.m in Sources */,
 				CB42BA491E56E1600092CE91 /* PopoverView.m in Sources */,
@@ -4127,6 +4152,7 @@
 				CBD990061E4ABCB500C09DD2 /* CFCoverFlowView.m in Sources */,
 				CBE312F51E7A303B000E1025 /* Foundation+Log.m in Sources */,
 				CBD98F2C1E4AB37A00C09DD2 /* UIImage+WebP.m in Sources */,
+				5A517E0F1EFB526F00D46703 /* MyAppointment2Cell.m in Sources */,
 				CBD9909D1E4AC7FF00C09DD2 /* IQUIScrollView+Additions.m in Sources */,
 				CBE0CFA01E67C8D00027DAD2 /* SearchResultVC.m in Sources */,
 				5A91D8881ED66AE1008D0393 /* WKVideoConverter.m in Sources */,
@@ -4156,6 +4182,7 @@
 				5A91D87E1ED66AE1008D0393 /* UIImageView+PlayGIF.m in Sources */,
 				CBD98E781E4AB37A00C09DD2 /* FSCoreDataManager+Private.m in Sources */,
 				5A0DDF011ECAA27A0053AAEE /* NSString+WJAttribute.m in Sources */,
+				5A517E081EFA03D300D46703 /* MyAppointment2VC.m in Sources */,
 				CBD9905A1E4AC64800C09DD2 /* MASConstraint.m in Sources */,
 				CB3F5BF71E5AEBDC0013FCEF /* MultipleQueryVC.m in Sources */,
 				CB3F5C921E5D90A30013FCEF /* ServiceMapDataModel.m in Sources */,
@@ -4165,6 +4192,7 @@
 				CBD98EF91E4AB37A00C09DD2 /* JSONModelError.m in Sources */,
 				CBA9632E1E5FD1B700BA1D26 /* MultipleQueryDataModel.m in Sources */,
 				CBD98F261E4AB37A00C09DD2 /* UIImage+GIF.m in Sources */,
+				5A517E0B1EFA53AF00D46703 /* MyBusiness2VC.m in Sources */,
 				CB56DBFA1E963FFE004249CE /* NoticeDetailVC.m in Sources */,
 				CBD991461E4ACC0300C09DD2 /* README.md in Sources */,
 				CBD991251E4ACC0300C09DD2 /* MJRefreshBackNormalFooter.m in Sources */,

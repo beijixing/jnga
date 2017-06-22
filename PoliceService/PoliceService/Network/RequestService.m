@@ -353,4 +353,18 @@
     }];
 }
 
++(void)getMyConsult2WithParamDict:(NSDictionary *)paramDict resultBlock:(void (^)(BOOL, id _Nullable))resultBlock{
+    NSString *urlStr = [NSString stringWithFormat:@"%@%@", AppJNGAURL, Interface_MyConsult2];
+    [[FSNetWorkManager manager] postDataWithHostUrl:urlStr parameters:[APISign paramSignedWithPagram:paramDict functionName:Interface_MyConsult2] result:^(BOOL success, id  _Nonnull object) {
+        resultBlock(success, object);
+    }];
+}
+
++(void)getMyAppointment2WithParamDict:(NSDictionary *)paramDict resultBlock:(void (^)(BOOL, id _Nullable))resultBlock{
+    NSString *urlStr = [NSString stringWithFormat:@"%@%@", AppJNGAURL, Interface_MyAppointment2];
+    [[FSNetWorkManager manager] postDataWithHostUrl:urlStr parameters:[APISign paramSignedWithPagram:paramDict functionName:Interface_MyAppointment2] result:^(BOOL success, id  _Nonnull object) {
+        resultBlock(success, object);
+    }];
+}
+
 @end

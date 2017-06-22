@@ -135,6 +135,8 @@ static const NSString *businessId = @"38ed36f8307443fa9765e35f6db0c032";
 #define Interface_HighWayStatus @"convenience/highwaytrafficinfo/highwayTrafficInfo/queryHighwayTrafficInfo"//高速路况查询
 #define Interface_NotifiList @"notice/appNotice/noticeList"//通知公告
 #define Interface_NotifiDetail @"notice/appNotice/getNotice"//通知公告详情
+#define Interface_MyConsult2 @"convenience/myconsult"//我的咨询2-户政业务AppJNGAURL
+#define Interface_MyAppointment2 @"appoint/list"//我的预约2-户政业务AppJNGAURL
 
 
 

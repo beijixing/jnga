@@ -188,6 +188,9 @@
                                                 <constraint firstAttribute="trailing" secondItem="wjV-4C-B0K" secondAttribute="trailing" constant="8" id="a7s-lQ-HWp"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="jev-sH-U7s" kind="push" id="RAE-XK-ki5"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="Jh7-fz-vxc">
                                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
@@ -251,6 +254,9 @@
                                                 <constraint firstAttribute="trailing" secondItem="8e0-6b-TRJ" secondAttribute="trailing" constant="8" id="wRp-IB-57t"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="9JO-om-4wM" kind="push" id="xmh-JI-LGF"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="cut-f1-Pwk">
                                         <rect key="frame" x="0.0" y="132" width="375" height="44"/>
@@ -281,6 +287,9 @@
                                                 <constraint firstItem="x8p-3R-TjM" firstAttribute="leading" secondItem="g6F-T3-edx" secondAttribute="leading" constant="15" id="diR-3V-LdH"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="Dpq-vb-gnD" kind="push" id="9nS-mS-Lj2"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -327,7 +336,112 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aY9-sz-eXX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="885.60000000000002" y="286.50674662668666"/>
+            <point key="canvasLocation" x="1343" y="169"/>
+        </scene>
+        <!--My Business2VC-->
+        <scene sceneID="qAQ-SR-lz1">
+            <objects>
+                <viewController id="jev-sH-U7s" customClass="MyBusiness2VC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qpy-Dk-g34"/>
+                        <viewControllerLayoutGuide type="bottom" id="Q0E-Uf-bDf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Kgf-I8-CXu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3dD-aa-0DV">
+                                <rect key="frame" x="0.0" y="0.0" width="187.5" height="40"/>
+                                <color key="backgroundColor" red="0.45098039220000002" green="0.74509803919999995" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="2tQ-oq-Shh"/>
+                                </constraints>
+                                <color key="tintColor" red="0.45098039220000002" green="0.74509803919999995" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="在办业务">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="segmentChange:" destination="jev-sH-U7s" eventType="touchUpInside" id="Jiv-Ue-Xdh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kFg-Bw-AYz">
+                                <rect key="frame" x="187.5" y="0.0" width="187.5" height="40"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="已完成业务">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="segmentChange:" destination="jev-sH-U7s" eventType="touchUpInside" id="Seq-xp-bVm"/>
+                                </connections>
+                            </button>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3db-bP-Pq0">
+                                <rect key="frame" x="0.0" y="40" width="375" height="627"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Q0E-Uf-bDf" firstAttribute="top" secondItem="3db-bP-Pq0" secondAttribute="bottom" id="34z-eB-Nof"/>
+                            <constraint firstItem="kFg-Bw-AYz" firstAttribute="top" secondItem="Kgf-I8-CXu" secondAttribute="top" id="BLp-zC-byl"/>
+                            <constraint firstItem="kFg-Bw-AYz" firstAttribute="width" secondItem="3dD-aa-0DV" secondAttribute="width" id="CRy-Rz-uvT"/>
+                            <constraint firstItem="3db-bP-Pq0" firstAttribute="top" secondItem="kFg-Bw-AYz" secondAttribute="bottom" id="IGO-Cx-RAp"/>
+                            <constraint firstItem="3db-bP-Pq0" firstAttribute="leading" secondItem="Kgf-I8-CXu" secondAttribute="leading" id="Kum-p8-fqg"/>
+                            <constraint firstAttribute="trailing" secondItem="3db-bP-Pq0" secondAttribute="trailing" id="LgJ-6L-RB6"/>
+                            <constraint firstItem="3dD-aa-0DV" firstAttribute="leading" secondItem="Kgf-I8-CXu" secondAttribute="leading" id="iRg-bJ-gmV"/>
+                            <constraint firstItem="kFg-Bw-AYz" firstAttribute="leading" secondItem="3dD-aa-0DV" secondAttribute="trailing" id="jzK-Sz-Y59"/>
+                            <constraint firstItem="kFg-Bw-AYz" firstAttribute="height" secondItem="3dD-aa-0DV" secondAttribute="height" id="r3p-RV-gN9"/>
+                            <constraint firstItem="3dD-aa-0DV" firstAttribute="top" secondItem="Kgf-I8-CXu" secondAttribute="top" id="sOv-E2-kHs"/>
+                            <constraint firstAttribute="trailing" secondItem="kFg-Bw-AYz" secondAttribute="trailing" id="xcN-Yg-SSg"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="kzY-xy-qW4"/>
+                    <connections>
+                        <outlet property="firstButton" destination="3dD-aa-0DV" id="4QI-nk-4TF"/>
+                        <outlet property="secondButton" destination="kFg-Bw-AYz" id="YCa-4T-MTA"/>
+                        <outlet property="webView" destination="3db-bP-Pq0" id="gWl-dR-08A"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="noU-tR-Rzh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-348" y="996.25187406296857"/>
+        </scene>
+        <!--My Appointment2VC-->
+        <scene sceneID="Hdk-v0-3ga">
+            <objects>
+                <viewController id="Dpq-vb-gnD" customClass="MyAppointment2VC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="85D-EK-IPf"/>
+                        <viewControllerLayoutGuide type="bottom" id="EX1-gB-Feo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Cmr-gZ-JnW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="OAV-R4-ZYO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dd0-Qm-BsO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="465" y="954"/>
+        </scene>
+        <!--My Consult2VC-->
+        <scene sceneID="EhM-2O-uBE">
+            <objects>
+                <viewController id="9JO-om-4wM" customClass="MyConsult2VC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pyQ-CW-Pe2"/>
+                        <viewControllerLayoutGuide type="bottom" id="6yM-am-icR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0Yz-PW-2L3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Th6-Qf-F1v"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lj0-yZ-ohG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1054" y="829"/>
         </scene>
     </scenes>
     <resources>
