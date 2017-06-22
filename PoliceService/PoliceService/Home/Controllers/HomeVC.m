@@ -503,12 +503,9 @@ static const NSString *homeItemId = @"38ed36f8307443fa9765e35f6db0c038";
         return _mainCollectionView;
     }
     UICollectionViewFlowLayout *flowlayout = [[UICollectionViewFlowLayout alloc]init];
-//    CGFloat itemWidth = [flowlayout fixSlit:CGRectMake(0, 0, SCREN_WIDTH, SCREN_HEIGHT-49-64) colCount:3 space:1];
     CGFloat itemWidth = (SCREN_WIDTH -2)/3;
     self.generalCellSize = CGSizeMake(itemWidth, itemWidth);
-//    CGFloat itemWidth2 = [flowlayout fixSlit:CGRectMake(0, 0, SCREN_WIDTH, SCREN_HEIGHT-49-64) colCount:3 space:0];
     self.thirdSectionCellSize = CGSizeMake((SCREN_WIDTH-1)/2, SCREN_WIDTH/3);
-//    flowlayout.itemSize = CGSizeMake(itemWidth, itemWidth);
     flowlayout.minimumInteritemSpacing = 1;
     flowlayout.minimumLineSpacing = 1;//未设置这个参数会导致有列间隙
     flowlayout.sectionInset = UIEdgeInsetsMake(0, 0, 0, 0);//这里设置了属性值之后，不要再实现相应的代理方法了，否则属性设置无效。
@@ -523,8 +520,6 @@ static const NSString *homeItemId = @"38ed36f8307443fa9765e35f6db0c038";
 
     [_mainCollectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"header"];
     [_mainCollectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:@"footer"];
-//    _mainCollectionView.scrollEnabled = NO;
-//    [self dataModel];
     return _mainCollectionView;
 }
 

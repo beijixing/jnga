@@ -22,14 +22,16 @@
     NSMutableDictionary *pagramSort = [pagram mutableCopy];
     [pagramSort setObject:functionName forKey:@"t"];
     //字典排序
+
     NSArray *keys = [[pagramSort allKeys] sortedArrayUsingComparator:^NSComparisonResult(id  _Nonnull obj1, id  _Nonnull obj2) {
-        unsigned char obj1_char = [obj1 characterAtIndex:0];
-        unsigned char obj2_char = [obj2 characterAtIndex:0];
-        if (obj1_char < obj2_char) {
-            return NSOrderedAscending;
-        }else{
-            return NSOrderedDescending;
-        }
+//        unsigned char obj1_char = [obj1 characterAtIndex:0];
+//        unsigned char obj2_char = [obj2 characterAtIndex:0];
+//        if (obj1_char < obj2_char) {
+//            return NSOrderedAscending;
+//        }else{
+//            return NSOrderedDescending;
+//        }
+        return [obj1 localizedCompare:obj2];
         
     }];
     

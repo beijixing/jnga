@@ -22,62 +22,86 @@
 {
 "id":0,
 "title": "交管",
-"img_url": "bsjiaoguan"
+"img_url": "bsjiaoguan",
+"parentId":"jiaog"
 },
 {
 "id":1,
 "title": "户政",
-"img_url": "huzheng"
+"img_url": "huzheng_bl",
+"parentId":"huz"
 },
 {
 "id":2,
 "title": "出入境",
-"img_url": "churujing"
+"img_url": "churujing",
+"parentId":"churj"
 },
 {
 "id":3,
 "title": "消防",
-"img_url": "xinfangmhq"
+"img_url": "xinfangmhq",
+"parentId":"9afb634651c548b499cdd1622aee86df"
 },
 {
 "id":4,
 "title": "法制",
-"img_url": "fazhi"
+"img_url": "fazhi",
+"parentId":"38815ef79efc4f6ca5ec1c5fe8ed60f6"
 },
 {
 "id":5,
 "title": "治安",
-"img_url": "zhian"
+"img_url": "zhian",
+"parentId":"cc8ef394cfde428d823d36967cb57340"
 },
 {
 "id":6,
 "title": "刑警",
-"img_url": "xingjing"
+"img_url": "xingjing",
+"parentId":"32ba5a89cce34635951ef561cb327978"
 },
 {
 "id":7,
 "title": "经侦",
-"img_url": "jingzhen"
+"img_url": "jingzhen",
+"parentId":"469f1fe8d1e04f2d836f94ee354526dd"
 },
 {
 "id":8,
 "title": "网警",
-"img_url": "wangjing"
+"img_url": "wangjing",
+"parentId":"wangj"
 },
 {
 "id":9,
 "title": "禁毒",
-"img_url": "jindu"
+"img_url": "jindu",
+"parentId":"00e3b0cedcd248d6b25c4587f88c9b76"
 },
 {
 "id":10,
 "title": "科技",
-"img_url": "keji"
+"img_url": "keji",
+"parentId":"4362255f9e02451984c111ffca22cdb5"
 },
 {
 "id":11,
 "title": "信访",
-"img_url": "xinfang"
+"img_url": "xinfang",
+"parentId":"7a9bd3d322b7442ba6f7b1274e233c9b"
+},
+{
+"id":12,
+"title": "保安",
+"img_url": "baoan_bl",
+"parentId":"9d9a4d393a3f4f6e820fa990cf58f467"
+},
+{
+"id":11,
+"title": "监管",
+"img_url": "jianguan_bl",
+"parentId":"901280ac99854095a244730f96c82f40"
 }
 ]
 }
