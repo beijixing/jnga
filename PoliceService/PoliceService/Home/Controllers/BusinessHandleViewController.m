@@ -24,6 +24,7 @@
 #import "RequestService.h"
 #import "UIImageView+WebCache.h"
 #import "Constant.h"
+#import "TrafficViewController.h"
 #define SCROLL_HEADER_HEIGHT (280*KSCALE)
 #define MODULE_HEADER_HEIGHT (280*KSCALE)
 #define DEEDS_HEADER_HEIGHT (40*KSCALE)
@@ -45,26 +46,6 @@
     [self setUpLeftNavbarItem];
 }
 
-//- (void)getServerData{
-//    [WJHUD showOnView:self.view];
-//    typeof(self) __weak wself = self;
-//    [RequestService getGuideListWithParamDict:@{@"parentid":businessId} resultBlock:^(BOOL success, id object) {
-//        [WJHUD hideFromView:wself.view];
-//        if (success) {
-//            NSDictionary *dataDict = (NSDictionary *)object;
-//            if ([[dataDict objectForKey:@"code"] integerValue] == 1) {
-//                NSError *error;
-//                wself.dataModel = [[AffairsGuideDataModel alloc] initWithDictionary:dataDict error:&error];
-//                [wself.mainCollectionView reloadData];
-//                NSLog(@"%@", dataDict);
-//            }else {
-//                [WJHUD showText:[dataDict objectForKey:@"message"] onView:wself.view];
-//            }
-//        }else {
-//            NSLog(@"object=%@", object);
-//        }
-//    }];
-//}
 
 - (void)setUpLeftNavbarItem {
     //    typeof(self) __weak wself = self;
@@ -84,7 +65,6 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"collectioncell" forIndexPath:indexPath];
-    //    cell.backgroundColor = [UIColor redColor];
     return cell;
 }
 
@@ -92,7 +72,7 @@
     PeopleAppealCollectionViewCell*showCell = (PeopleAppealCollectionViewCell*)cell;
     AffairsItemDataModel *dmodel = self.dataModel.data[indexPath.row];
     showCell.titleLabel.text = dmodel.title;
-    [showCell.iconImageView sd_setImageWithURL:[NSURL URLWithString:dmodel.img_url] placeholderImage:[UIImage imageNamed:@"bsjiaoguan"]];
+    [showCell.iconImageView setImage:[UIImage imageNamed:dmodel.img_url]];
 }
 
 
@@ -120,11 +100,17 @@
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    AffairsItemDataModel *dmodel = self.dataModel.data[indexPath.row];
     self.hidesBottomBarWhenPushed = YES;
-    AffairsSubVC *affairsSubVc = [[AffairsSubVC alloc] init];
-    affairsSubVc.parentId = dmodel.id;
-    [self.navigationController pushViewController:affairsSubVc animated:YES];
+    if (indexPath.item == 0) {
+        TrafficViewController *trafficVC = [[TrafficViewController alloc]init];
+        [self.navigationController pushViewController:trafficVC animated:YES];
+    }else{
+        AffairsItemDataModel *dmodel = self.dataModel.data[indexPath.row];
+        AffairsSubVC *affairsSubVc = [[AffairsSubVC alloc] init];
+        affairsSubVc.parentId = dmodel.parentId;
+        [self.navigationController pushViewController:affairsSubVc animated:YES];
+    }
+    
     //    self.hidesBottomBarWhenPushed = NO;
     
 }

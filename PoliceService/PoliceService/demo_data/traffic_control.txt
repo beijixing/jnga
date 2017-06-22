@@ -1,0 +1,158 @@
+{
+    "datas":
+    [
+
+        {
+            "type_id":0,
+            "type_name":"机动车业务",
+            "items":
+                [
+                        {
+                                      "id":1017,
+                                        "name": "移车服务",
+                                        "img_url": "move_car_ic.png"
+                                    },
+                    {
+                        "id":1001,
+                        "name": "机动车选号",
+                        "img_url": "jdcxh.png"
+                    },
+                    {
+                        "id":1002,
+                        "name": "补领机动车号牌",
+                        "img_url": "bljdchp.png"
+                    },
+                    {
+                        "id":1004,
+                        "name": "补领机动车行驶证",
+                        "img_url": "bljdcxsz.png"
+                    },
+                    {
+                        "id":1005,
+                        "name": "补领检验合格标志",
+                        "img_url": "bljyhgbz.png"
+                    },
+                    {
+                        "id":1007,
+                        "name": "机动车检验预约",
+                        "img_url": "jdcjyyy.png"
+                    },
+                    {
+                        "id":1011,
+                        "name": "变更机动车联系方式",
+                        "img_url": "bgjdclxfs.png"
+                    },
+                    {
+                        "id":1012,
+                        "name": "换领机动车号牌",
+                        "img_url": "hljdchp.png"
+                    },
+                    {
+                        "id":1014,
+                        "name": "换领机动车行驶证",
+                        "img_url": "hljdcxsz.png"
+                    },
+                    {
+                        "id":1015,
+                        "name": "换领检验合格标志",
+                        "img_url": "hljyhgbz.png"
+                    },
+                    {
+                        "id":1016,
+                        "name": "预选号牌申诉",
+                        "img_url": "yxhpss.png"
+                    }
+                ]
+        },
+        {
+            "type_id":1,
+            "type_name":"驾驶证业务",
+            "items":
+                [
+                    {
+                        "id":2001,
+                        "name": "期满换证",
+                        "img_url": "qmhz.png"
+                    },
+                    {
+                        "id":2002,
+                        "name": "超龄换证",
+                        "img_url": "clhz.png"
+                    },
+                    {
+                        "id":2003,
+                        "name": "遗失补证",
+                        "img_url": "ysbz.png"
+                    },
+                    {
+                        "id":2004,
+                        "name": "延期换证",
+                        "img_url": "yqhz.png"
+                    },
+                    {
+                        "id":2005,
+                        "name": "提交身体条件证明",
+                        "img_url": "tjsttjzm.png"
+                    },
+                    {
+                        "id":2006,
+                        "name": "延期提交身体条件证明",
+                        "img_url": "yqtjstzm.png"
+                    },
+                    {
+                        "id":2011,
+                        "name": "变更联系方式",
+                        "img_url": "bglxfs.png"
+                    },
+                    {
+                        "id":2012,
+                        "name": "延期审验",
+                        "img_url": "yqsj.png"
+                    },
+                    {
+                        "id":2013,
+                        "name": "损毁换证",
+                        "img_url": "shhz.png"
+                    },
+                    {
+                        "id":2015,
+                        "name": "取消预约",
+                        "img_url": "qxyy.png"
+                    },
+                    {
+                        "id":2016,
+                        "name": "考试预约",
+                        "img_url": "ksyy.png"
+                    },
+                    {
+                        "id":2021,
+                        "name": "异地考试预约",
+                        "img_url": "ydksyy.png"
+                    },
+                    {
+                        "id":2022,
+                        "name": "取消异地考试预约",
+                        "img_url": "qxydksyy.png"
+                    },
+                    {
+                        "id":2023,
+                        "name": "打印学习驾驶证明",
+                        "img_url": "dyxxjsz.png"
+                    }
+                ]
+        },
+        {
+              "type_id":2,
+              "type_name":"其他业务",
+              "items":
+                  [
+
+                      {
+                          "id":3002,
+                          "name": "缴纳罚款",
+                          "img_url": "jnfk.png"
+                      }
+                  ]
+          }
+     ]
+}

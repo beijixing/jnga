@@ -16,6 +16,7 @@
 
 @property(nonatomic, copy) NSString<Optional> *imgUrl;
 @property(nonatomic, copy) NSString<Optional> *img_url;
+@property(nonatomic, copy) NSString<Optional> *parentId;
 @end
 
 
