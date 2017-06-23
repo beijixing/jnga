@@ -19,7 +19,8 @@
 @property(nonatomic) NSString<Optional> *vc;
 @property(nonatomic) BOOL shouldLogin;
 @property(nonatomic) NSString<Optional> *urlString;
-
+@property(nonatomic) NSString<Optional> *dataType;
+@property(nonatomic) NSString<Optional> *parentId;
 
 
 @end

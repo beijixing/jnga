@@ -99,7 +99,6 @@
 - (void)collectionView:(UICollectionView *)collectionView willDisplayCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath {
     PeopleAppealCollectionViewCell*showCell = (PeopleAppealCollectionViewCell*)cell;
     TrafficSectionModel *sectionModel = self.dataModel.datas[indexPath.section];
-
     TrafficItemModel *dmodel = sectionModel.items[indexPath.row];
     showCell.titleLabel.text = dmodel.name;
     [showCell.iconImageView setImage:[UIImage imageNamed:dmodel.img_url]];

@@ -38,8 +38,7 @@
 "img_url": "jf_yy",
 "desc": "交管缴罚",
 "keyword": "jgkj",
-"vc":"MoveCarServiceVC",
-"shouldLogin":1
+"shouldLogin":1,
 },
 {
 "id": 2,
@@ -56,7 +55,7 @@
 "img_url": "wf_yy",
 "desc": "违法查询",
 "keyword": "wfkj",
-"vc":"MoveCarServiceVC",
+"vc":"CheckPeccancyVC",
 "shouldLogin":1
 }
 ],
@@ -124,7 +123,7 @@
 "title": "交警",
 "img_url": "jj_bl",
 "keyword": "jjbl",
-"vc":"MoveCarServiceVC",
+"vc":"TrafficViewController",
 "shouldLogin":1
 },
 {
@@ -178,7 +177,7 @@
 "title": "机动车违法信息",
 "img_url": "jdch_cx",
 "keyword": "jdchcx",
-"vc":"MoveCarServiceVC",
+"vc":"CheckPeccancyVC",
 "shouldLogin":1
 },
 {
@@ -186,7 +185,7 @@
 "title": "驾驶人交通违法",
 "img_url": "jshr_cx",
 "keyword": "jshrcx",
-"vc":"MoveCarServiceVC",
+"vc":"QueryDriverPeccancyVC",
 "shouldLogin":1
 },
 {
@@ -194,7 +193,7 @@
 "title": "出入境办证进度",
 "img_url": "chrj_cx",
 "keyword": "chrjcx",
-"vc":"MoveCarServiceVC",
+"vc":"CertificateProgressQueryVC",
 "shouldLogin":1
 },
 {
@@ -202,7 +201,7 @@
 "title": "执法办案公开查询",
 "img_url": "zf_cx",
 "keyword": "zhfcx",
-"vc":"MoveCarServiceVC",
+"vc":"CheckOpenCaseVC",
 "shouldLogin":1
 },
 {
@@ -210,7 +209,7 @@
 "title": "办事场所",
 "img_url": "bs_cx",
 "keyword": "bshcx",
-"vc":"MoveCarServiceVC",
+"vc":"QueryBusinessPlaceTableVC",
 "shouldLogin":1
 },
 {
@@ -240,7 +239,7 @@
 "title": "违法有奖举报",
 "img_url": "wf_sq",
 "keyword": "wfsq",
-"vc":"MoveCarServiceVC",
+"vc":"CrimeReportVC",
 "shouldLogin":1
 },
 {
@@ -248,15 +247,16 @@
 "title": "我要咨询",
 "img_url": "zx_sq",
 "keyword": "zxsq",
-"vc":"MoveCarServiceVC",
-"shouldLogin":1
+"vc":"SuggestionVC",
+"shouldLogin":1,
+"dataType":"4"
 },
 {
 "id": 3,
 "title": "局长信箱",
 "img_url": "jzh_sq",
 "keyword": "jzhsq",
-"vc":"MoveCarServiceVC",
+"vc":"DirectorMailVC",
 "shouldLogin":1
 },
 {
@@ -264,8 +264,9 @@
 "title": "我要建议",
 "img_url": "jy_sq",
 "keyword": "jysq",
-"vc":"MoveCarServiceVC",
-"shouldLogin":1
+"vc":"SuggestionVC",
+"shouldLogin":1,
+"dataType":"2"
 },
 {
 "id": 5,
@@ -285,47 +286,47 @@
 "id": 0,
 "title": "交警",
 "img_url": "jj_zn",
-"keyword": "jjzn",
-"vc":"MoveCarServiceVC",
+"parentId": "41da9bcdfb8c4ae7bf32b456fde8fbca",
+"vc":"AffairsSubVC",
 "shouldLogin":1
 },
 {
 "id": 1,
 "title": "户政",
 "img_url": "hzh_zn",
-"keyword": "hzhzn",
-"vc":"MoveCarServiceVC",
+"parentId": "0b45de639c7f45f4b5113f04ddc284fa",
+"vc":"AffairsSubVC",
 "shouldLogin":1
 },
 {
 "id": 2,
 "title": "出入境",
 "img_url": "chrj_zn",
-"keyword": "chrjzn",
-"vc":"MoveCarServiceVC",
+"parentId": "c8240eb497f2488f8cf106e41440d027",
+"vc":"AffairsSubVC",
 "shouldLogin":1
 },
 {
 "id": 3,
 "title": "治安",
 "img_url": "za_zn",
-"keyword": "zhazn",
-"vc":"MoveCarServiceVC",
+"parentId": "cc8ef394cfde428d823d36967cb57340",
+"vc":"AffairsSubVC",
 "shouldLogin":1
 },
 {
 "id": 4,
 "title": "法制",
 "img_url": "fzh_zn",
-"keyword": "fzhzn",
-"vc":"MoveCarServiceVC",
+"parentId": "38815ef79efc4f6ca5ec1c5fe8ed60f6",
+"vc":"AffairsSubVC",
 "shouldLogin":1
 },
 {
 "id": 5,
 "title": "更多",
 "img_url": "gd",
-"keyword": "gdzn",
+"parentId": "gdzn",
 "vc":"AffairsGuideVC",
 "shouldLogin":1
 },
