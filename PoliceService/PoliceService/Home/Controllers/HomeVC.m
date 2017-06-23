@@ -277,7 +277,22 @@ static const NSString *homeItemId = @"38ed36f8307443fa9765e35f6db0c038";
     
     if (indexPath.section == 2) {
         OperationItemModel *model = self.dataModel.operate_items[indexPath.item];
-        [GlobalFunctionManager pushViewControllerWithItem:model fromVC:self];
+        
+        if ([model.keyword isEqualToString:@"jgkj"]) {
+            if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"tmri12123://"]]) {
+                [[UIApplication sharedApplication]openURL:[NSURL URLWithString:@"tmri12123://"] options:@{} completionHandler:NULL];
+            }else {
+                NSString *urlString = @"itms-apps://itunes.apple.com/cn/app/交管12123/id1039727169?mt=8";
+                urlString = [urlString stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLFragmentAllowedCharacterSet]];
+                
+                if( [[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:urlString]]) {
+                    [[UIApplication sharedApplication]openURL:[NSURL URLWithString:urlString] options:@{} completionHandler:NULL];
+                }
+                
+            }
+        }else{
+            [GlobalFunctionManager pushViewControllerWithItem:model fromVC:self];
+        }
     }
     if (indexPath.section >= 3) {
         HomePageSectionModel *sectionModel = self.dataModel.sections[indexPath.section - 3];

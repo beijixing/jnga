@@ -18,6 +18,12 @@
 
 @implementation QueryBusinessPlaceTableVC
 
+
+-(instancetype)init
+{
+    self = [[UIStoryboard storyboardWithName:@"Colligation" bundle:nil]instantiateViewControllerWithIdentifier:@"QueryBusinessPlaceVC"];
+    return self;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
