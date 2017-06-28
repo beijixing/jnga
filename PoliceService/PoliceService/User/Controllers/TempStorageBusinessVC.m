@@ -22,6 +22,8 @@
     self.title = @"暂存业务";
     
     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://jnhz.jiga.gov.cn/api/business/MyListt?fcard=%@&uuid=%@&token=%@",[GlobalVariableManager manager].codeId,[UDIDManager getUDID],[GlobalVariableManager manager].loginToken]];
+//    NSURL *url = [NSURL URLWithString:@"http://jnhz.jiga.gov.cn/api/business/MyListt?fcard=370983198805100579&uuid=99000558707271&token=f5870d105a034882a076b16282dc85b4G1706281098"];
+    
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     [self.webView loadRequest:request];
     [self setUpLeftNavbarItem];

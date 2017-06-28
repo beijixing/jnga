@@ -15,6 +15,7 @@
 #import "RequestService.h"
 #import "GlobalVariableManager.h"
 #import "ChangePasswordVC.h"
+#import "UDIDManager.h"
 @interface LoginVC ()
 
 @end
@@ -51,7 +52,8 @@
     
     typeof(self) __weak wself = self;
     [RequestService loginWithParamDict:@{@"phone":self.phoneTF.text,
-                                             @"password":self.passwdTF.text
+                                             @"password":self.passwdTF.text,
+                                         @"uuid":    [UDIDManager getUDID]
                                          }
     resultBlock:^(BOOL success, id object) {
                 if (success) {
