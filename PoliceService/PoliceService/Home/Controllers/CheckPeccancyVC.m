@@ -13,13 +13,19 @@
 #import "PopoverView.h"
 #import "VerifyCodeView.h"
 #import "CheckPeccancyResultVC.h"
+#import "RequestService.h"
+#import "WJHUD.h"
+#import "UDIDManager.h"
+
 @interface CheckPeccancyVC ()
 @property (strong, nonatomic) IBOutlet UITextField *carNumberTF;
 @property (strong, nonatomic) IBOutlet UITextField *engineNumberTF;
-@property (strong, nonatomic) IBOutlet UITextField *carFrameNumberTF;
+@property (strong, nonatomic) IBOutlet UIButton *carTypeButton;
 @property (strong, nonatomic) IBOutlet UITextField *verificationCodeTF;
 @property (strong, nonatomic) IBOutlet UIImageView *verificationCodeView;
 @property (strong, nonatomic) VerifyCodeView *codeView;
+@property (strong, nonatomic) NSArray *carTypeArray;
+@property (nonatomic, strong) NSString *carType;
 
 @end
 
@@ -30,6 +36,7 @@
     self.title = @"违章查询";
     [self setUpLeftNavbarItem];
     [self setupCarNumberTFLeftView];
+    [self getCarType];
     [self.verificationCodeView addSubview:self.codeView];
 }
 
@@ -40,10 +47,42 @@
     }];
 }
 
+- (void)getCarType{
+    [RequestService  getAppDataDictWithParamDict:@{@"type":@"plate_type"} resultBlock:^(BOOL success, id object) {
+        if (success) {
+            if ([[object objectForKey:@"code"] isEqualToString:@"1"]) {
+                self.carTypeArray = object[@"data"];
+            }
+        }
+    }];
+}
+- (IBAction)chooseCarType:(id)sender {
+    NSMutableArray *popOverActions = [[NSMutableArray alloc] init];
+    for (NSInteger i = 0; i < self.carTypeArray.count; i ++ ) {
+        NSDictionary *dict = self.carTypeArray[i];
+        PopoverAction *pop = [PopoverAction actionWithTitle:dict[@"label"] handler:^(PopoverAction *action) {
+            self.carType = action.title;
+            [self.carTypeButton setTitle:action.title forState:UIControlStateNormal];
+            self.carType = dict[@"value"];
+        }];
+        [popOverActions addObject:pop];
+    }
+    [self showPopoverViewWithView:sender actions:popOverActions];
+}
+- (void)showPopoverViewWithView:(UIView *)view  actions:(NSArray *)actions{
+    if (actions.count == 0) {
+        NSLog(@"showPopoverViewWithView actions 为空");
+        return;
+    }
+    PopoverView* popoverView = [PopoverView popoverView];
+    popoverView.style = PopoverViewStyleDefault;
+    popoverView.hideAfterTouchOutside = YES; // 点击外部时允许隐藏
+    [popoverView showToView:view withActions:actions];
+}
 - (void)setupCarNumberTFLeftView {
     UIView *leftView = [UIFactory createViewWith:CGRectMake(0, 0, 40, 30) backgroundColor:[UIColor clearColor]];
     
-    UIButton *chooseAreaCodeBtn = [UIFactory createButtonWith:CGRectMake(0, 2.5, 40, 25) selector:@selector(chooseAreaCode:) target:self titleColor:COLOR_WITH_RGB(90, 90, 90) title:@"A\U0000E601"];
+    UIButton *chooseAreaCodeBtn = [UIFactory createButtonWith:CGRectMake(0, 2.5, 40, 25) selector:nil target:self titleColor:COLOR_WITH_RGB(90, 90, 90) title:@"H"];
     chooseAreaCodeBtn.titleLabel.font = [UIFont fontWithName:@"iconfont" size:15.0];
     chooseAreaCodeBtn.cornerRadius = 6;
     chooseAreaCodeBtn.borderWidth = 1.0;
@@ -75,8 +114,40 @@
 }
 - (IBAction)queryBtnAction:(UIButton *)sender {
     
-    self.hidesBottomBarWhenPushed = YES;
-    [self.navigationController pushViewController:[[CheckPeccancyResultVC alloc] init] animated:YES];
+//    self.hidesBottomBarWhenPushed = YES;
+//    [self.navigationController pushViewController:[[CheckPeccancyResultVC alloc] init] animated:YES];
+    [self queryInfo];
+}
+
+-(void)queryInfo{
+    
+    if ([_carType isEqualToString:@""]) {
+        [WJHUD showText:@"请选择车型" onView:self.view];
+        return;
+    }
+    if ([_carNumberTF.text isEqualToString:@""]) {
+        [WJHUD showText:@"请输入车牌号" onView:self.view];
+        return;
+    }
+    if ([_engineNumberTF.text isEqualToString:@""]) {
+        [WJHUD showText:@"请输入发动机号" onView:self.view];
+        return;
+    }
+    [WJHUD showOnView:self.view];
+    [RequestService queryPeccancyWithParamDict:@{@"type":_carType,
+                                                 @"plateNumber":[NSString stringWithFormat:@"鲁H%@",_carNumberTF.text],
+                                                 @"engineNumber":_engineNumberTF.text,
+                                                 @"imei":[UDIDManager getUDID]} resultBlock:^(BOOL success, id  _Nullable object) {
+                                                     [WJHUD hideFromView:self.view];
+                                                     if (success) {
+                                                         NSArray *infoAry = [object objectForKey:@"data"];
+                                                         if (infoAry.count!=0) {
+                                                             
+                                                         }else{
+                                                             [WJHUD showText:[object objectForKey:@"message"] onView:self.view];
+                                                         }
+                                                     }
+    }];
 }
 
 - (VerifyCodeView *)codeView {

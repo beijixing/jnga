@@ -68,6 +68,13 @@
     NSLog(@"indexPath.row=%ld", (long)indexPath.row);
 //    [GlobalFunctionManager pushPeopleAppealSubviewWithController:self switchId:indexPath.row];
     self.hidesBottomBarWhenPushed = YES;
+    if (indexPath.row == 0) {
+        NSURL *phoneURL = [NSURL URLWithString:[NSString stringWithFormat:@"tel:%@",@"9600110"]];
+        UIWebView *webView = [[UIWebView alloc]init];
+        [webView loadRequest:[NSURLRequest requestWithURL:phoneURL]];
+        
+        [self.view addSubview:webView];
+    }
     if (indexPath.row >0 && indexPath.row <6) {
         SuggestionVC *suggestionVc = [[SuggestionVC alloc] init];
         suggestionVc.title = self.headerTitleArr[indexPath.row];

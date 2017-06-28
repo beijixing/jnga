@@ -40,6 +40,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 - (IBAction)segmentChange:(UIButton *)sender {
     [self loadWebWithTag:sender.tag];
     if (sender == _firstButton) {

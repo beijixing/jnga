@@ -40,15 +40,25 @@
 
 -(void)getData{
     [WJHUD showOnView:self.view];
-    [RequestService getMyConsult2WithParamDict:@{@"fcard":[GlobalVariableManager manager].codeId,
-                                                 @"uuid":[UDIDManager getUDID],
-                                                 @"token":[GlobalVariableManager manager].loginToken
+    [RequestService getMyConsult2WithParamDict:@{@"fcard":@"370983198805100579",
+                                                 @"uuid":@"99000558707271",
+                                                 @"token":@"dea4358328494df1852776392dc35751G170622416"
                                                  } resultBlock:^(BOOL success, id  _Nullable object) {
                                                      [WJHUD hideFromView:self.view];
                                                      if (success) {
                                                          
                                                      }
-    }];
+                                                 }];
+//    [WJHUD showOnView:self.view];
+//    [RequestService getMyConsult2WithParamDict:@{@"fcard":[GlobalVariableManager manager].codeId,
+//                                                 @"uuid":[UDIDManager getUDID],
+//                                                 @"token":[GlobalVariableManager manager].loginToken
+//                                                 } resultBlock:^(BOOL success, id  _Nullable object) {
+//                                                     [WJHUD hideFromView:self.view];
+//                                                     if (success) {
+//                                                         
+//                                                     }
+//    }];
     
 }
 

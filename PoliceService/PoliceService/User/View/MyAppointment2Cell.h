@@ -14,4 +14,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *progressLabel;
 @property (weak, nonatomic) IBOutlet UILabel *appointTimeQuantumLabel;
 
+-(void)setContentWithDic:(NSDictionary *)dic;
+
 @end

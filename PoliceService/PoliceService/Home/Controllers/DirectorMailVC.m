@@ -96,7 +96,7 @@
 }
 
 - (IBAction)selectClassLabelAction:(UITapGestureRecognizer *)sender {
-    
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
     NSMutableArray *popOverActions = [[NSMutableArray alloc] init];
     NSArray *titleArr = @[@"治安", @"民政", @"交警", @"消防", @"出入境",
                           @"网安", @"法制", @"刑侦", @"技防", @"禁毒", @"经侦", @"其他"];

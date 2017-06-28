@@ -288,11 +288,11 @@ static const NSString *homeItemId = @"38ed36f8307443fa9765e35f6db0c038";
                 if( [[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:urlString]]) {
                     [[UIApplication sharedApplication]openURL:[NSURL URLWithString:urlString] options:@{} completionHandler:NULL];
                 }
-                
             }
         }else{
             [GlobalFunctionManager pushViewControllerWithItem:model fromVC:self];
         }
+        
     }
     if (indexPath.section >= 3) {
         HomePageSectionModel *sectionModel = self.dataModel.sections[indexPath.section - 3];
