@@ -61,22 +61,23 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="752" text="预约时间段:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5GA-io-BMZ">
-                        <rect key="frame" x="8" y="76.5" width="81" height="18"/>
+                        <rect key="frame" x="8" y="77" width="81" height="18"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="81" id="Veb-Aa-tbz"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DZu-1n-dms">
-                        <rect key="frame" x="97" y="85" width="42" height="0.0"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="42" id="ajH-Tx-DhW"/>
-                        </constraints>
+                        <rect key="frame" x="97" y="86" width="215" height="0.0"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
+                    <constraint firstAttribute="trailing" secondItem="DZu-1n-dms" secondAttribute="trailing" constant="8" id="1BH-40-e5z"/>
                     <constraint firstItem="xi8-aH-qwO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="ADa-9Y-wQq"/>
                     <constraint firstItem="agm-KE-MIg" firstAttribute="leading" secondItem="xi8-aH-qwO" secondAttribute="trailing" constant="8" id="I1S-po-6X5"/>
                     <constraint firstItem="ZGt-Nq-0uj" firstAttribute="leading" secondItem="TOD-hJ-54L" secondAttribute="trailing" constant="8" id="RwD-Z4-VkF"/>

@@ -81,5 +81,6 @@
 +(void)getMyConsult2WithParamDict:(NSDictionary *_Nullable)paramDict resultBlock:(void(^_Nullable)(BOOL success,id _Nullable object))resultBlock;
 +(void)getMyAppointment2WithParamDict:(NSDictionary *_Nullable)paramDict resultBlock:(void(^_Nullable)(BOOL success,id _Nullable object))resultBlock;
 +(void)queryPeccancyWithParamDict:(NSDictionary *_Nullable)paramDict resultBlock:(void(^_Nullable)(BOOL success,id _Nullable object))resultBlock;
-
++(void)getMyAppointmentDetail2WithParamDict:(NSDictionary *_Nullable)paramDict resultBlock:(void(^_Nullable)(BOOL success,id _Nullable object))resultBlock;
++(void)getMoveCarListWithParamDict:(NSDictionary *_Nullable)paramDict resultBlock:(void(^_Nullable)(BOOL success,id _Nullable object))resultBlock;
 @end

@@ -22,7 +22,6 @@
 }
 
 -(void)setContentWithDic:(NSDictionary *)dic{
-    
     self.appointBusinessLabel.text = [dic objectForKey:@"fbusioness"];
     self.appointTimeLabel.text = [dic objectForKey:@"fdate"];
     self.progressLabel.text = [dic objectForKey:@"fstate"];

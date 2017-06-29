@@ -10,8 +10,11 @@
 #import <BaiduMapAPI_Map/BMKMapComponent.h>
 #import "IQKeyboardManager.h"
 #import "CustomTabBarController.h"
+#import "WXApi.h"
+#import <TencentOpenAPI/TencentOAuth.h>
+#import "Constant.h"
 BMKMapManager* _mapManager;
-@interface AppDelegate ()
+@interface AppDelegate ()<WXApiDelegate>
 
 @end
 
@@ -25,9 +28,60 @@ BMKMapManager* _mapManager;
         NSLog(@"manager start failed!");
     }
     
+    [WXApi registerApp:WeiXinKey];
+    [[TencentOAuth alloc] initWithAppId:QQKey andDelegate:nil]; //注册
+    [self performSelector:@selector(testLog) withObject:nil afterDelay:3];
     [IQKeyboardManager sharedManager].enable = YES;
     self.window.rootViewController = [[CustomTabBarController alloc] init];
     return YES;
+}
+
+- (void) testLog
+{
+    NSLog(@"startstart");
+    for (int i = 0; i < 1; i++)
+    {
+        [[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:[NSString stringWithFormat:@"wx795fbcef1070b5be://%d",i]]];
+    }
+    NSLog(@"sss1111:%@", [NSString stringWithFormat:@"%d",[[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:[NSString stringWithFormat:@"wx795fbcef1070b5be://sss"]]]]);
+}
+#pragma mark - wx
+-(BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options
+{
+    if ([[NSString stringWithFormat:@"%@",url] rangeOfString:WeiXinKey].location !=NSNotFound) {
+        return [WXApi handleOpenURL:url delegate:self];
+    }
+    if ([[NSString stringWithFormat:@"%@",url] rangeOfString:QQKey].location !=NSNotFound) {
+       return [TencentOAuth HandleOpenURL:url];
+    }
+    return YES;
+}
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
+    if ([[NSString stringWithFormat:@"%@",url] rangeOfString:WeiXinKey].location !=NSNotFound) {
+       return [WXApi handleOpenURL:url delegate:self];
+    }
+    if ([[NSString stringWithFormat:@"%@",url] rangeOfString:QQKey].location !=NSNotFound) {
+      return [TencentOAuth HandleOpenURL:url];
+    }
+    return YES;
+}
+- (BOOL)application:(UIApplication*)application openURL:(NSURL *)url sourceApplication:(NSString*)sourceApplication annotation:(id)annotation{
+    
+    return[TencentOAuth HandleOpenURL:url];
+    
+}
+- (void)onResp:(BaseResp *)resp {
+    NSString *strResult = nil;
+    if (resp.errCode == 0) {
+        strResult = @"分享成功";
+    }else if(resp.errCode == -2) {
+        strResult = @"取消分享";
+    }else{
+        strResult = @"分享失败";
+    }
+    
+    UIAlertView *alertview = [[UIAlertView alloc] initWithTitle:@"分享结果" message:strResult delegate:self cancelButtonTitle:@"确认" otherButtonTitles:nil, nil];
+    [alertview show];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
