@@ -131,6 +131,7 @@ static const NSString *businessId = @"38ed36f8307443fa9765e35f6db0c032";
 #define Interface_ConsultOnline @"convenience/consult"//在线咨询
 
 #define Interface_ReportCrime @"convenience/awardreport/awardReport/save"//违法犯罪线索有奖举报
+#define Interface_FeedBack @"feedback/answer/feedback/apiSave"//意见反馈
 
 #define Interface_QueryBusinessPlace @"convenience/officeaddrestelinquiries/officeaddresTelinquiries/querySubdivisionProject"//办事场所地址电话快捷查询
 #define Interface_QueryCityDetail @"convenience/officeaddrestelinquiries/officeaddresTelinquiries/queryCounties"//根据细分项查询县市区列表

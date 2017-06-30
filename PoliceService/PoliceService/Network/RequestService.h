@@ -83,4 +83,6 @@
 +(void)queryPeccancyWithParamDict:(NSDictionary *_Nullable)paramDict resultBlock:(void(^_Nullable)(BOOL success,id _Nullable object))resultBlock;
 +(void)getMyAppointmentDetail2WithParamDict:(NSDictionary *_Nullable)paramDict resultBlock:(void(^_Nullable)(BOOL success,id _Nullable object))resultBlock;
 +(void)getMoveCarListWithParamDict:(NSDictionary *_Nullable)paramDict resultBlock:(void(^_Nullable)(BOOL success,id _Nullable object))resultBlock;
++(void)feedBackWithMediaArray:(NSMutableArray *_Nullable)array progress:(nullable void (^)(NSProgress * _Nonnull))progress withParamDict:(NSDictionary *_Nullable)paramDict resultBlock:(void(^_Nullable)(BOOL success,id _Nullable object))resultBlock;
+
 @end

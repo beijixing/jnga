@@ -385,4 +385,15 @@
         resultBlock(success, object);
     }];
 }
++(void)feedBackWithMediaArray:(NSMutableArray *)array progress:(nullable void (^)(NSProgress * _Nonnull))progress withParamDict:(NSDictionary *)paramDict resultBlock:(void (^)(BOOL, id _Nullable))resultBlock{
+    NSString *urlStr = [NSString stringWithFormat:@"%@%@", AppURL, Interface_FeedBack];
+    [[FSNetWorkManager manager]uploadFileWithMediaData:array progress:^(NSProgress * _Nonnull upProgress) {
+        if (progress) {
+            progress(upProgress);
+        }
+    } url:urlStr params:paramDict result:^(BOOL success, id  _Nonnull object) {
+        resultBlock(success, object);
+    }];
+}
+
 @end

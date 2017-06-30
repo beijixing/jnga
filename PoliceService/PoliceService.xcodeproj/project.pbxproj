@@ -21,6 +21,7 @@
 		5A0B440C1F04E679005330CD /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A0B440B1F04E679005330CD /* libiconv.tbd */; };
 		5A0B44111F04EDD0005330CD /* TencentOpenApi_IOS_Bundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5A0B440F1F04EDD0005330CD /* TencentOpenApi_IOS_Bundle.bundle */; };
 		5A0B44121F04EDD0005330CD /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A0B44101F04EDD0005330CD /* TencentOpenAPI.framework */; };
+		5A0B44171F05E566005330CD /* FeedBackVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0B44161F05E566005330CD /* FeedBackVC.m */; };
 		5A0DDEED1ECA928F0053AAEE /* spz@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A0DDEEC1ECA928E0053AAEE /* spz@2x.png */; };
 		5A0DDEEF1ECA92A70053AAEE /* spz@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A0DDEEE1ECA92A70053AAEE /* spz@3x.png */; };
 		5A0DDEF11ECA92CD0053AAEE /* crj@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A0DDEF01ECA92CD0053AAEE /* crj@3x.png */; };
@@ -989,6 +990,8 @@
 		5A0B440B1F04E679005330CD /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
 		5A0B440F1F04EDD0005330CD /* TencentOpenApi_IOS_Bundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TencentOpenApi_IOS_Bundle.bundle; sourceTree = "<group>"; };
 		5A0B44101F04EDD0005330CD /* TencentOpenAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TencentOpenAPI.framework; sourceTree = "<group>"; };
+		5A0B44151F05E566005330CD /* FeedBackVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedBackVC.h; sourceTree = "<group>"; };
+		5A0B44161F05E566005330CD /* FeedBackVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedBackVC.m; sourceTree = "<group>"; };
 		5A0DDEEC1ECA928E0053AAEE /* spz@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "spz@2x.png"; sourceTree = "<group>"; };
 		5A0DDEEE1ECA92A70053AAEE /* spz@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "spz@3x.png"; sourceTree = "<group>"; };
 		5A0DDEF01ECA92CD0053AAEE /* crj@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "crj@3x.png"; sourceTree = "<group>"; };
@@ -3593,6 +3596,8 @@
 				5A0B43DE1F03A15A005330CD /* MyBusinessNewVC.m */,
 				5A0B43E01F03A16C005330CD /* MyBusinessNewListVC.h */,
 				5A0B43E11F03A16C005330CD /* MyBusinessNewListVC.m */,
+				5A0B44151F05E566005330CD /* FeedBackVC.h */,
+				5A0B44161F05E566005330CD /* FeedBackVC.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -4262,6 +4267,7 @@
 				5A53F0E51ECC336600162B2F /* BaseTableViewController.m in Sources */,
 				CB3F5C271E5C19540013FCEF /* WJTextView.m in Sources */,
 				CBD98EFF1E4AB37A00C09DD2 /* JSONValueTransformer.m in Sources */,
+				5A0B44171F05E566005330CD /* FeedBackVC.m in Sources */,
 				CBE0CF851E67A6350027DAD2 /* DriverPeccancyResultVC.m in Sources */,
 				CBD98E7B1E4AB37A00C09DD2 /* FSCoreDataManager.m in Sources */,
 				CBE312F01E77EC2E000E1025 /* LostItemServerDataModel.m in Sources */,

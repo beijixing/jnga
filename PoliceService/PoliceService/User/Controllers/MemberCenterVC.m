@@ -33,6 +33,7 @@
 #import <TencentOpenAPI/TencentMessageObject.h>
 #import <TencentOpenAPI/TencentOAuth.h>
 #import <TencentOpenAPI/QQApiInterfaceObject.h>
+#import "FeedBackVC.h"
 
 NSString *cellIdentifier = @"cell";
 @interface MemberCenterVC ()
@@ -312,6 +313,11 @@ NSString *cellIdentifier = @"cell";
                         [GlobalFunctionManager checkVersionOnViewController:wself];
                     }
                         break;
+                    case 1:
+                    {
+                        [self goFeedBack];
+                    }
+                        break;
                     default:
                         break;
                 }
@@ -352,6 +358,10 @@ NSString *cellIdentifier = @"cell";
 }
 - (void)goMyBusiness{
     MyBusinessNewListVC *vc = [[UIStoryboard storyboardWithName:@"User" bundle:nil]instantiateViewControllerWithIdentifier:@"MyBusinessNewVCID"];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+- (void)goFeedBack{
+    FeedBackVC *vc = [[UIStoryboard storyboardWithName:@"User" bundle:nil]instantiateViewControllerWithIdentifier:@"FeedBackVCID"];
     [self.navigationController pushViewController:vc animated:YES];
 }
 
