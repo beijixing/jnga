@@ -367,10 +367,31 @@
         resultBlock(success, object);
     }];
 }
-
++(void)getMyAppointmentDetail2WithParamDict:(NSDictionary *)paramDict resultBlock:(void (^)(BOOL, id _Nullable))resultBlock{
+    NSString *urlStr = [NSString stringWithFormat:@"%@%@", AppJNGAURL, Interface_MyAppointmentDetail2];
+    [[FSNetWorkManager manager] postDataWithHostUrl:urlStr parameters:[APISign paramSignedWithPagram:paramDict functionName:Interface_MyAppointmentDetail2] result:^(BOOL success, id  _Nonnull object) {
+        resultBlock(success, object);
+    }];
+}
 +(void)queryPeccancyWithParamDict:(NSDictionary *)paramDict resultBlock:(void (^)(BOOL, id _Nullable))resultBlock{
     NSString *urlStr = [NSString stringWithFormat:@"%@%@", AppURL, Interface_QueryPeccancy];
     [[FSNetWorkManager manager] postDataWithHostUrl:urlStr parameters:paramDict result:^(BOOL success, id  _Nonnull object) {
+        resultBlock(success, object);
+    }];
+}
++(void)getMoveCarListWithParamDict:(NSDictionary *)paramDict resultBlock:(void (^)(BOOL, id _Nullable))resultBlock{
+    NSString *urlStr = [NSString stringWithFormat:@"%@%@", AppURL, Interface_MoveCarList];
+    [[FSNetWorkManager manager] getDataWithHostUrl:urlStr parameters:paramDict result:^(BOOL success, id  _Nonnull object) {
+        resultBlock(success, object);
+    }];
+}
++(void)feedBackWithMediaArray:(NSMutableArray *)array progress:(nullable void (^)(NSProgress * _Nonnull))progress withParamDict:(NSDictionary *)paramDict resultBlock:(void (^)(BOOL, id _Nullable))resultBlock{
+    NSString *urlStr = [NSString stringWithFormat:@"%@%@", AppURL, Interface_FeedBack];
+    [[FSNetWorkManager manager]uploadFileWithMediaData:array progress:^(NSProgress * _Nonnull upProgress) {
+        if (progress) {
+            progress(upProgress);
+        }
+    } url:urlStr params:paramDict result:^(BOOL success, id  _Nonnull object) {
         resultBlock(success, object);
     }];
 }

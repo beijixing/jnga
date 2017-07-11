@@ -85,16 +85,36 @@
 				<string>tmri12123://</string>
 			</array>
 		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>weixin</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>wx795fbcef1070b5be</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>tencent</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>tencent1106180827</string>
+			</array>
+		</dict>
 	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
-		<string>baidumap</string>
-		<string>comgooglemaps</string>
-		<string>qqmap</string>
-		<string>iosamap</string>
-		<string>tmri12123</string>
+		<string>weixin</string>
+		<string>mqq</string>
+		<string>tim</string>
+		<string>mqqapi</string>
+		<string>mqqopensdkapiv2</string>
 	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>

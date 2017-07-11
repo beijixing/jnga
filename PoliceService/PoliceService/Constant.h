@@ -11,6 +11,8 @@
 
 #pragma mark - Host
 //http://124.133.15.93/jngateam/jnga_ios.git gitlab
+static NSString * const WeiXinKey = @"wx795fbcef1070b5be";
+static NSString * const QQKey = @"1106180827";
 static NSString * const Host_IP = @"http://124.133.15.90:8780/";
 static NSString * const AppURL = @"http://119.188.169.79:8081/jnga/appService/";
 
@@ -129,14 +131,19 @@ static const NSString *businessId = @"38ed36f8307443fa9765e35f6db0c032";
 #define Interface_ConsultOnline @"convenience/consult"//在线咨询
 
 #define Interface_ReportCrime @"convenience/awardreport/awardReport/save"//违法犯罪线索有奖举报
+#define Interface_FeedBack @"feedback/answer/feedback/apiSave"//意见反馈
 
 #define Interface_QueryBusinessPlace @"convenience/officeaddrestelinquiries/officeaddresTelinquiries/querySubdivisionProject"//办事场所地址电话快捷查询
 #define Interface_QueryCityDetail @"convenience/officeaddrestelinquiries/officeaddresTelinquiries/queryCounties"//根据细分项查询县市区列表
 #define Interface_HighWayStatus @"convenience/highwaytrafficinfo/highwayTrafficInfo/queryHighwayTrafficInfo"//高速路况查询
 #define Interface_NotifiList @"notice/appNotice/noticeList"//通知公告
 #define Interface_NotifiDetail @"notice/appNotice/getNotice"//通知公告详情
+#define Interface_MoveCarList @"move/yiche/yiche/wapList"//移车列表
+
 #define Interface_MyConsult2 @"convenience/myconsult"//我的咨询2-户政业务AppJNGAURL
 #define Interface_MyAppointment2 @"appoint/list"//我的预约2-户政业务AppJNGAURL
+#define Interface_MyAppointmentDetail2 @"appoint/detail"//我的预约详情2-户政业务AppJNGAURL
+
 #define Interface_QueryPeccancy @"convenience/motorvehice/motorvehiceIllegal/query"//机动车违法信息查询
 
 

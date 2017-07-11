@@ -20,5 +20,10 @@
 
     // Configure the view for the selected state
 }
-
+-(void)setContentWithDic:(NSDictionary *)dic{
+    self.titleLabel.text = @"";
+    self.consultTimeLabel.text = @"";
+    self.replyTimeLabel.text = @"";
+    self.nameLabel.text = @"";
+}
 @end

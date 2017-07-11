@@ -12,6 +12,7 @@
 #import "GlobalVariableManager.h"
 #import "UDIDManager.h"
 #import "MyAppointment2Cell.h"
+#import "MyAppointmentDetail2VC.h"
 
 @interface MyAppointment2VC ()<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -25,6 +26,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self.tableView registerNib:[UINib nibWithNibName:@"MyAppointment2Cell" bundle:nil] forCellReuseIdentifier:@"MyAppointment2CellID"];
+    self.tableView.estimatedRowHeight = 100;
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.title = @"我的预约";
     [self setUpLeftNavbarItem];
     [self getData];
@@ -42,33 +45,20 @@
 }
 -(void)getData{
     [WJHUD showOnView:self.view];
-    
-    [RequestService getMyAppointment2WithParamDict:@{@"fcard":@"370983198805100579",
-                                                     @"uuid":@"99000558707271",
-                                                     @"token":@"dea4358328494df1852776392dc35751G170622416"
-                                                     } resultBlock:^(BOOL success, id  _Nullable object) {
-                                                         [WJHUD hideFromView:self.view];
-                                                         if (success) {
-                                                             if (!_dataAry) {
-                                                                 self.dataAry = [NSMutableArray new];
-                                                             }
-                                                             self.dataAry = [object objectForKey:@"data"];
+
+    [RequestService getMyAppointment2WithParamDict:@{@"fcard":[GlobalVariableManager manager].codeId,
+                                                 @"uuid":[UDIDManager getUDID],
+                                                 @"token":[GlobalVariableManager manager].loginToken
+                                                 } resultBlock:^(BOOL success, id  _Nullable object) {
+                                                     [WJHUD hideFromView:self.view];
+                                                     if (success) {
+                                                         if (!_dataAry) {
+                                                             self.dataAry = [NSMutableArray new];
                                                          }
-                                                         [self.tableView reloadData];
-                                                     }];
-//    [RequestService getMyAppointment2WithParamDict:@{@"fcard":[GlobalVariableManager manager].codeId,
-//                                                 @"uuid":[UDIDManager getUDID],
-//                                                 @"token":[GlobalVariableManager manager].loginToken
-//                                                 } resultBlock:^(BOOL success, id  _Nullable object) {
-//                                                     [WJHUD hideFromView:self.view];
-//                                                     if (success) {
-//                                                         if (!_dataAry) {
-//                                                             self.dataAry = [NSMutableArray new];
-//                                                         }
-//                                                         self.dataAry = [object objectForKey:@"data"];
-//                                                     }
-//                                                     [self.tableView reloadData];
-//                                                 }];
+                                                         self.dataAry = [object objectForKey:@"data"];
+                                                     }
+                                                     [self.tableView reloadData];
+                                                 }];
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -82,14 +72,25 @@
     return cell;
 }
 
-/*
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    NSDictionary *dic =_dataAry[indexPath.row];
+    
+    [self performSegueWithIdentifier:@"PushToDetail" sender:[dic objectForKey:@"id"]];
+}
+
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString:@"PushToDetail"]) {
+        MyAppointmentDetail2VC *vc = segue.destinationViewController;
+        vc.detailID = sender;
+    }
 }
-*/
+
 
 @end

@@ -7,6 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A0B43DC1F03879A005330CD /* MyAppointmentDetail2VC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0B43DB1F03879A005330CD /* MyAppointmentDetail2VC.m */; };
+		5A0B43DF1F03A15A005330CD /* MyBusinessNewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0B43DE1F03A15A005330CD /* MyBusinessNewVC.m */; };
+		5A0B43E21F03A16C005330CD /* MyBusinessNewListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0B43E11F03A16C005330CD /* MyBusinessNewListVC.m */; };
+		5A0B43E51F03AEB7005330CD /* MoveCarListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0B43E41F03AEB7005330CD /* MoveCarListCell.m */; };
+		5A0B43F01F049F6F005330CD /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A0B43EF1F049F6F005330CD /* libc++.tbd */; };
+		5A0B43F21F049F7D005330CD /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A0B43F11F049F7D005330CD /* CFNetwork.framework */; };
+		5A0B43FA1F04A2D2005330CD /* ActionButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0B43F51F04A2D2005330CD /* ActionButton.m */; };
+		5A0B43FB1F04A2D2005330CD /* ActionSheetView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0B43F71F04A2D2005330CD /* ActionSheetView.m */; };
+		5A0B43FC1F04A2D2005330CD /* VerButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0B43F91F04A2D2005330CD /* VerButton.m */; };
+		5A0B44031F04CF14005330CD /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A0B43FE1F04CF14005330CD /* libWeChatSDK.a */; };
+		5A0B44041F04CF14005330CD /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5A0B43FF1F04CF14005330CD /* README.txt */; };
+		5A0B440C1F04E679005330CD /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A0B440B1F04E679005330CD /* libiconv.tbd */; };
+		5A0B44111F04EDD0005330CD /* TencentOpenApi_IOS_Bundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5A0B440F1F04EDD0005330CD /* TencentOpenApi_IOS_Bundle.bundle */; };
+		5A0B44121F04EDD0005330CD /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A0B44101F04EDD0005330CD /* TencentOpenAPI.framework */; };
+		5A0B44171F05E566005330CD /* FeedBackVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0B44161F05E566005330CD /* FeedBackVC.m */; };
 		5A0DDEED1ECA928F0053AAEE /* spz@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A0DDEEC1ECA928E0053AAEE /* spz@2x.png */; };
 		5A0DDEEF1ECA92A70053AAEE /* spz@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A0DDEEE1ECA92A70053AAEE /* spz@3x.png */; };
 		5A0DDEF11ECA92CD0053AAEE /* crj@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A0DDEF01ECA92CD0053AAEE /* crj@3x.png */; };
@@ -954,6 +969,32 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5A0B43DA1F03879A005330CD /* MyAppointmentDetail2VC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyAppointmentDetail2VC.h; sourceTree = "<group>"; };
+		5A0B43DB1F03879A005330CD /* MyAppointmentDetail2VC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyAppointmentDetail2VC.m; sourceTree = "<group>"; };
+		5A0B43DD1F03A15A005330CD /* MyBusinessNewVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyBusinessNewVC.h; sourceTree = "<group>"; };
+		5A0B43DE1F03A15A005330CD /* MyBusinessNewVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyBusinessNewVC.m; sourceTree = "<group>"; };
+		5A0B43E01F03A16C005330CD /* MyBusinessNewListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyBusinessNewListVC.h; sourceTree = "<group>"; };
+		5A0B43E11F03A16C005330CD /* MyBusinessNewListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyBusinessNewListVC.m; sourceTree = "<group>"; };
+		5A0B43E31F03AEB7005330CD /* MoveCarListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoveCarListCell.h; sourceTree = "<group>"; };
+		5A0B43E41F03AEB7005330CD /* MoveCarListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoveCarListCell.m; sourceTree = "<group>"; };
+		5A0B43EF1F049F6F005330CD /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		5A0B43F11F049F7D005330CD /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		5A0B43F41F04A2D2005330CD /* ActionButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionButton.h; sourceTree = "<group>"; };
+		5A0B43F51F04A2D2005330CD /* ActionButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionButton.m; sourceTree = "<group>"; };
+		5A0B43F61F04A2D2005330CD /* ActionSheetView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionSheetView.h; sourceTree = "<group>"; };
+		5A0B43F71F04A2D2005330CD /* ActionSheetView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionSheetView.m; sourceTree = "<group>"; };
+		5A0B43F81F04A2D2005330CD /* VerButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerButton.h; sourceTree = "<group>"; };
+		5A0B43F91F04A2D2005330CD /* VerButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerButton.m; sourceTree = "<group>"; };
+		5A0B43FE1F04CF14005330CD /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
+		5A0B43FF1F04CF14005330CD /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		5A0B44001F04CF14005330CD /* WechatAuthSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WechatAuthSDK.h; sourceTree = "<group>"; };
+		5A0B44011F04CF14005330CD /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
+		5A0B44021F04CF14005330CD /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
+		5A0B440B1F04E679005330CD /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
+		5A0B440F1F04EDD0005330CD /* TencentOpenApi_IOS_Bundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TencentOpenApi_IOS_Bundle.bundle; sourceTree = "<group>"; };
+		5A0B44101F04EDD0005330CD /* TencentOpenAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TencentOpenAPI.framework; sourceTree = "<group>"; };
+		5A0B44151F05E566005330CD /* FeedBackVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedBackVC.h; sourceTree = "<group>"; };
+		5A0B44161F05E566005330CD /* FeedBackVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedBackVC.m; sourceTree = "<group>"; };
 		5A0DDEEC1ECA928E0053AAEE /* spz@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "spz@2x.png"; sourceTree = "<group>"; };
 		5A0DDEEE1ECA92A70053AAEE /* spz@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "spz@3x.png"; sourceTree = "<group>"; };
 		5A0DDEF01ECA92CD0053AAEE /* crj@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "crj@3x.png"; sourceTree = "<group>"; };
@@ -1879,18 +1920,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A0B440C1F04E679005330CD /* libiconv.tbd in Frameworks */,
+				5A0B43F21F049F7D005330CD /* CFNetwork.framework in Frameworks */,
+				5A0B43F01F049F6F005330CD /* libc++.tbd in Frameworks */,
 				CBD991EF1E4BFD2300C09DD2 /* libcrypto.a in Frameworks */,
 				CBD991F01E4BFD2300C09DD2 /* libssl.a in Frameworks */,
 				CBD991E81E4BFC5500C09DD2 /* BaiduMapAPI_Base.framework in Frameworks */,
 				CBD991E91E4BFC5500C09DD2 /* BaiduMapAPI_Location.framework in Frameworks */,
 				CBD991EA1E4BFC5500C09DD2 /* BaiduMapAPI_Map.framework in Frameworks */,
 				CBD991EB1E4BFC5500C09DD2 /* BaiduMapAPI_Search.framework in Frameworks */,
+				5A0B44121F04EDD0005330CD /* TencentOpenAPI.framework in Frameworks */,
 				CBD991EC1E4BFC5600C09DD2 /* BaiduMapAPI_Utils.framework in Frameworks */,
 				CBD991D01E4B167A00C09DD2 /* MapKit.framework in Frameworks */,
 				CBD991BE1E4B143A00C09DD2 /* libstdc++.6.0.9.tbd in Frameworks */,
 				CBD991BC1E4B142D00C09DD2 /* CoreTelephony.framework in Frameworks */,
 				CBD991BA1E4B141E00C09DD2 /* libsqlite3.0.tbd in Frameworks */,
 				CBD991B81E4B140D00C09DD2 /* Security.framework in Frameworks */,
+				5A0B44031F04CF14005330CD /* libWeChatSDK.a in Frameworks */,
 				CBD991B61E4B140500C09DD2 /* CoreGraphics.framework in Frameworks */,
 				CBD991B41E4B13F900C09DD2 /* SystemConfiguration.framework in Frameworks */,
 				CBD991B21E4B13EE00C09DD2 /* OpenGLES.framework in Frameworks */,
@@ -1917,6 +1963,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5A0B43F31F04A2D2005330CD /* ZPActionsheet */ = {
+			isa = PBXGroup;
+			children = (
+				5A0B43F41F04A2D2005330CD /* ActionButton.h */,
+				5A0B43F51F04A2D2005330CD /* ActionButton.m */,
+				5A0B43F61F04A2D2005330CD /* ActionSheetView.h */,
+				5A0B43F71F04A2D2005330CD /* ActionSheetView.m */,
+				5A0B43F81F04A2D2005330CD /* VerButton.h */,
+				5A0B43F91F04A2D2005330CD /* VerButton.m */,
+			);
+			path = ZPActionsheet;
+			sourceTree = "<group>";
+		};
+		5A0B43FD1F04CF14005330CD /* NoPay_OpenSDK1.7.8 */ = {
+			isa = PBXGroup;
+			children = (
+				5A0B43FE1F04CF14005330CD /* libWeChatSDK.a */,
+				5A0B43FF1F04CF14005330CD /* README.txt */,
+				5A0B44001F04CF14005330CD /* WechatAuthSDK.h */,
+				5A0B44011F04CF14005330CD /* WXApi.h */,
+				5A0B44021F04CF14005330CD /* WXApiObject.h */,
+			);
+			path = NoPay_OpenSDK1.7.8;
+			sourceTree = "<group>";
+		};
+		5A0B44061F04E61A005330CD /* Tencent */ = {
+			isa = PBXGroup;
+			children = (
+				5A0B440F1F04EDD0005330CD /* TencentOpenApi_IOS_Bundle.bundle */,
+				5A0B44101F04EDD0005330CD /* TencentOpenAPI.framework */,
+			);
+			path = Tencent;
+			sourceTree = "<group>";
+		};
 		5A0DDEFA1ECAA27A0053AAEE /* WJAttributeString */ = {
 			isa = PBXGroup;
 			children = (
@@ -2833,6 +2913,9 @@
 		CBD98F471E4AB47900C09DD2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5A0B440B1F04E679005330CD /* libiconv.tbd */,
+				5A0B43F11F049F7D005330CD /* CFNetwork.framework */,
+				5A0B43EF1F049F6F005330CD /* libc++.tbd */,
 				CBD991ED1E4BFD2300C09DD2 /* libcrypto.a */,
 				CBD991EE1E4BFD2300C09DD2 /* libssl.a */,
 				CBD991E31E4BFC5500C09DD2 /* BaiduMapAPI_Base.framework */,
@@ -2860,6 +2943,8 @@
 		CBD98F4A1E4AB52900C09DD2 /* Vendors */ = {
 			isa = PBXGroup;
 			children = (
+				5A0B44061F04E61A005330CD /* Tencent */,
+				5A0B43FD1F04CF14005330CD /* NoPay_OpenSDK1.7.8 */,
 				5A91D8641ED66AE1008D0393 /* ShortVideo */,
 				CBD990D51E4ACC0200C09DD2 /* MJRefresh */,
 				CBD990C71E4ACB3E00C09DD2 /* MBProgressHUD */,
@@ -3514,6 +3599,14 @@
 				5A517E011EFA03A000D46703 /* MyConsult2VC.m */,
 				5A517E061EFA03D300D46703 /* MyAppointment2VC.h */,
 				5A517E071EFA03D300D46703 /* MyAppointment2VC.m */,
+				5A0B43DA1F03879A005330CD /* MyAppointmentDetail2VC.h */,
+				5A0B43DB1F03879A005330CD /* MyAppointmentDetail2VC.m */,
+				5A0B43DD1F03A15A005330CD /* MyBusinessNewVC.h */,
+				5A0B43DE1F03A15A005330CD /* MyBusinessNewVC.m */,
+				5A0B43E01F03A16C005330CD /* MyBusinessNewListVC.h */,
+				5A0B43E11F03A16C005330CD /* MyBusinessNewListVC.m */,
+				5A0B44151F05E566005330CD /* FeedBackVC.h */,
+				5A0B44161F05E566005330CD /* FeedBackVC.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -3534,6 +3627,7 @@
 		CBD992001E4D566100C09DD2 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5A0B43F31F04A2D2005330CD /* ZPActionsheet */,
 				CBD992041E4D60B600C09DD2 /* MemberCenterCell.h */,
 				CBD992051E4D60B600C09DD2 /* MemberCenterCell.m */,
 				CBD992061E4D60B600C09DD2 /* MemberCenterCell.xib */,
@@ -3553,6 +3647,8 @@
 				5A517E0C1EFB526F00D46703 /* MyAppointment2Cell.h */,
 				5A517E0D1EFB526F00D46703 /* MyAppointment2Cell.m */,
 				5A517E0E1EFB526F00D46703 /* MyAppointment2Cell.xib */,
+				5A0B43E31F03AEB7005330CD /* MoveCarListCell.h */,
+				5A0B43E41F03AEB7005330CD /* MoveCarListCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -3851,11 +3947,13 @@
 				CB6163E81E5E8A3C002FD980 /* yy_wyts.png in Resources */,
 				5A91D8821ED66AE1008D0393 /* ShortVideo.storyboard in Resources */,
 				CB6163E31E5E8A3C002FD980 /* yy_swzl.png in Resources */,
+				5A0B44041F04CF14005330CD /* README.txt in Resources */,
 				CB6163DB1E5E8A3C002FD980 /* yy_jgyy.png in Resources */,
 				CBB02ABB1E6CF8E5001EFCBA /* xingjing@3x.png in Resources */,
 				CBB02AAF1E6CF8E5001EFCBA /* xingjing@2x.png in Resources */,
 				CB6163B71E5E8A3C002FD980 /* 06.png in Resources */,
 				CBB02AAA1E6CF8E5001EFCBA /* jingzhen@2x.png in Resources */,
+				5A0B44111F04EDD0005330CD /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
 				CB2DB11A1E66A5D200D4FA40 /* CheckVersionVC.xib in Resources */,
 				CBB02B1D1E6FFFF9001EFCBA /* zx@3x.png in Resources */,
 				CBB02B1A1E6FFFF9001EFCBA /* pj@3x.png in Resources */,
@@ -4130,6 +4228,7 @@
 				CBE0CF801E66C74A0027DAD2 /* QueryDriverPeccancyVC.m in Sources */,
 				CB3F5C0D1E5BEFFC0013FCEF /* SuggestionVC.m in Sources */,
 				CBD98FDE1E4ABA3600C09DD2 /* Validator.m in Sources */,
+				5A0B43E51F03AEB7005330CD /* MoveCarListCell.m in Sources */,
 				CBD98FB91E4AB83000C09DD2 /* UIWebView+Error.m in Sources */,
 				CBD9915D1E4AEDDE00C09DD2 /* BlueNavigationController.m in Sources */,
 				CBD98F3E1E4AB37A00C09DD2 /* WebViewJavascriptBridge_JS.m in Sources */,
@@ -4175,6 +4274,7 @@
 				CB3DDDBB1ED6769800EFCFF7 /* HomePageSectionModel.m in Sources */,
 				CBD9915A1E4AEDDE00C09DD2 /* BaseViewController.m in Sources */,
 				5A517DFC1EF7BF4400D46703 /* HuzhengYeWuVC.m in Sources */,
+				5A0B43DC1F03879A005330CD /* MyAppointmentDetail2VC.m in Sources */,
 				CBD990601E4AC64800C09DD2 /* MASLayoutConstraint.m in Sources */,
 				5A53F0D31ECC262A00162B2F /* HightWayStatusVC.m in Sources */,
 				CBE0CFBA1E6959270027DAD2 /* RequestService.m in Sources */,
@@ -4190,6 +4290,7 @@
 				5A53F0E51ECC336600162B2F /* BaseTableViewController.m in Sources */,
 				CB3F5C271E5C19540013FCEF /* WJTextView.m in Sources */,
 				CBD98EFF1E4AB37A00C09DD2 /* JSONValueTransformer.m in Sources */,
+				5A0B44171F05E566005330CD /* FeedBackVC.m in Sources */,
 				CBE0CF851E67A6350027DAD2 /* DriverPeccancyResultVC.m in Sources */,
 				CBD98E7B1E4AB37A00C09DD2 /* FSCoreDataManager.m in Sources */,
 				CBE312F01E77EC2E000E1025 /* LostItemServerDataModel.m in Sources */,
@@ -4228,6 +4329,7 @@
 				CBD98F321E4AB37A00C09DD2 /* UIImageView+WebCache.m in Sources */,
 				CBE312FB1E7BB897000E1025 /* NewsItemDataModel.m in Sources */,
 				CBD990A91E4AC7FF00C09DD2 /* IQUIWindow+Hierarchy.m in Sources */,
+				5A0B43DF1F03A15A005330CD /* MyBusinessNewVC.m in Sources */,
 				CBA963311E601B9900BA1D26 /* VerifyCodeView.m in Sources */,
 				CB3F5C241E5BF1DC0013FCEF /* AffairsSubVC.m in Sources */,
 				CB3F5C001E5BD09D0013FCEF /* CheckOpenCaseVC.m in Sources */,
@@ -4316,9 +4418,11 @@
 				CBD98E841E4AB37A00C09DD2 /* FSJSONModel.m in Sources */,
 				CBD9900C1E4ABCB600C09DD2 /* CKShimmerLabel.m in Sources */,
 				CB3F5C8A1E5D8E3D0013FCEF /* PoliceServiceMapVC.m in Sources */,
+				5A0B43FC1F04A2D2005330CD /* VerButton.m in Sources */,
 				CB3F5C7E1E5D75F10013FCEF /* OperationItemModel.m in Sources */,
 				CBD9912E1E4ACC0300C09DD2 /* MJRefreshNormalHeader.m in Sources */,
 				CBD990C11E4AC7FF00C09DD2 /* IQUIView+IQKeyboardToolbar.m in Sources */,
+				5A0B43E21F03A16C005330CD /* MyBusinessNewListVC.m in Sources */,
 				CBB02ACB1E6E8472001EFCBA /* ReservationNoticeVC.m in Sources */,
 				CBD98F171E4AB37A00C09DD2 /* SDWebImageDownloader.m in Sources */,
 				CBD990061E4ABCB500C09DD2 /* CFCoverFlowView.m in Sources */,
@@ -4334,7 +4438,9 @@
 				CB3F5C3F1E5D60A30013FCEF /* UICollectionViewFlowLayout+CollectionViewCellSpaceFix.m in Sources */,
 				CB3F5C201E5BF19C0013FCEF /* AffairsGuideDetailVC.m in Sources */,
 				CBD990AC1E4AC7FF00C09DD2 /* IQKeyboardManager.m in Sources */,
+				5A0B43FB1F04A2D2005330CD /* ActionSheetView.m in Sources */,
 				CBD98F881E4AB69500C09DD2 /* NSObject+YYAddForKVO.m in Sources */,
+				5A0B43FA1F04A2D2005330CD /* ActionButton.m in Sources */,
 				CB42BA271E568F930092CE91 /* AppSquareHeaderView.m in Sources */,
 				CBD9911C1E4ACC0300C09DD2 /* MJRefreshAutoNormalFooter.m in Sources */,
 				CBD9902F1E4ABCC100C09DD2 /* UIFactory.m in Sources */,
@@ -4857,16 +4963,24 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/PoliceService/BKMap",
+					"$(PROJECT_DIR)/PoliceService/Vendors/Tencent",
 				);
 				GCC_INPUT_FILETYPE = automatic;
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = PoliceService/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/PoliceService/BKMap",
+					"$(PROJECT_DIR)/PoliceService/Vendors/WeChatSDK1.7.2",
+					"$(PROJECT_DIR)/PoliceService/Vendors/NoPay_OpenSDK1.7.8",
 				);
-				OTHER_LDFLAGS = "-Objc";
+				OTHER_LDFLAGS = (
+					"-Objc",
+					"-Objc",
+					"-all_load",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.fosung.PoliceService;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -4888,16 +5002,24 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/PoliceService/BKMap",
+					"$(PROJECT_DIR)/PoliceService/Vendors/Tencent",
 				);
 				GCC_INPUT_FILETYPE = automatic;
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = PoliceService/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/PoliceService/BKMap",
+					"$(PROJECT_DIR)/PoliceService/Vendors/WeChatSDK1.7.2",
+					"$(PROJECT_DIR)/PoliceService/Vendors/NoPay_OpenSDK1.7.8",
 				);
-				OTHER_LDFLAGS = "-Objc";
+				OTHER_LDFLAGS = (
+					"-Objc",
+					"-Objc",
+					"-all_load",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.fosung.PoliceService;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";

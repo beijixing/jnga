@@ -13,5 +13,5 @@
 @property (strong, nonatomic) IBOutlet UILabel *consultTimeLabel;
 @property (strong, nonatomic) IBOutlet UILabel *replyTimeLabel;
 @property (strong, nonatomic) IBOutlet UILabel *nameLabel;
-
+-(void)setContentWithDic:(NSDictionary *)dic;
 @end

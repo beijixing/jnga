@@ -25,6 +25,15 @@
 #import "WJHUD.h"
 #import "NotifiViewController.h"
 #import "HuzhengYeWuVC.h"
+#import "MyBusinessNewListVC.h"
+#import "ActionSheetView.h"
+#import "WXApi.h"
+#import <TencentOpenAPI/TencentApiInterface.h>
+#import <TencentOpenAPI/QQApiInterface.h>
+#import <TencentOpenAPI/TencentMessageObject.h>
+#import <TencentOpenAPI/TencentOAuth.h>
+#import <TencentOpenAPI/QQApiInterfaceObject.h>
+#import "FeedBackVC.h"
 
 NSString *cellIdentifier = @"cell";
 @interface MemberCenterVC ()
@@ -112,7 +121,7 @@ NSString *cellIdentifier = @"cell";
     _operationTableview.dataSource = self.tableDataSoure;
     _operationTableview.separatorStyle = UITableViewCellSeparatorStyleNone;
     if(SCREN_HEIGHT > 568.0){
-        _operationTableview.scrollEnabled = NO;
+//        _operationTableview.scrollEnabled = NO;
     }
     _operationTableview.backgroundColor = COLOR_WITH_RGB(240, 244, 249);
     [_operationTableview registerNib:[UINib nibWithNibName:@"MemberCenterCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:cellIdentifier];
@@ -155,10 +164,11 @@ NSString *cellIdentifier = @"cell";
     self.sectionTwoTitleArr = [[NSMutableArray alloc] init];
     [self.sectionTwoTitleArr addObject:@{@"title":@"手机号变更", @"icon":@"sjh"}];
     [self.sectionTwoTitleArr addObject:@{@"title":@"修改密码", @"icon":@"mm"}];
-   
+    [self.sectionTwoTitleArr addObject:@{@"title":@"应用分享", @"icon":@"share_ic"}];
+    
     self.sectionThreeTitleArr = [[NSMutableArray alloc] init];
     [self.sectionThreeTitleArr addObject:@{@"title":@"版本检测", @"icon":@"bb"}];
-
+    [self.sectionThreeTitleArr addObject:@{@"title":@"意见反馈", @"icon":@"feed_back"}];
 }
 
 - (MemberCenterTableDataSource *)tableDataSoure {
@@ -244,7 +254,8 @@ NSString *cellIdentifier = @"cell";
                 switch (indexPath.row) {
                     case 0:
                     {
-                        [wself checkLoginAndGotoNextVC:@"MyBusinessVC"];
+//                        [wself checkLoginAndGotoNextVC:@"MyBusinessVC"];
+                        [wself goMyBusiness];
                     }
                         break;
                     case 1:
@@ -285,6 +296,11 @@ NSString *cellIdentifier = @"cell";
                         [wself checkLoginAndGotoNextVC:@"ChangePasswordVC"];
                     }
                         break;
+                    case 2:
+                    {
+                        [wself shareAction:nil];
+                    }
+                        break;
                     default:
                         break;
                 }
@@ -295,6 +311,11 @@ NSString *cellIdentifier = @"cell";
                     case 0:
                     {
                         [GlobalFunctionManager checkVersionOnViewController:wself];
+                    }
+                        break;
+                    case 1:
+                    {
+                        [self goFeedBack];
                     }
                         break;
                     default:
@@ -335,6 +356,84 @@ NSString *cellIdentifier = @"cell";
     HuzhengYeWuVC *vc = [[UIStoryboard storyboardWithName:@"User" bundle:nil]instantiateViewControllerWithIdentifier:@"HuzhengYeWuVCID"];
     [self.navigationController pushViewController:vc animated:YES];
 }
+- (void)goMyBusiness{
+    MyBusinessNewListVC *vc = [[UIStoryboard storyboardWithName:@"User" bundle:nil]instantiateViewControllerWithIdentifier:@"MyBusinessNewVCID"];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+- (void)goFeedBack{
+    FeedBackVC *vc = [[UIStoryboard storyboardWithName:@"User" bundle:nil]instantiateViewControllerWithIdentifier:@"FeedBackVCID"];
+    [self.navigationController pushViewController:vc animated:YES];
+}
 
+- (IBAction)shareAction:(UIButton *)sender {
+    NSArray *titlearr = @[@"微信好友",@"QQ好友"];
+    NSMutableArray *imageArr = @[].mutableCopy;
+    
+    if ([WXApi isWXAppInstalled] ) {
+        [imageArr addObject:@"wechat"];
+        [imageArr addObject:@"ssdk_oks_classic_qq"];
+    }else{
+        [imageArr addObject:@"wechat_grey"];
+        [imageArr addObject:@"ssdk_oks_classic_qq"];
+    }
+    
+    ActionSheetView *actionsheet = [[ActionSheetView alloc] initWithShareHeadOprationWith:titlearr andImageArry:imageArr andProTitle:@"分享" and:ShowTypeIsShareStyle];
+    [actionsheet setBtnClick:^(NSInteger btnTag) {
+        NSLog(@"\n点击第几个====%ld\n当前选中的按钮title====%@",(long)btnTag,titlearr[btnTag]);
+        switch (btnTag) {
+            case 0:
+                [self shareWXChat:WXSceneSession];
+                break;
+            case 1:
+                [self shareQQFriend];
+                break;
+                
+            default:
+                break;
+        }
+    }];
+    
+    [[UIApplication sharedApplication].keyWindow addSubview:actionsheet];
+    
+}
+- (void)shareWXChat:(int)wxScene {
 
+    WXMediaMessage *message = [WXMediaMessage message];
+    [message setThumbImage:[UIImage imageNamed:@"ic_jnga_qcode"]];
+    
+    WXImageObject *imageObject = [WXImageObject object];
+    UIImage *image =[UIImage imageNamed:@"ic_jnga_qcode"];
+    imageObject.imageData = UIImageJPEGRepresentation(image, 0.5);
+    
+    message.mediaObject = imageObject;
+
+    SendMessageToWXReq *req = [[SendMessageToWXReq alloc]init];
+    req.text = @"济宁公安便民服务APP已上线，欢迎下载";
+    req.bText = NO;
+    req.message = message;
+    req.scene = WXSceneSession;
+    [WXApi sendReq:req];
+    
+}
+
+-(void)shareQQFriend{
+    //开发者分享图片数据
+    UIImage *image =[UIImage imageNamed:@"ic_jnga_qcode"];
+    
+    NSData *imgData = UIImageJPEGRepresentation(image, 0.5);
+    QQApiImageObject *imgObj = [QQApiImageObject objectWithData:imgData
+                                
+                                               previewImageData:imgData
+                                
+                                                          title:@"济宁公安便民服务APP已上线，欢迎下载"
+                                
+                                                    description:nil];
+    
+    SendMessageToQQReq *req = [SendMessageToQQReq reqWithContent:imgObj];
+    
+    //将内容分享到qq
+    
+    QQApiSendResultCode sent = [QQApiInterface sendReq:req];
+
+}
 @end
