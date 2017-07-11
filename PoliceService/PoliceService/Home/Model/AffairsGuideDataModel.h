@@ -13,6 +13,7 @@
 @property(nonatomic, copy) NSString *id;
 @property(nonatomic, copy) NSString<Optional>*name;
 @property(nonatomic, copy) NSString<Optional>*title;
+@property(nonatomic, copy) NSString<Optional>*vc;
 
 @property(nonatomic, copy) NSString<Optional> *imgUrl;
 @property(nonatomic, copy) NSString<Optional> *img_url;

@@ -17,6 +17,7 @@
 #import "ScrollMessageView.h"
 #import "NewsCenterVC.h"
 #import "AffairsSubVC.h"
+#import "GlobalFunctionManager.h"
 #import "UICollectionViewFlowLayout+CollectionViewCellSpaceFix.h"
 #import "AffairsGuideDataModel.h"
 #import "GlobalVariableManager.h"
@@ -100,19 +101,9 @@
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    self.hidesBottomBarWhenPushed = YES;
-    if (indexPath.item == 0) {
-        TrafficViewController *trafficVC = [[TrafficViewController alloc]init];
-        [self.navigationController pushViewController:trafficVC animated:YES];
-    }else{
-        AffairsItemDataModel *dmodel = self.dataModel.data[indexPath.row];
-        AffairsSubVC *affairsSubVc = [[AffairsSubVC alloc] init];
-        affairsSubVc.parentId = dmodel.parentId;
-        [self.navigationController pushViewController:affairsSubVc animated:YES];
-    }
     
-    //    self.hidesBottomBarWhenPushed = NO;
-    
+    AffairsItemDataModel *dmodel = self.dataModel.data[indexPath.row];
+    [GlobalFunctionManager pushViewControllerWithName:dmodel.vc pagram:dmodel.toDictionary fromVC:self];
 }
 
 #pragma mark --Private Methods

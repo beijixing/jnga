@@ -930,6 +930,9 @@
 		CBE3D2481EFA55C1008BBF50 /* yqtjstzm.png in Resources */ = {isa = PBXBuildFile; fileRef = CBE3D22E1EFA55C1008BBF50 /* yqtjstzm.png */; };
 		CBE3D2491EFA55C1008BBF50 /* ysbz.png in Resources */ = {isa = PBXBuildFile; fileRef = CBE3D22F1EFA55C1008BBF50 /* ysbz.png */; };
 		CBE3D24A1EFA55C1008BBF50 /* yxhpss.png in Resources */ = {isa = PBXBuildFile; fileRef = CBE3D2301EFA55C1008BBF50 /* yxhpss.png */; };
+		CBE3D2521F0B21BB008BBF50 /* ChurujingHandleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE3D2501F0B21BB008BBF50 /* ChurujingHandleViewController.m */; };
+		CBE3D2531F0B21BB008BBF50 /* ChurujingHandleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBE3D2511F0B21BB008BBF50 /* ChurujingHandleViewController.xib */; };
+		CBE3D2571F0B3142008BBF50 /* FSEdgeInsetButton.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE3D2561F0B3142008BBF50 /* FSEdgeInsetButton.m */; };
 		F588545B1EA09ECD0004DBC0 /* MyAppointmentDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F588545A1EA09ECD0004DBC0 /* MyAppointmentDataModel.m */; };
 /* End PBXBuildFile section */
 
@@ -1862,6 +1865,11 @@
 		CBE3D22E1EFA55C1008BBF50 /* yqtjstzm.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yqtjstzm.png; sourceTree = "<group>"; };
 		CBE3D22F1EFA55C1008BBF50 /* ysbz.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ysbz.png; sourceTree = "<group>"; };
 		CBE3D2301EFA55C1008BBF50 /* yxhpss.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yxhpss.png; sourceTree = "<group>"; };
+		CBE3D24F1F0B21BB008BBF50 /* ChurujingHandleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChurujingHandleViewController.h; sourceTree = "<group>"; };
+		CBE3D2501F0B21BB008BBF50 /* ChurujingHandleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChurujingHandleViewController.m; sourceTree = "<group>"; };
+		CBE3D2511F0B21BB008BBF50 /* ChurujingHandleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChurujingHandleViewController.xib; sourceTree = "<group>"; };
+		CBE3D2551F0B3142008BBF50 /* FSEdgeInsetButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSEdgeInsetButton.h; sourceTree = "<group>"; };
+		CBE3D2561F0B3142008BBF50 /* FSEdgeInsetButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSEdgeInsetButton.m; sourceTree = "<group>"; };
 		F58854591EA09ECD0004DBC0 /* MyAppointmentDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyAppointmentDataModel.h; sourceTree = "<group>"; };
 		F588545A1EA09ECD0004DBC0 /* MyAppointmentDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyAppointmentDataModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -2941,6 +2949,7 @@
 		CBD98FF51E4ABC6A00C09DD2 /* FosungUI */ = {
 			isa = PBXGroup;
 			children = (
+				CBE3D2541F0B2782008BBF50 /* FSEdgeInsetButton */,
 				5A0DDEFA1ECAA27A0053AAEE /* WJAttributeString */,
 				CBC8BCFC1E72A146004C8D5A /* WJHUD.h */,
 				CBC8BCFD1E72A146004C8D5A /* WJHUD.m */,
@@ -3581,6 +3590,9 @@
 				CBE3D20D1EFA4773008BBF50 /* TrafficViewController.h */,
 				CBE3D20E1EFA4773008BBF50 /* TrafficViewController.m */,
 				CBE3D20F1EFA4773008BBF50 /* TrafficViewController.xib */,
+				CBE3D24F1F0B21BB008BBF50 /* ChurujingHandleViewController.h */,
+				CBE3D2501F0B21BB008BBF50 /* ChurujingHandleViewController.m */,
+				CBE3D2511F0B21BB008BBF50 /* ChurujingHandleViewController.xib */,
 				CBE3D2121EFA4EB2008BBF50 /* Model */,
 			);
 			name = "业务办理";
@@ -3626,6 +3638,15 @@
 				CBE3D2301EFA55C1008BBF50 /* yxhpss.png */,
 			);
 			path = "交管办理";
+			sourceTree = "<group>";
+		};
+		CBE3D2541F0B2782008BBF50 /* FSEdgeInsetButton */ = {
+			isa = PBXGroup;
+			children = (
+				CBE3D2551F0B3142008BBF50 /* FSEdgeInsetButton.h */,
+				CBE3D2561F0B3142008BBF50 /* FSEdgeInsetButton.m */,
+			);
+			name = FSEdgeInsetButton;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -3928,6 +3949,7 @@
 				CB61636F1E5E89FC002FD980 /* app_square.txt in Resources */,
 				CB42BA1A1E5447B20092CE91 /* HomeCollectionViewCell.xib in Resources */,
 				CB6163E41E5E8A3C002FD980 /* yy_wjyw.png in Resources */,
+				CBE3D2531F0B21BB008BBF50 /* ChurujingHandleViewController.xib in Resources */,
 				CBE3D24A1EFA55C1008BBF50 /* yxhpss.png in Resources */,
 				CB6163B91E5E8A3C002FD980 /* 08.png in Resources */,
 				CBB02AB01E6CF8E5001EFCBA /* zhian@2x.png in Resources */,
@@ -4097,6 +4119,7 @@
 				CBD991A31E4AF28D00C09DD2 /* ScrollImage.m in Sources */,
 				CBD98F6D1E4AB69500C09DD2 /* NSArray+YYAdd.m in Sources */,
 				CBD991101E4ACC0300C09DD2 /* MJRefreshComponent.m in Sources */,
+				CBE3D2521F0B21BB008BBF50 /* ChurujingHandleViewController.m in Sources */,
 				CBD98FFD1E4ABCAC00C09DD2 /* BaseTableHeaderView.m in Sources */,
 				CBD9914D1E4AEDC700C09DD2 /* CustomTabBarController.m in Sources */,
 				CBD98F4F1E4AB68A00C09DD2 /* UIDevice+YYAdd.m in Sources */,
@@ -4194,6 +4217,7 @@
 				CBD98FD11E4ABA2000C09DD2 /* DeviceModel.m in Sources */,
 				CB6163FE1E5EC505002FD980 /* PeopleAppealDataModel.m in Sources */,
 				CBE3D2101EFA4773008BBF50 /* TrafficViewController.m in Sources */,
+				CBE3D2571F0B3142008BBF50 /* FSEdgeInsetButton.m in Sources */,
 				CBD98F1D1E4AB37A00C09DD2 /* SDWebImageManager.m in Sources */,
 				CBD98F291E4AB37A00C09DD2 /* UIImage+MultiFormat.m in Sources */,
 				CBE0CF8A1E67AC620027DAD2 /* CheckPeccancyResultVC.m in Sources */,
