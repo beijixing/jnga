@@ -110,7 +110,7 @@
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>WayBookJiNing</string>
+				<string>WayBookJiNing://</string>
 			</array>
 		</dict>
 	</array>
