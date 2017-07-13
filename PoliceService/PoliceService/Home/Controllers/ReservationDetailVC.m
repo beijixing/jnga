@@ -250,74 +250,78 @@
             [wself showPopoverViewWithView:sender.view actions:popOverActions];
         }
     }];
-
-    
    
 }
 
 - (IBAction)subbureauLabelAction:(UITapGestureRecognizer * )sender {
-//        NSMutableArray *popOverActions = [[NSMutableArray alloc] init];
-        typeof(self) __weak wself = self;
     
-//        for (NSDictionary* subbureauDict in self.compListArr) {
-//            PopoverAction *action = [PopoverAction actionWithTitle:subbureauDict[@"name"] handler:^(PopoverAction *action) {
-//                NSLog(@"fontName = %@", subbureauDict);
-//                wself.subbureauLabel.text = action.title;
-//                wself.selectedSubbureauId = subbureauDict[@"id"];
-//            }];
-//            [popOverActions addObject:action];
-//        }
-    
-//   [self showPopoverViewWithView:sender.view actions:popOverActions];
-    
-    
-    [self.handle getPoliceAry:^(id ary, BOOL success) {
-        if (success) {
-            NSMutableArray *popOverActions = [[NSMutableArray alloc] init];
-            
-            for (NSDictionary* subbureauDict in ary) {
-                PopoverAction *action = [PopoverAction actionWithTitle:subbureauDict[@"text"] handler:^(PopoverAction *action) {
-                    wself.subbureauLabel.text = action.title;
-                    wself.selectedSubbureauId = subbureauDict[@"value"];
-                    wself.handle.police = subbureauDict[@"value"];
-                }];
-                [popOverActions addObject:action];
+    typeof(self) __weak wself = self;
+    if ([self.keyword isEqualToString:@"hzyy"]) {
+        [self.handle getPoliceAry:^(id ary, BOOL success) {
+            if (success) {
+                NSMutableArray *popOverActions = [[NSMutableArray alloc] init];
+                
+                for (NSDictionary* subbureauDict in ary) {
+                    PopoverAction *action = [PopoverAction actionWithTitle:subbureauDict[@"text"] handler:^(PopoverAction *action) {
+                        wself.subbureauLabel.text = action.title;
+                        wself.selectedSubbureauId = subbureauDict[@"value"];
+                        wself.handle.police = subbureauDict[@"value"];
+                    }];
+                    [popOverActions addObject:action];
+                }
+                [wself showPopoverViewWithView:sender.view actions:popOverActions];
             }
-            [wself showPopoverViewWithView:sender.view actions:popOverActions];
+        }];
+    }else {
+        NSMutableArray *popOverActions = [[NSMutableArray alloc] init];
+        
+        for (NSDictionary* subbureauDict in self.compListArr) {
+            PopoverAction *action = [PopoverAction actionWithTitle:subbureauDict[@"name"] handler:^(PopoverAction *action) {
+                NSLog(@"fontName = %@", subbureauDict);
+                wself.subbureauLabel.text = action.title;
+                wself.selectedSubbureauId = subbureauDict[@"id"];
+            }];
+            [popOverActions addObject:action];
         }
-    }];
+        
+        [self showPopoverViewWithView:sender.view actions:popOverActions];
+    }
+    
 
 }
 - (IBAction)policeSubstationLabelAcion:(UITapGestureRecognizer *)sender {
-//        NSMutableArray *popOverActions = [[NSMutableArray alloc] init];
-        typeof(self) __weak wself = self;
-//        for (NSDictionary* substationDict in self.departmentArr) {
-//            PopoverAction *action = [PopoverAction actionWithTitle:substationDict[@"name"] handler:^(PopoverAction *action) {
-//                NSLog(@"fontName = %@", substationDict);
-//                wself.policeSubstationLabel.text = action.title;
-//                wself.selectedPoliceSubstationId = substationDict[@"id"];
-//            }];
-//            [popOverActions addObject:action];
-//        }
-//    
-//    [self showPopoverViewWithView:sender.view actions:popOverActions];
     
-    
-    [self.handle getStationAry:^(id ary, BOOL success) {
-        if (success) {
-            NSMutableArray *popOverActions = [[NSMutableArray alloc] init];
-            
-            for (NSDictionary* subbureauDict in ary) {
-                PopoverAction *action = [PopoverAction actionWithTitle:subbureauDict[@"text"] handler:^(PopoverAction *action) {
-                    wself.policeSubstationLabel.text = action.title;
-                    wself.selectedPoliceSubstationId = subbureauDict[@"value"];
-                    wself.handle.station = subbureauDict[@"value"];
-                }];
-                [popOverActions addObject:action];
+    typeof(self) __weak wself = self;
+    if ([self.keyword isEqualToString:@"hzyy"]) {
+        [self.handle getStationAry:^(id ary, BOOL success) {
+            if (success) {
+                NSMutableArray *popOverActions = [[NSMutableArray alloc] init];
+                
+                for (NSDictionary* subbureauDict in ary) {
+                    PopoverAction *action = [PopoverAction actionWithTitle:subbureauDict[@"text"] handler:^(PopoverAction *action) {
+                        wself.policeSubstationLabel.text = action.title;
+                        wself.selectedPoliceSubstationId = subbureauDict[@"value"];
+                        wself.handle.station = subbureauDict[@"value"];
+                    }];
+                    [popOverActions addObject:action];
+                }
+                [wself showPopoverViewWithView:sender.view actions:popOverActions];
             }
-            [wself showPopoverViewWithView:sender.view actions:popOverActions];
+        }];
+    }else {
+        NSMutableArray *popOverActions = [[NSMutableArray alloc] init];
+        for (NSDictionary* substationDict in self.departmentArr) {
+            PopoverAction *action = [PopoverAction actionWithTitle:substationDict[@"name"] handler:^(PopoverAction *action) {
+                NSLog(@"fontName = %@", substationDict);
+                wself.policeSubstationLabel.text = action.title;
+                wself.selectedPoliceSubstationId = substationDict[@"id"];
+            }];
+            [popOverActions addObject:action];
         }
-    }];
+        
+        [self showPopoverViewWithView:sender.view actions:popOverActions];
+    }
+    
 }
 
 - (void)showPopoverViewWithView:(UIView *)view  actions:(NSArray *)actions{
@@ -342,39 +346,38 @@
     }];
 }
 - (IBAction)durationLabelAction:(UITapGestureRecognizer *)sender {
-//    NSMutableArray *popOverActions = [[NSMutableArray alloc] init];
     typeof(self) __weak wself = self;
-//    for (NSDictionary* durationDict in self.departmentTimeArr) {
-//        NSString *durationStr = [self getFormatDurationTimeWith:durationDict[@"start_time"] endTime:durationDict[@"end_time"]];
-//        
-//        PopoverAction *action = [PopoverAction actionWithTitle:durationStr handler:^(PopoverAction *action) {
-//            NSLog(@"fontName = %@", durationDict);
-//            wself.durationLabel.text = action.title;
-//            wself.selectedDurationId = durationDict[@"id"];
-//            wself.maxAdvanceDays = durationDict[@"ahead_schedule_days"];
-//        }];
-//        [popOverActions addObject:action];
-//    }
-//    
-//    [self showPopoverViewWithView:sender.view actions:popOverActions];
-    
-    [self.handle getPeriodAry:^(id ary, BOOL success) {
-        if (success) {
-            NSMutableArray *popOverActions = [[NSMutableArray alloc] init];
-            for (NSDictionary* subbureauDict in ary) {
-                PopoverAction *action = [PopoverAction actionWithTitle:subbureauDict[@"text"] handler:^(PopoverAction *action) {
-                    wself.durationLabel.text = action.title;
-                    wself.selectedDurationId = subbureauDict[@"value"];
-                    wself.handle.period =  subbureauDict[@"value"];
-                }];
-                [popOverActions addObject:action];
+    if ([self.keyword isEqualToString:@"hzyy"]) {
+        [self.handle getPeriodAry:^(id ary, BOOL success) {
+            if (success) {
+                NSMutableArray *popOverActions = [[NSMutableArray alloc] init];
+                for (NSDictionary* subbureauDict in ary) {
+                    PopoverAction *action = [PopoverAction actionWithTitle:subbureauDict[@"text"] handler:^(PopoverAction *action) {
+                        wself.durationLabel.text = action.title;
+                        wself.selectedDurationId = subbureauDict[@"value"];
+                        wself.handle.period =  subbureauDict[@"value"];
+                    }];
+                    [popOverActions addObject:action];
+                }
+                [wself showPopoverViewWithView:sender.view actions:popOverActions];
             }
-            [wself showPopoverViewWithView:sender.view actions:popOverActions];
+        }];
+    }else {
+        NSMutableArray *popOverActions = [[NSMutableArray alloc] init];
+        for (NSDictionary* durationDict in self.departmentTimeArr) {
+            NSString *durationStr = [self getFormatDurationTimeWith:durationDict[@"start_time"] endTime:durationDict[@"end_time"]];
+            
+            PopoverAction *action = [PopoverAction actionWithTitle:durationStr handler:^(PopoverAction *action) {
+                NSLog(@"fontName = %@", durationDict);
+                wself.durationLabel.text = action.title;
+                wself.selectedDurationId = durationDict[@"id"];
+                wself.maxAdvanceDays = durationDict[@"ahead_schedule_days"];
+            }];
+            [popOverActions addObject:action];
         }
-    }];
-    
-
-    
+        
+        [self showPopoverViewWithView:sender.view actions:popOverActions];
+    }
 }
 - (IBAction)selectBusinessAction:(UITapGestureRecognizer *)sender {
     //选择业务

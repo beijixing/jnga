@@ -169,6 +169,21 @@
             [self pushViewControllerWithName:@"CommentPoliceVC" title:@"我要评警" from:vc];
         }
             break;
+        case 7:
+        {
+            [self pushViewControllerWithName:@"DirectorMailVC" title:@"局长信箱" from:vc];
+        }
+            break;
+        case 8:
+        {
+            [self pushViewControllerWithName:@"ConsultOnlineVC" title:@"在线咨询" from:vc];
+        }
+            break;
+        case 9:
+        {
+            [self pushViewControllerWithName:@"CrimeReportVC" title:@"违法犯罪线索有奖举报" from:vc];
+        }
+            break;
             
         default:
             break;

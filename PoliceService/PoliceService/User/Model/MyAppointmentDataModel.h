@@ -11,26 +11,28 @@
 
 
 @interface MyAppointmentBookDepartTimeItemModel : FSJSONModel
-@property (nonatomic) NSString *endTime;
-@property (nonatomic) NSString *startTime;
+@property (nonatomic) NSString<Optional> *endTime;
+@property (nonatomic) NSString<Optional> *startTime;
 @property (nonatomic) NSString *id;
 @property (nonatomic) BOOL isNewRecord;
 @end
 
 @interface MyAppointmentBusinessModel : FSJSONModel
-@property (nonatomic) NSString *name;
+@property (nonatomic) NSString<Optional> *name;
 @property (nonatomic) NSString *id;
 @end
 
 @interface MyAppointmentDepartModel  : FSJSONModel
 @property (nonatomic) NSString *id;
-@property (nonatomic) NSString *name;
+@property (nonatomic) NSString<Optional> *name;
 @property (nonatomic) NSInteger type;
 @end
 
 @interface MyAppointmentUserModel : FSJSONModel
-@property (nonatomic) NSString *name;
+@property (nonatomic) NSString<Optional> *name;
 @property (nonatomic) NSString *id;
+@property (nonatomic) NSString<Optional> *usercard;
+@property (nonatomic) NSString<Optional> *phone;
 @end
 
 @protocol MyAppointmentItemModel;
@@ -38,12 +40,13 @@
 @property (nonatomic) NSString *bookDate;
 @property (nonatomic) MyAppointmentBookDepartTimeItemModel *bookDepartTime;
 @property (nonatomic) MyAppointmentBusinessModel *business;
-@property (nonatomic) NSString *businessType;
-@property (nonatomic) NSString *compName;
+@property (nonatomic) NSString<Optional> *businessType;
+@property (nonatomic) NSString<Optional> *compName;
 @property (nonatomic) NSString *createDate;
 @property (nonatomic) MyAppointmentDepartModel *depart;
-@property (nonatomic) NSString *funcClassification;
+@property (nonatomic) NSString<Optional> *funcClassification;
 @property (nonatomic) NSString *id;
+@property (nonatomic) NSString<Optional> *funcName;
 @property (nonatomic) NSInteger status;
 @property (nonatomic) MyAppointmentUserModel *user;
 @end

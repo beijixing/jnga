@@ -79,7 +79,11 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 150*KSCALE;
+    if ([self.newsType integerValue] == 1){
+        return 140*KSCALE;
+    }else {
+        return 100*KSCALE;
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -93,12 +97,17 @@
     NewsItemDataModel *dModel = self.dataModel.list[indexPath.row];
     showCell.titleLabel.text = dModel.title;
     [showCell.iconImageView sd_setImageWithURL:[NSURL URLWithString:dModel.image] placeholderImage:[UIImage imageNamed:@"deedsTest"]];
+    if ([self.newsType integerValue] != 1) {
+        showCell.iconWidthConstraint.constant = 0;
+        showCell.topMarginConstraint.constant = 4;
+        showCell.bottomMarginConstraint.constant = 4;
+    }
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NewsItemDataModel *dModel = self.dataModel.list[indexPath.row];
     NewsDetailVC *detailVc = [[NewsDetailVC alloc] init];
-    detailVc.newsId = dModel.id;
+    detailVc.itemNewsModel = dModel;
     self.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:detailVc animated:YES];
 }

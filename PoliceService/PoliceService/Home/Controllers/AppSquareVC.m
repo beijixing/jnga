@@ -58,7 +58,7 @@
                 NSError *error;
                 wself.affairsDataModel = [[AffairsGuideDataModel alloc] initWithDictionary:dataDict error:&error];
                 NSMutableIndexSet *indexSet = [[NSMutableIndexSet alloc] init];
-                [indexSet addIndex:4];
+                [indexSet addIndex:5];
                 [wself.mainCollectionView reloadSections:indexSet];
                 NSLog(@"%@", dataDict);
             }else {
@@ -80,7 +80,7 @@
 
 #pragma mark --UICollectionViewDelegate/UICollectionViewDataSource
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    if (section == 4) {
+    if (section == 5) {
         return self.affairsDataModel.data.count;
     }else {
         AppSquareSectionDataModel *sectionDataModel = self.dataModel.datas[section];
@@ -96,7 +96,7 @@
 
 - (void)collectionView:(UICollectionView *)collectionView willDisplayCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath {
     AppSquareCollectionViewCell *showCell = (AppSquareCollectionViewCell*)cell;
-    if (indexPath.section == 4) {
+    if (indexPath.section == 5) {
         AffairsItemDataModel *dmodel = self.affairsDataModel.data[indexPath.row];
         showCell.titleLabel.text = dmodel.name;
         [showCell.iconImageView sd_setImageWithURL:[NSURL URLWithString:dmodel.imgUrl] placeholderImage:[UIImage imageNamed:@"bsjiaoguan"]];
@@ -162,7 +162,7 @@
             AppSquareItemDataModel *itemModel = sectionDataModel.items[indexPath.row];
             if ([GlobalVariableManager manager].userId != nil) {
                 //直接到预约界面
-                if (indexPath.item == 7) {
+                if (indexPath.item == 7 || indexPath.item == 8 ) {
                      [self gotoCommonWebView:itemModel.name];
                 }else {
                      [self gotoReserVationDetailViewControlellerWithKeyWord:itemModel.keyword title:itemModel.name];
@@ -182,16 +182,21 @@
         }
             break;
         case 2:
-        {
-            [GlobalFunctionManager pushQuerySubviewWithController:self switchId:indexPath.row];
+        {//业务办理
+            //[GlobalFunctionManager pushQuerySubviewWithController:self switchId:indexPath.row];
         }
             break;
         case 3:
         {
-            [GlobalFunctionManager pushPeopleAppealSubviewWithController:self switchId:indexPath.row];
+            [GlobalFunctionManager pushQuerySubviewWithController:self switchId:indexPath.row];
         }
             break;
         case 4:
+        {
+            [GlobalFunctionManager pushPeopleAppealSubviewWithController:self switchId:indexPath.row];
+        }
+            break;
+        case 5:
         {
             AffairsSubVC *affairsVC = [[AffairsSubVC alloc] init];
             AffairsItemDataModel *dmodel = self.affairsDataModel.data[indexPath.row];

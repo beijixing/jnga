@@ -13,11 +13,13 @@
 #import "UICollectionViewFlowLayout+CollectionViewCellSpaceFix.h"
 #import "RecomendAppDataModel.h"
 #import "CommonWebViewController.h"
+#import "WJHUD.h"
 #define SCROLL_HEADER_HEIGHT (280*KSCALE)
 @interface RecommendVC ()<UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, ScrollImageDelegate>
 @property(nonatomic, strong)UICollectionView *mainCollectionView;
-@property(nonatomic, strong)NSArray *serviceTitleArr;
 @property(nonatomic, strong) RecomendAppDataModel *dataModel;
+@property(nonatomic, strong) UIView *qrCodeView;
+@property(nonatomic, strong) UIImageView *qrImageView;
 @end
 
 @implementation RecommendVC
@@ -27,6 +29,7 @@
     self.navigationItem.title = @"推荐应用";
     self.view.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.mainCollectionView];
+    [self.view addSubview:self.qrCodeView];
     
 }
 
@@ -73,47 +76,101 @@
     APPInfoDataModel *dModel = self.dataModel.app_items[indexPath.row];  
             switch (indexPath.row) {
                 case 0:{
-                    if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"tmri12123://"]]) {
-                        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"tmri12123://"]];
-                    }else {
-                        NSString *urlString = @"itms-apps://itunes.apple.com/cn/app/交管12123/id1039727169?mt=8";
-                        urlString = [urlString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-                        
-                        if( [[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:urlString]]) {
-                            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlString]];
-                        }
-                        
+                        [self openAppWithTestURL:[NSURL URLWithString:@"tmri12123://"] downloadUrlString:@"itms-apps://itunes.apple.com/cn/app/交管12123/id1039727169?mt=8"];
                     }
-                }
                     break;
-                    //";
                 case 1:
                 {
-                    self.hidesBottomBarWhenPushed = YES;
-                    CommonWebViewController *commonWebVc = [[CommonWebViewController alloc] init];
-                    commonWebVc.title = dModel.app_name;
-                    commonWebVc.urlString = @"http://www.sdcrj.com/";
-                    [self.navigationController pushViewController:commonWebVc animated:YES];
-                    self.hidesBottomBarWhenPushed = NO;
+                    [self openWebViewWithTitle:dModel.app_name url:dModel.link_url];
                 }
                     break;
                     
                 case 2:
                 {
-                   
+                     [self openAppWithTestURL:[NSURL URLWithString:@"WayBookJiNing://"] downloadUrlString:@"itms-apps://itunes.apple.com/cn/app/济宁交通/id1088160802?mt=8"];
                 }
                     break;
-                    
+                case 3:
+                {
+                    [WJHUD showText:@"暂无iphone版本" onView:self.view];
+                }
+                    break;
+                case 4:
+                {
+//                    [self openAppWithTestURL:[NSURL URLWithString:@"://"] downloadUrlString:@"itms-apps://itunes.apple.com/cn/app/民生警务/id1023665999?mt=8"];
+                    [WJHUD showText:@"无法跳转" onView:self.view];
+                }
+                    break;
+                case 5:
+                {
+                    [self openWebViewWithTitle:dModel.app_name url:dModel.link_url];
+                }
+                    break;
+                case 6:
+                {
+                     [self showQRCodeViewWithImageName:@"zz_jnjj"];
+                }
+                    break;
+                case 7:
+                {
+                     [self showQRCodeViewWithImageName:@"zz_jnga"];
+                }
+                    break;
+                case 8:
+                {
+                    [self openWebViewWithTitle:dModel.app_name url:dModel.link_url];
+                }
+                    break;
+                case 9:
+                {
+                    [self showQRCodeViewWithImageName:@"zz_jnxf.jpg"];
+                }
+                    break;
+                case 10:
+                {
+                    [self openWebViewWithTitle:dModel.app_name url:dModel.link_url];
+                }
+                    break;
+                case 11:
+                {
+                    [self openWebViewWithTitle:dModel.app_name url:dModel.link_url];
+                }
+                    break;
                 default:
                     break;
             }
 }
 
-//- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-//    NSLog(@"自定义cell大小");
-//    return CGSizeMake(SCREN_WIDTH/3, SCREN_WIDTH/3);
-//}
+- (void)showQRCodeViewWithImageName:(NSString *)imageName {
+    self.qrImageView.image = [UIImage imageNamed:imageName];
+    typeof(self) __weak wself = self;
+    [UIView animateWithDuration:0.2 animations:^{
+        wself.qrCodeView.frame = wself.view.bounds;
+    }];
+}
 
+- (void)openWebViewWithTitle:(NSString *)title url:(NSString *)urlstr {
+    self.hidesBottomBarWhenPushed = YES;
+    CommonWebViewController *commonWebVc = [[CommonWebViewController alloc] init];
+    commonWebVc.title = title;
+    commonWebVc.urlString = urlstr;
+    [self.navigationController pushViewController:commonWebVc animated:YES];
+    self.hidesBottomBarWhenPushed = NO;
+}
+
+- (void)openAppWithTestURL:(NSURL *)url downloadUrlString:(NSString *)downloadUrl {
+    if ([[UIApplication sharedApplication] canOpenURL:url]) {
+        [[UIApplication sharedApplication] openURL:url];
+    }else {
+        NSString *urlString = downloadUrl;
+        urlString = [urlString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+        
+        if( [[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:urlString]]) {
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlString]];
+        }
+        
+    }
+}
 
 #pragma mark --Private Methods
 - (UIView *)scrollHeaderView {
@@ -122,8 +179,7 @@
         [imageArr addObject:bannerModel.img_url];
     }];
     
-    
-    ScrollImage *scrl = [[ScrollImage alloc] initWithCurrentController:self urlString:imageArr viewFrame:CGRectMake(0,0, SCREN_WIDTH, SCROLL_HEADER_HEIGHT) placeholderImage:[UIImage imageNamed:@"police1"]];
+    ScrollImage *scrl = [[ScrollImage alloc] initWithCurrentController:self imageNames:imageArr viewFrame:CGRectMake(0,0, SCREN_WIDTH, SCROLL_HEADER_HEIGHT) placeholderImage:[UIImage imageNamed:@"police1"]];
     scrl.delegate = self;
     scrl.timeInterval = 2.0;
     return scrl.view;
@@ -158,13 +214,33 @@
     return _mainCollectionView;
 }
 
-
--(NSArray *)serviceTitleArr {
-    if (_serviceTitleArr) {
-        return _serviceTitleArr;
+- (UIImageView *)qrImageView {
+    if (_qrImageView) {
+        return _qrImageView;
     }
-    _serviceTitleArr = @[@"交管12123",@"出入境",@"法制办"];
-    return _serviceTitleArr;
+    _qrImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, SCREN_WIDTH/2, SCREN_WIDTH/2)];
+    _qrImageView.center = CGPointMake(SCREN_WIDTH/2, (SCREN_HEIGHT-64-49)/2);
+    return _qrImageView;
+}
+
+- (UIView *)qrCodeView {
+    if (_qrCodeView) {
+        return _qrCodeView;
+    }
+    _qrCodeView = [[UIView alloc] initWithFrame:CGRectMake(0, -SCREN_HEIGHT, SCREN_WIDTH, SCREN_HEIGHT)];
+    _qrCodeView.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.6];
+    [_qrCodeView addSubview:self.qrImageView];
+    
+    UITapGestureRecognizer *tapGeture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(qrviewClicked:)];
+    [_qrCodeView addGestureRecognizer:tapGeture];
+    return _qrCodeView;
+}
+
+- (void)qrviewClicked:(UITapGestureRecognizer *)tap {
+    typeof(self) __weak wself = self;
+    [UIView animateWithDuration:0.2 animations:^{
+        wself.qrCodeView.frame = CGRectMake(0, -SCREN_HEIGHT, SCREN_WIDTH, SCREN_HEIGHT);
+    }];
 }
 
 -(RecomendAppDataModel *)dataModel {

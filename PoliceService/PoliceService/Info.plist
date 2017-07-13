@@ -105,6 +105,14 @@
 				<string>tencent1106180827</string>
 			</array>
 		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>WayBookJiNing</string>
+			</array>
+		</dict>
 	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
@@ -115,6 +123,8 @@
 		<string>tim</string>
 		<string>mqqapi</string>
 		<string>mqqopensdkapiv2</string>
+		<string>tmri12123</string>
+		<string>WayBookJiNing</string>
 	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>

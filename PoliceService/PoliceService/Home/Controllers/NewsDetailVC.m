@@ -35,8 +35,9 @@
         return _webView;
     }
     _webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height-64)];
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@?id=%@",Host_IP, Interface_NewsDetail, self.newsId]]];
-    [_webView loadRequest:request];
+//    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@?id=%@",Host_IP, Interface_NewsDetail, self.newsId]]];
+
+    [_webView loadHTMLString:self.itemNewsModel.content baseURL:nil];
     _webView.delegate = self;
     return _webView;
 }

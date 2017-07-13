@@ -29,9 +29,11 @@
 @interface NewsCenterVC ()<SGSegmentedControlDelegate>
 @property(nonatomic, strong)UITableView *tableView;
 @property(nonatomic, strong)SGSegmentedControl *segmentedControl;
-@property(nonatomic, strong) NewsListVC *newsCenterVC;
-@property(nonatomic, strong) NewsListVC *jingqingVC;
-@property(nonatomic, strong) NewsListVC *securityVC;
+@property(nonatomic, strong) NewsListVC *newsCenterVC;//新闻中心
+@property(nonatomic, strong) NewsListVC *noticeVC;//警方公告
+@property(nonatomic, strong) NewsListVC *securityVC;//安全防范
+@property(nonatomic, strong) NewsListVC *lawsInfoVC;//法律法规
+@property(nonatomic, strong) NewsListVC *extinguishingVC;//消防
 @property(nonatomic, strong)NSArray *titleArr;
 @end
 
@@ -45,14 +47,19 @@
     [self setUpLeftNavbarItem];
  
     [self addChildViewController:self.newsCenterVC];
-    [self addChildViewController:self.jingqingVC];
+    [self addChildViewController:self.lawsInfoVC];
     [self addChildViewController:self.securityVC];
+    [self addChildViewController:self.noticeVC];
+    [self addChildViewController:self.extinguishingVC];
+
     
     [self.view addSubview:self.newsCenterVC.view];
-    [self.view addSubview:self.jingqingVC.view];
+    [self.view addSubview:self.lawsInfoVC.view];
     [self.view addSubview:self.securityVC.view];
-    self.jingqingVC.view.hidden = YES;
-    self.securityVC.view.hidden = YES;
+    [self.view addSubview:self.noticeVC.view];
+    [self.view addSubview:self.extinguishingVC.view];
+   
+    [self showSelectedVC:self.newsCenterVC];
     [self.view addSubview:self.segmentedControl];
 }
 
@@ -79,29 +86,44 @@
     switch (index) {
         case 0:
         {
-            self.newsCenterVC.view.hidden = NO;
-            self.jingqingVC.view.hidden = YES;
-            self.securityVC.view.hidden = YES;
+             [self showSelectedVC:self.newsCenterVC];
         }
             break;
         case 1:
         {
-            self.newsCenterVC.view.hidden = YES;
-            self.jingqingVC.view.hidden = NO;
-            self.securityVC.view.hidden = YES;
+            [self showSelectedVC:self.lawsInfoVC];
         }
             break;
         case 2:
         {
-            self.newsCenterVC.view.hidden = YES;
-            self.jingqingVC.view.hidden = YES;
-            self.securityVC.view.hidden = NO;
+             [self showSelectedVC:self.securityVC];
         }
             break;
-            
+        case 3:
+        {
+            [self showSelectedVC:self.noticeVC];
+        }
+            break;
+        case 4:
+        {
+            [self showSelectedVC:self.extinguishingVC];
+        }
+            break;
         default:
             break;
     }
+}
+
+- (void)showSelectedVC:(NewsListVC *)selectednews {
+    
+    NSArray *childVC = [self childViewControllers];
+    [childVC enumerateObjectsUsingBlock:^(NewsListVC* child, NSUInteger idx, BOOL * _Nonnull stop) {
+        if (selectednews == child) {
+            child.view.hidden = NO;
+        }else {
+            child.view.hidden = YES;
+        }
+    }];
 }
 
 - (NewsListVC *)newsCenterVC {
@@ -113,13 +135,13 @@
     return _newsCenterVC;
 }
 
-- (NewsListVC *)jingqingVC {
-    if (_jingqingVC) {
-        return _jingqingVC;
+- (NewsListVC *)lawsInfoVC {
+    if (_lawsInfoVC) {
+        return _lawsInfoVC;
     }
-    _jingqingVC = [[NewsListVC alloc] init];
-    _jingqingVC.newsType = [NSNumber numberWithInteger:2];
-    return _jingqingVC;
+    _lawsInfoVC = [[NewsListVC alloc] init];
+    _lawsInfoVC.newsType = [NSNumber numberWithInteger:2];
+    return _lawsInfoVC;
 }
 
 - (NewsListVC *)securityVC {
@@ -131,12 +153,30 @@
     return _securityVC;
 }
 
+- (NewsListVC *)noticeVC {
+    if (_noticeVC) {
+        return _noticeVC;
+    }
+    _noticeVC = [[NewsListVC alloc] init];
+    _noticeVC.newsType = [NSNumber numberWithInteger:4];
+    return _noticeVC;
+}
+
+- (NewsListVC *)extinguishingVC {
+    if (_extinguishingVC) {
+        return _extinguishingVC;
+    }
+    _extinguishingVC = [[NewsListVC alloc] init];
+    _extinguishingVC.newsType = [NSNumber numberWithInteger:5];
+    return _extinguishingVC;
+}
+
 -(NSArray *)titleArr {
     if (_titleArr) {
         return _titleArr;
     }
     
-    _titleArr = @[@"新闻中心",@"警情通报",@"安全防范"];
+    _titleArr = @[@"新闻中心",@"法律法规",@"安全防范", @"警方公告", @"消防一点通"];
     return _titleArr;
 }
 

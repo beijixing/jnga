@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -66,9 +66,12 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="bottomMarginConstraint" destination="zU2-22-85r" id="SiX-u0-z9r"/>
                 <outlet property="dateLabel" destination="XLD-NU-NbA" id="zH7-Rn-9kT"/>
                 <outlet property="iconImageView" destination="vy2-vX-rXz" id="ZcG-J1-vpx"/>
+                <outlet property="iconWidthConstraint" destination="tJr-oc-Mhi" id="Nj0-x4-V2S"/>
                 <outlet property="titleLabel" destination="9hW-1A-oeT" id="kcg-PF-2vq"/>
+                <outlet property="topMarginConstraint" destination="aIS-Xq-X9n" id="Gvq-cX-hWf"/>
             </connections>
             <point key="canvasLocation" x="83" y="80"/>
         </tableViewCell>
